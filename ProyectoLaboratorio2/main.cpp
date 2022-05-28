@@ -1,6 +1,7 @@
 #include <iostream>
-
 using namespace std;
+#include "clases.h"
+
 int Alumno();
 int main(){
  int Opc;
