@@ -34,6 +34,7 @@
 		</Compiler>
 		<Unit filename="Alumno.cpp" />
 		<Unit filename="Maestro.cpp" />
+		<Unit filename="clasess.h" />
 		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>

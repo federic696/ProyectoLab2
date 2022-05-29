@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-#include "clases.h"
+#include "clasess.h"
 
 int Alumno();
 int main(){
@@ -41,3 +41,5 @@ int main(){
     system("pause");
     return 0;
 }
+
+
