@@ -61,25 +61,69 @@ class Persona{
     void setEmail(const char *e);
     void setFecha();
     void setEstado();
+    void cargar();
+    void mostrar();
+    bool GrabarEnDisco();
+    bool LeerEnDisco();
 
     //gets()
     char *getNombre(){return nombre;}
     char *getApellido(){return apellido;}
     int getDNI(){return DNI;}
     bool getEstado(){return estado;}
-
-
-
-
-
-
-
-
-
-
-
+    Fecha getfecha(){return fechaN;}
 
 
 };
+
+void Persona::cargar(){
+  cout << "Nombre: ";
+  cin >>nombre;
+  cout << "Apellido: ";
+  cin >> apellido;
+  cout << "DNI: ";
+  cin >> DNI;
+  cout << "Email: ";
+  cin >> email;
+  cout << "Fecha de nacimiento: ";
+  fechaN.Cargar();
+  cout << "Estado: ";
+  cin >> estado;
+}
+void Persona::mostrar(){
+  cout << "Nombre: ";
+  cout << nombre << endl;
+  cout << "Apellido: ";
+  cout << apellido << endl;
+  cout << "DNI: ";
+  cout << DNI << endl;
+  cout << "Email: ";
+  cout << email << endl;
+  cout << "Fecha de nacimiento: ";
+  fechaN.Mostrar();
+  cout << "Estado: ";
+  cout << estado << endl;
+
+}
+bool Persona::GrabarEnDisco(){
+      FILE *p;
+      p=fopen ("Personas.dat","ab");
+      if(p==NULL){
+        return false;
+      }
+      bool leyo=fwrite(this,sizeof(Persona),1,p);
+      return leyo;
+      fclose(p);
+}
+bool Persona::LeerEnDisco(){
+      FILE *p = fopen("estudiantes.dat", "rb");
+      if (p == NULL){
+        return false;
+    }
+      fseek(p, nroRegistro * sizeof(Persona), SEEK_SET);
+      bool leyo = fread(this, sizeof(Persona), 1, p);
+      fclose(p);
+      return leyo;
+}
 
 #endif // CLASES_H_INCLUDED
