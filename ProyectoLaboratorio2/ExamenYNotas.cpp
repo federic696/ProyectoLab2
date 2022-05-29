@@ -2,19 +2,17 @@
 #include<conio.h>
 using namespace std;
 
-int Alumno()
-{
-
+int ExamenNotas(){
     int Opc;
     while(true)
     {
         system("cls");
-        cout<< "\t MENU ALUMNOS "<<endl;
-        cout<< "1.Cargar Estudiante"<<endl;
-        cout<< "2.Mostrar Estudiantes"<<endl;
-        cout<< "3.Buscar por DNI o Legajo"<<endl;
-        cout<< "4.Modificar Estudiante Por DNI o Legajo"<<endl;
-        cout<< "5.Darlo de baja o alta por Legajo o DNI"<<endl;
+        cout<< "\t MENU Examen y Notas "<<endl;
+        cout<< "1.Cargar nuevo examen"<<endl;
+        cout<< "2.Modificar examen"<<endl;
+        cout<< "3.Modificar nota alumnos"<<endl;
+        cout<< "4.Cargar promedio alumno por grado"<<endl;
+        cout<< "5.Ver mejores notas de alumnos"<<endl;
         cout<< "0.Volver a menu"<<endl;
         cin>>Opc;
         system("cls");

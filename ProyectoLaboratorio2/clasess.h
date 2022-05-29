@@ -115,7 +115,7 @@ bool Persona::GrabarEnDisco(){
       return leyo;
       fclose(p);
 }
-bool Persona::LeerEnDisco(int nro_registro){
+/*bool Persona::LeerEnDisco(){
       FILE *p = fopen("estudiantes.dat", "rb");
       if (p == NULL){
         return false;
@@ -124,6 +124,6 @@ bool Persona::LeerEnDisco(int nro_registro){
       bool leyo = fread(this, sizeof(Persona), 1, p);
       fclose(p);
       return leyo;
-}
+}*/
 
 #endif // CLASES_H_INCLUDED

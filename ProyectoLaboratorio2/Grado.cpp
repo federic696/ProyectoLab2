@@ -2,19 +2,17 @@
 #include<conio.h>
 using namespace std;
 
-int Alumno()
-{
+int Grado(){
 
-    int Opc;
+int Opc;
     while(true)
     {
         system("cls");
-        cout<< "\t MENU ALUMNOS "<<endl;
-        cout<< "1.Cargar Estudiante"<<endl;
-        cout<< "2.Mostrar Estudiantes"<<endl;
-        cout<< "3.Buscar por DNI o Legajo"<<endl;
-        cout<< "4.Modificar Estudiante Por DNI o Legajo"<<endl;
-        cout<< "5.Darlo de baja o alta por Legajo o DNI"<<endl;
+        cout<< "\t MENU GRADO "<<endl;
+        cout<< "1.Mostrar  maestros por grado y materia"<<endl;
+        cout<< "2.Mostrar  estudiante por grado"<<endl;
+        cout<< "3.Mostrar mejores promedios por grado"<<endl;
+        cout<< "4.Mostrar mejores promedio materia por grado"<<endl;
         cout<< "0.Volver a menu"<<endl;
         cin>>Opc;
         system("cls");
@@ -42,4 +40,5 @@ int Alumno()
     cout<< endl;
     system("pause");
     return 0;
+
 }

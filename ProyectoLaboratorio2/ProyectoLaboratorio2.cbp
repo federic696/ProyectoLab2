@@ -33,7 +33,10 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="Alumno.cpp" />
+		<Unit filename="ExamenYNotas.cpp" />
+		<Unit filename="Grado.cpp" />
 		<Unit filename="Maestro.cpp" />
+		<Unit filename="Materia.cpp" />
 		<Unit filename="clasess.h" />
 		<Unit filename="main.cpp" />
 		<Extensions />
