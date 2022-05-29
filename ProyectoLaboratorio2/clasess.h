@@ -115,7 +115,7 @@ bool Persona::GrabarEnDisco(){
       return leyo;
       fclose(p);
 }
-bool Persona::LeerEnDisco(){
+bool Persona::LeerEnDisco(int nro_registro){
       FILE *p = fopen("estudiantes.dat", "rb");
       if (p == NULL){
         return false;
