@@ -54,7 +54,7 @@ class Persona{
 
   public:
     //sets()
-     Fecha getfecha(){return fechaN;}
+    void setFecha(Fecha fn){fechaN=fn;}
     void setNombre(const char *n){strcpy(nombre,n);}
     void setApellido(const char *n){strcpy(apellido,n);}
     void setDNI(int d){DNI=d;}
