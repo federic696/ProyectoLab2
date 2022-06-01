@@ -1,14 +1,13 @@
 #include<iostream>
 #include<conio.h>
 #include "Alumno.h"
+#include "Fecha.h"
 using namespace std;
 
-void Fecha::Mostrar();
-void Fecha::Cargar();
-void Alumno::cargar();
-void Alumno::mostrar();
-bool Alumno::GrabarEnDisco();
-bool Alumno::LeerEnDisco(int nroRegistro);
+void Alumno::cargarAlumno();
+void Alumno::mostrarAlumno();
+bool Alumno::GrabarEnDiscoAlumno();
+bool Alumno::LeerEnDiscoAlumno(int nroRegistro);
 
 int Alumnos()
 {
@@ -35,12 +34,12 @@ int Alumnos()
         switch(Opc)
         {
         case 1:
-            obj.cargar();
-            obj.GrabarEnDisco();
+            obj.cargarAlumno();
+            obj.GrabarEnDiscoAlumno();
             break;
         case 2:
-            while(obj.LeerEnDisco(pos)==1){
-            obj.mostrar();
+            while(obj.LeerEnDiscoAlumno(pos)==1){
+            obj.mostrarAlumno();
             cout<<endl;
             pos++;
             }

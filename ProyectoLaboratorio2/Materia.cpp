@@ -2,7 +2,7 @@
 #include<conio.h>
 using namespace std;
 
-int Materia()
+int Materias()
 {
 
     int Opc;

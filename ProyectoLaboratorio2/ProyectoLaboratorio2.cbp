@@ -35,9 +35,17 @@
 		<Unit filename="Alumno.cpp" />
 		<Unit filename="Alumno.h" />
 		<Unit filename="ExamenYNotas.cpp" />
+		<Unit filename="ExamenYNotas.h" />
+		<Unit filename="Fecha.cpp" />
+		<Unit filename="Fecha.h" />
 		<Unit filename="Grado.cpp" />
+		<Unit filename="Grado.h" />
 		<Unit filename="Maestro.cpp" />
+		<Unit filename="Maestro.h" />
 		<Unit filename="Materia.cpp" />
+		<Unit filename="Materia.h" />
+		<Unit filename="Persona.cpp" />
+		<Unit filename="Persona.h" />
 		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>

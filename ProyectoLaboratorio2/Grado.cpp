@@ -2,7 +2,7 @@
 #include<conio.h>
 using namespace std;
 
-int Grado(){
+int Grados(){
 
 int Opc;
     while(true)

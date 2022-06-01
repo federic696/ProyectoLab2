@@ -1,7 +1,7 @@
 #include<iostream>
 #include<conio.h>
 using namespace std;
-int Maestro(){
+int Maestros(){
 int Opc;
     while(true)
     {

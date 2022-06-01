@@ -3,10 +3,10 @@ using namespace std;
 
 ///funciones adiccionales para los demas menus
 int Alumnos();
-int Maestro();
+int Maestros();
 int ExamenNotas();
-int Grado();
-int Materia();
+int Grados();
+int Materias();
 
 int main()
 {
@@ -32,16 +32,16 @@ int main()
             Alumnos();
             break;
         case 2:
-            Maestro();
+            Maestros();
             break;
         case 3:
             ExamenNotas();
             break;
         case 4:
-            Grado();
+            Grados();
             break;
         case 5:
-            Materia();
+            Materias();
             break;
         case 0:
             return 0;
