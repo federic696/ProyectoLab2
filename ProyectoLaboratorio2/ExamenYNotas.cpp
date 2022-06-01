@@ -8,12 +8,15 @@ int ExamenNotas(){
     {
         system("cls");
         cout<< "\t MENU Examen y Notas "<<endl;
-        cout<< "1.Cargar nuevo examen"<<endl;
-        cout<< "2.Modificar examen"<<endl;
-        cout<< "3.Modificar nota alumnos"<<endl;
-        cout<< "4.Cargar promedio alumno por grado"<<endl;
-        cout<< "5.Ver mejores notas de alumnos"<<endl;
-        cout<< "0.Volver a menu"<<endl;
+        cout<< "-------------------------------"<<endl;
+        cout<< "1) Cargar nuevo examen"<<endl;
+        cout<< "2) Modificar examen"<<endl;
+        cout<< "3) Modificar nota alumnos"<<endl;
+        cout<< "4) Cargar promedio alumno por grado"<<endl;
+        cout<< "5) Ver mejores notas de alumnos"<<endl;
+        cout<< "0) Volver a menu"<<endl;
+        cout<< "-------------------------------"<<endl;
+        cout<< "Opcion: "<<endl;
         cin>>Opc;
         system("cls");
         switch(Opc)

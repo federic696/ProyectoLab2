@@ -1,9 +1,8 @@
 #include <iostream>
 using namespace std;
-#include "clasess.h"
 
 ///funciones adiccionales para los demas menus
-int Alumno();
+int Alumnos();
 int Maestro();
 int ExamenNotas();
 int Grado();
@@ -16,19 +15,21 @@ int main()
     {
         system("cls");
         cout<< "\t MENU PRINCIPAL "<<endl;
-        cout<< "1.INGRESAR MENU ALUMNO"<<endl;
-        cout<< "2.INGRESAR MENU MAESTRO"<<endl;
-        cout<< "3.INGRESAR MENU NOTAS Y EXAMEN"<<endl;
-        cout<< "4.INGRESAR MENU GRADOS"<<endl;
-        cout<< "5.INGRESAR MENU MATERIA"<<endl;
-        cout<< "0.  Salir"<<endl;
+        cout<< "-------------------------------"<<endl;
+        cout<< "1) INGRESAR MENU ALUMNO"<<endl;
+        cout<< "2) INGRESAR MENU MAESTRO"<<endl;
+        cout<< "3) INGRESAR MENU NOTAS Y EXAMEN"<<endl;
+        cout<< "4) INGRESAR MENU GRADOS"<<endl;
+        cout<< "5) INGRESAR MENU MATERIA"<<endl;
+        cout<< "0) Salir"<<endl;
+        cout<< "-------------------------------"<<endl;
         cout<< "Opcion: ";
         cin>>Opc;
         system("cls");
         switch(Opc)
         {
         case 1:
-            Alumno();
+            Alumnos();
             break;
         case 2:
             Maestro();

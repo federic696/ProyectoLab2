@@ -10,13 +10,16 @@ int Materia()
     {
         system("cls");
         cout<< "\t MENU MATERIA "<<endl;
-        cout<< "1.Mostrar maestros por materias"<<endl;
-        cout<< "2.Mostrar mejores promedios de alumnos por materia"<<endl;
-        cout<< "3.Mostrar todas las materias"<<endl;
-        cout<< "4.Dar de baja una materia"<<endl;
-        cout<< "5.Dar de alta una materia"<<endl;
-        cout<< "6.Subir materia  por grado"<<endl;
-        cout<< "0.Volver a menu"<<endl;;
+        cout<< "-------------------------------"<<endl;
+        cout<< "1) Mostrar maestros por materias"<<endl;
+        cout<< "2) Mostrar mejores promedios de alumnos por materia"<<endl;
+        cout<< "3) Mostrar todas las materias"<<endl;
+        cout<< "4) Dar de baja una materia"<<endl;
+        cout<< "5) Dar de alta una materia"<<endl;
+        cout<< "6) Subir materia  por grado"<<endl;
+        cout<< "0) Volver a menu"<<endl;
+        cout<< "-------------------------------"<<endl;
+        cout<< "Opcion: "<<endl;
         cin>>Opc;
 
         system("cls");
