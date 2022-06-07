@@ -8,7 +8,11 @@ using namespace std;
 #include "Fecha.h"
 class ExamenYNotas{
 private:
-
+    int IDAlumno;
+    int IDMaestro;
+    int IDMateria;
+    int Nota;
+    bool estado;
 
 public:
     //sets()

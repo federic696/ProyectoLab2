@@ -8,7 +8,10 @@ using namespace std;
 #include "Fecha.h"
 class Materia{
 private:
-
+    int IDMateria;
+    char nombreMateria[30];
+    int IDMaestro;
+    bool estado;
 
 public:
     //sets()

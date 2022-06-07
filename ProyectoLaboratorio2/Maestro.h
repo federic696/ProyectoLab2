@@ -8,8 +8,8 @@ using namespace std;
 #include "Fecha.h"
 class Maestro{
 private:
-
-
+    int IDMateria;
+    int Materia;
 public:
     //sets()
 

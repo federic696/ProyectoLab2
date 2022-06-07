@@ -134,3 +134,54 @@
 	<string.h>
 	"Fecha.h"
 
+1654557666 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\alumno.cpp
+	<iostream>
+	<conio.h>
+	"Alumno.h"
+	"Fecha.h"
+
+1654557666 c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\alumno.h
+	<iostream>
+	<iostream>
+	<cstdlib>
+	<string.h>
+	"Persona.h"
+
+1654557666 c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\persona.h
+	<iostream>
+	<cstdlib>
+	<string.h>
+	"Fecha.h"
+
+1654557666 c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\fecha.h
+
+1654557666 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\examenynotas.cpp
+	<iostream>
+	<conio.h>
+
+1654557666 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\fecha.cpp
+	<iostream>
+	<conio.h>
+	"Fecha.h"
+
+1654557666 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\grado.cpp
+	<iostream>
+	<conio.h>
+
+1654557666 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\maestro.cpp
+	<iostream>
+	<conio.h>
+
+1654557666 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\main.cpp
+	<iostream>
+
+1654557666 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\materia.cpp
+	<iostream>
+	<conio.h>
+
+1654557666 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\persona.cpp
+	<iostream>
+	<conio.h>
+	"Persona.h"
+	"Fecha.h"
+

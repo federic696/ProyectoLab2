@@ -14,6 +14,7 @@ private:
     char email[30];
     Fecha fechaN;
     bool estado;
+    int ID;
 
 public:
     //sets()
@@ -32,6 +33,9 @@ public:
     void setDNI(int d)
     {
         DNI=d;
+    }
+    void setID(int i){
+        ID=i;
     }
     void setEmail(const char *e);
     void setFecha();
@@ -62,7 +66,9 @@ public:
     {
         return fechaN;
     }
-
+    int getID(){
+        return ID;
+    }
 
 };
 #endif // PERSONA_H_INCLUDED
