@@ -46,7 +46,9 @@
 		<Unit filename="Materia.h" />
 		<Unit filename="Persona.cpp" />
 		<Unit filename="Persona.h" />
+		<Unit filename="funcionesrecuadro.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="rlutil.h" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
