@@ -25,12 +25,11 @@ public:
 };
 void Maestro::cargarMaestro()
 {
-   cargarPersona();
+    cargarPersona();
 }
 void Maestro::mostrarMaestro()
 {
-    mostrarpersona();
-
+    mostrarPersona();
 }
 bool Maestro::GrabarEnDiscoMaestro()
 {

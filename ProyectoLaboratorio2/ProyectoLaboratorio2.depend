@@ -93,7 +93,7 @@
 	"Alumno.h"
 	"Fecha.h"
 
-1654065113 c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\alumno.h
+1654981817 c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\alumno.h
 	<iostream>
 	<iostream>
 	<cstdlib>
@@ -116,8 +116,9 @@
 	<iostream>
 	<conio.h>
 
-1654060126 source:c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\main.cpp
+1654979458 source:c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\main.cpp
 	<iostream>
+	"funcionesrecuadro.h"
 
 1654064413 source:c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\fecha.cpp
 	<iostream>
@@ -126,13 +127,13 @@
 
 1654064861 c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\fecha.h
 
-1654064729 source:c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\persona.cpp
+1654981817 source:c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\persona.cpp
 	<iostream>
 	<conio.h>
 	"Persona.h"
 	"Fecha.h"
 
-1654064861 c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\persona.h
+1654981817 c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\persona.h
 	<iostream>
 	<cstdlib>
 	<string.h>
@@ -294,4 +295,25 @@
 	<conio.h>
 	"Persona.h"
 	"Fecha.h"
+
+1654979458 c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\funcionesrecuadro.h
+	<iostream>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	"rlutil.h"
+
+1654979458 c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
 

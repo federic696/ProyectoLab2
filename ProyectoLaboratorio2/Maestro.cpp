@@ -1,8 +1,10 @@
 #include<iostream>
 #include<conio.h>
+#include "Maestro.h"
 using namespace std;
 int Maestros(){
 int Opc;
+Maestro mas;
     while(true)
     {
         system("cls");
@@ -22,10 +24,10 @@ int Opc;
         switch(Opc)
         {
         case 1:
-
+            mas.cargarMaestro();
             break;
         case 2:
-
+            mas.mostrarMaestro();
             break;
         case 3:
 
