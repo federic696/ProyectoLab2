@@ -31,32 +31,7 @@ void Persona::mostrarPersona()
     cout << email << endl;
     cout << "Fecha de nacimiento: ";
     fechaN.MostrarFecha();
-    cout << "Estado: ";
-    cout << estado << endl;
+    estado=true;
 
 }
 
-bool Persona::GrabarEnDiscoPersona()
-{
-    FILE *p;
-    p=fopen ("Persona.dat","ab");
-    if(p==NULL)
-    {
-        return false;
-    }
-    bool escribio=fwrite(this,sizeof(Persona),1,p);
-    fclose(p);
-    return escribio;
-}
-bool Persona::LeerEnDiscoPersona(int nroRegistro)
-{
-    FILE *p = fopen("Persona.dat", "rb");
-    if (p == NULL)
-    {
-        return false;
-    }
-    fseek(p, nroRegistro * sizeof(Persona), SEEK_SET);
-    bool leyo = fread(this, sizeof(Persona), 1, p);
-    fclose(p);
-    return leyo;
-}

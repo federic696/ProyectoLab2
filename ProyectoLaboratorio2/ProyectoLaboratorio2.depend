@@ -1,11 +1,13 @@
 # depslib dependency file v1.0
-1653847091 source:c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\main.cpp
+1654813827 source:c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\main.cpp
 	<iostream>
-	"clasess.h"
+	"funcionesrecuadro.h"
 
-1653847091 source:c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\alumno.cpp
+1654822068 source:c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\alumno.cpp
 	<iostream>
 	<conio.h>
+	"Alumno.h"
+	"Fecha.h"
 
 1654098313 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\alumno.cpp
 	<iostream>
@@ -27,15 +29,15 @@
 	<cstdlib>
 	<string.h>
 
-1653847091 source:c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\maestro.cpp
+1654980538 source:c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\maestro.cpp
 	<iostream>
 	<conio.h>
 
-1653847091 source:c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\examenynotas.cpp
+1654189468 source:c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\examenynotas.cpp
 	<iostream>
 	<conio.h>
 
-1653847091 source:c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\grado.cpp
+1654189468 source:c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\grado.cpp
 	<iostream>
 	<conio.h>
 
@@ -45,7 +47,7 @@
 	<cstdlib>
 	<string.h>
 
-1653846902 source:c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\materia.cpp
+1654189468 source:c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\materia.cpp
 	<iostream>
 	<conio.h>
 
@@ -245,4 +247,51 @@
 	<sys/ioctl.h>
 	<sys/types.h>
 	<sys/time.h>
+
+1654981286 c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\alumno.h
+	<iostream>
+	<iostream>
+	<cstdlib>
+	<string.h>
+	"Persona.h"
+
+1654981484 c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\persona.h
+	<iostream>
+	<cstdlib>
+	<string.h>
+	"Fecha.h"
+
+1654189468 c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\fecha.h
+
+1654189468 source:c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\fecha.cpp
+	<iostream>
+	<conio.h>
+	"Fecha.h"
+
+1654813827 c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\funcionesrecuadro.h
+	<iostream>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	"rlutil.h"
+
+1654813827 c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1654981484 source:c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\persona.cpp
+	<iostream>
+	<conio.h>
+	"Persona.h"
+	"Fecha.h"
 

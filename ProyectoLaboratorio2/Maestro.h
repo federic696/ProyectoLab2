@@ -6,7 +6,9 @@ using namespace std;
 #include <cstdlib>
 #include <string.h>
 #include "Fecha.h"
-class Maestro{
+#include "Persona.h"
+
+class Maestro:public Persona{
 private:
     int IDMateria;
     int Materia;
@@ -23,11 +25,11 @@ public:
 };
 void Maestro::cargarMaestro()
 {
-
+   cargarPersona();
 }
 void Maestro::mostrarMaestro()
 {
-
+    mostrarpersona();
 
 }
 bool Maestro::GrabarEnDiscoMaestro()
@@ -42,6 +44,7 @@ bool Maestro::GrabarEnDiscoMaestro()
     fclose(p);
     return escribio;
 }
+
 bool Maestro::LeerEnDiscoMaestro(int nroRegistro)
 {
     FILE *p = fopen("Maestro.dat", "rb");

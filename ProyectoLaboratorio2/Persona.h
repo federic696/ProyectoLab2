@@ -42,8 +42,7 @@ public:
     void setEstado();
     void cargarPersona();
     void mostrarPersona();
-    bool GrabarEnDiscoPersona();
-    bool LeerEnDiscoPersona(int nroRegistro);
+
 
     //gets()
     char *getNombre()

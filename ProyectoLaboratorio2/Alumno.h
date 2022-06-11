@@ -25,6 +25,7 @@ public:
 
 
 };
+
 void Alumno::cargarAlumno()
 {
     cargarPersona();
@@ -33,6 +34,7 @@ void Alumno::cargarAlumno()
     cout << "Curso: ";
     cin >> curso;
 }
+
 void Alumno::mostrarAlumno()
 {
     mostrarPersona();
