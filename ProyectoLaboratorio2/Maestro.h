@@ -25,11 +25,22 @@ public:
 };
 void Maestro::cargarMaestro()
 {
+    Maestro Reg;
     cargarPersona();
+    Reg.GrabarEnDiscoMaestro();
 }
+
 void Maestro::mostrarMaestro()
 {
-    mostrarPersona();
+    Maestro Reg;
+    int Pos=0;
+    while(Reg.LeerEnDiscoMaestro(Pos++)==1)
+    {
+        mostrarPersona();
+        cout<<endl;
+    }
+    system("pause");
+
 }
 bool Maestro::GrabarEnDiscoMaestro()
 {

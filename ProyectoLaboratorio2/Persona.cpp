@@ -16,8 +16,7 @@ void Persona::cargarPersona()
     cin >> email;
     cout << "Fecha de nacimiento: ";
     fechaN.CargarFecha();
-    cout << "Estado: ";
-    cin >> estado;
+    estado=true;
 }
 void Persona::mostrarPersona()
 {
@@ -31,7 +30,9 @@ void Persona::mostrarPersona()
     cout << email << endl;
     cout << "Fecha de nacimiento: ";
     fechaN.MostrarFecha();
-    estado=true;
+    if(estado==true){
+        cout<<"Persona activa"<<endl;
+    }
 
 }
 
