@@ -1,10 +1,11 @@
 #include<iostream>
 #include<conio.h>
+#include "Materia.h"
 using namespace std;
 
 int Materias()
 {
-
+    Materia reg;
     int Opc;
     while(true)
     {
@@ -32,13 +33,13 @@ int Materias()
 
             break;
         case 3:
-
+            mostrarTodasMaterias();
             break;
         case 4:
 
             break;
         case 5:
-
+            reg.cargarMateria();
             break;
         case 6:
 

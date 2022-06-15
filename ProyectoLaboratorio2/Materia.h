@@ -28,12 +28,25 @@ public:
 };
 void Materia::cargarMateria()
 {
-
+    Materia reg;
+    cout<<"ID:";
+    cin>>reg.IDMateria;
+    cout<<"Nombre Materia:";
+    cin>>reg.nombreMateria;
+    cout<<"ID Maestro:";
+    cin>>reg.IDMaestro;
+    reg.estado=true;
+    reg.GrabarEnDiscoMateria();
 }
 void Materia::mostrarMateria()
 {
+    cout<<"ID Materia: "<<IDMateria<<endl;
+    cout<<"Nombre Materia: "<<nombreMateria<<endl;
+    cout<<"ID Maestro: "<<IDMaestro<<endl;
+    cout<<"Estado: "<<estado<<endl;
 
 }
+
 bool Materia::GrabarEnDiscoMateria()
 {
     FILE *p;
@@ -57,6 +70,16 @@ bool Materia::LeerEnDiscoMateria(int nroRegistro)
     bool leyo = fread(this, sizeof(Materia), 1, p);
     fclose(p);
     return leyo;
+}
+
+void mostrarTodasMaterias(){
+    Materia reg;
+    int pos=0;
+    while(reg.LeerEnDiscoMateria(pos++)==1){
+        reg.mostrarMateria();
+        cout<<endl;
+    }
+        system("pause");
 }
 
 #endif // MATERIA_H_INCLUDED
