@@ -9,7 +9,7 @@ using namespace std;
 
 class Alumno:public Persona{
 private:
-    int legajo;
+    //int legajo;
     int curso;
 
 public:
