@@ -7,7 +7,7 @@ using namespace std;
 #include "Fecha.h"
 
 class Persona{
-private:
+protected:
     char nombre[30];
     char apellido[30];
     int DNI;

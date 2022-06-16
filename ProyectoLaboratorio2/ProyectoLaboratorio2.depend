@@ -153,7 +153,7 @@
 	<string.h>
 	"Persona.h"
 
-1654981875 c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\persona.h
+1655418204 c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\persona.h
 	<iostream>
 	<cstdlib>
 	<string.h>
@@ -329,7 +329,7 @@
 	"Fecha.h"
 	"Persona.h"
 
-1655261866 c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\maestro.h
+1655418335 c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\maestro.h
 	<iostream>
 	<iostream>
 	<cstdlib>

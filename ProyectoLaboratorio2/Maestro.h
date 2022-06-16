@@ -10,8 +10,8 @@ using namespace std;
 
 class Maestro:public Persona{
 private:
-    int IDMateria;
-    int Materia;
+   /* int IDMateria;
+    int Materia;*/
 public:
     //sets()
 
@@ -25,9 +25,18 @@ public:
 };
 void Maestro::cargarMaestro()
 {
-    Maestro Reg;
-    cargarPersona();
-    Reg.GrabarEnDiscoMaestro();
+    cout << "Nombre: ";
+    cin >>nombre;
+    cout << "Apellido: ";
+    cin >> apellido;
+    cout << "DNI: ";
+    cin >> DNI;
+    cout << "Email: ";
+    cin >> email;
+    cout << "Fecha de nacimiento: ";
+    fechaN.CargarFecha();
+    estado=true;
+    GrabarEnDiscoMaestro();
 }
 
 void Maestro::mostrarMaestro()
@@ -36,7 +45,19 @@ void Maestro::mostrarMaestro()
     int Pos=0;
     while(Reg.LeerEnDiscoMaestro(Pos++)==1)
     {
-        mostrarPersona();
+        cout << "Nombre: ";
+        cout << Reg.nombre << endl;
+        cout << "Apellido: ";
+        cout << Reg.apellido << endl;
+        cout << "DNI: ";
+        cout << Reg.DNI << endl;
+        cout << "Email: ";
+        cout << Reg.email << endl;
+        cout << "Fecha de nacimiento: ";
+        Reg.fechaN.MostrarFecha();
+        if(estado==true){
+            cout<<"Persona activa"<<endl;
+        }
         cout<<endl;
     }
     system("pause");
