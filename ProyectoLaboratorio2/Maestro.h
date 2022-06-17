@@ -9,18 +9,15 @@ using namespace std;
 #include "Persona.h"
 
 class Maestro:public Persona{
-private:
-   /* int IDMateria;
-    int Materia;*/
+
 public:
-    //sets()
 
     void cargarMaestro();
     void mostrarMaestro();
     bool GrabarEnDiscoMaestro();
     bool LeerEnDiscoMaestro(int nroRegistro);
 
-    //gets()
+
 
 };
 void Maestro::cargarMaestro()
@@ -41,26 +38,22 @@ void Maestro::cargarMaestro()
 
 void Maestro::mostrarMaestro()
 {
-    Maestro Reg;
-    int Pos=0;
-    while(Reg.LeerEnDiscoMaestro(Pos++)==1)
-    {
+
         cout << "Nombre: ";
-        cout << Reg.nombre << endl;
+        cout << nombre << endl;
         cout << "Apellido: ";
-        cout << Reg.apellido << endl;
+        cout << apellido << endl;
         cout << "DNI: ";
-        cout << Reg.DNI << endl;
+        cout << DNI << endl;
         cout << "Email: ";
-        cout << Reg.email << endl;
+        cout << email << endl;
         cout << "Fecha de nacimiento: ";
-        Reg.fechaN.MostrarFecha();
+        fechaN.MostrarFecha();
         if(estado==true){
             cout<<"Persona activa"<<endl;
         }
-        cout<<endl;
-    }
-    system("pause");
+
+
 
 }
 bool Maestro::GrabarEnDiscoMaestro()

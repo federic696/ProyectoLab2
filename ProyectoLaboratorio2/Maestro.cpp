@@ -2,8 +2,10 @@
 #include<conio.h>
 #include "Maestro.h"
 using namespace std;
+void BuscarMaestro();
 int Maestros(){
 int Opc;
+int Pos=0;
 Maestro mas;
     while(true)
     {
@@ -27,10 +29,13 @@ Maestro mas;
             mas.cargarMaestro();
             break;
         case 2:
+            while(mas.LeerEnDiscoMaestro(Pos++)==1){
             mas.mostrarMaestro();
+            cout<<endl;
+            }
             break;
         case 3:
-
+            BuscarMaestro();
             break;
         case 4:
 
@@ -45,4 +50,23 @@ Maestro mas;
     cout<< endl;
     system("pause");
     return 0;
+}
+
+
+
+
+void BuscarMaestro(){
+    Maestro Reg;
+    int Pos=0;
+    int DNI=0;
+    cout<< "Ingrese el DNI del maestro: ";
+    cin>>DNI;
+    while(Reg.LeerEnDiscoMaestro(Pos++))
+    {
+        if(Reg.getDNI()==DNI)
+        {
+            Reg.mostrarMaestro();
+        }
+    }
+    system("pause");
 }
