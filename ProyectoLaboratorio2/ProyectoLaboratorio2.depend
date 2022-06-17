@@ -9,17 +9,18 @@
 	"Alumno.h"
 	"Fecha.h"
 
-1654098313 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\alumno.cpp
+1655165560 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\alumno.cpp
 	<iostream>
 	<conio.h>
 	"Alumno.h"
 	"Fecha.h"
 
-1654098313 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\maestro.cpp
+1655165568 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\maestro.cpp
 	<iostream>
 	<conio.h>
+	"Maestro.h"
 
-1654792259 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\main.cpp
+1655165560 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\main.cpp
 	<iostream>
 	"funcionesrecuadro.h"
 
@@ -194,14 +195,14 @@
 	"Persona.h"
 	"Fecha.h"
 
-1654098313 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\alumno.h
+1655424094 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\alumno.h
 	<iostream>
 	<iostream>
 	<cstdlib>
 	<string.h>
 	"Persona.h"
 
-1654784321 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\persona.h
+1655424095 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\persona.h
 	<iostream>
 	<cstdlib>
 	<string.h>
@@ -222,11 +223,12 @@
 	<iostream>
 	<conio.h>
 
-1654098313 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\materia.cpp
+1655424094 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\materia.cpp
 	<iostream>
 	<conio.h>
+	"Materia.h"
 
-1654098313 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\persona.cpp
+1655424095 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\persona.cpp
 	<iostream>
 	<conio.h>
 	"Persona.h"
@@ -359,6 +361,21 @@
 	<sys/time.h>
 
 1655334009 c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\materia.h
+	<iostream>
+	<iostream>
+	<cstdlib>
+	<string.h>
+	"Fecha.h"
+
+1655424094 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\maestro.h
+	<iostream>
+	<iostream>
+	<cstdlib>
+	<string.h>
+	"Fecha.h"
+	"Persona.h"
+
+1655424095 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\materia.h
 	<iostream>
 	<iostream>
 	<cstdlib>
