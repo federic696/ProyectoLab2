@@ -32,9 +32,6 @@ int main()
         rlutil::locate(11,17);
         cout<< "F6 - Salir"<<endl;
         rlutil::locate(0,0);
-       // cout<< "Opcion: ";
-       // cin>>Opc;
-       // system("cls");
         Opc=rlutil::getkey();
         switch(Opc)
         {

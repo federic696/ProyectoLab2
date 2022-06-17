@@ -6,6 +6,7 @@ using namespace std;
 #include <cstdlib>
 #include <string.h>
 #include "Persona.h"
+#include "rlutil.h"
 
 class Alumno:public Persona{
 private:
@@ -28,9 +29,12 @@ public:
 
 void Alumno::cargarAlumno()
 {
+
     cargarPersona();
+    rlutil::locate(2,13);
     cout << "Legajo: ";
     cin >> legajo;
+    rlutil::locate(2,14);
     cout << "Curso: ";
     cin >> curso;
 }
@@ -38,8 +42,10 @@ void Alumno::cargarAlumno()
 void Alumno::mostrarAlumno()
 {
     mostrarPersona();
+    rlutil::locate(2,12);
     cout << "Legajo: ";
     cout << legajo << endl;
+    rlutil::locate(2,13);
     cout << "Curso: ";
     cout << curso << endl;
 }
@@ -67,5 +73,120 @@ bool Alumno::LeerEnDiscoAlumno(int nroRegistro)
     fclose(p);
     return leyo;
 }
+
+void recuadroalu(int x, int y, int ancho, int alto){
+
+const char *UI_BOTTOM_RIGHT = "\xD9"; // 217 - ┘
+const char *UI_BOTTOM_LEFT = "\xC0"; // 192 - └
+const char *UI_TOP_LEFT = "\xDA"; // 218 - ┌
+const char *UI_TOP_RIGHT = "\xBF"; // 191 - ┐
+
+const char *UI_HORIZONTAL_LINE = "\xC4"; // 196 - ─
+
+
+const char *UI_VERTICAL_LINE = "\xB3"; // 179 - │
+
+
+
+
+    /// Borramos el espacio del recuadro
+    //COLOR DE FONDO
+    int i, j;
+    for(i=x; i<=x+ancho; i++){
+        for(j=y; j<=y+alto; j++){
+            rlutil::setBackgroundColor(rlutil::DARKGREY);
+            rlutil::locate(i, j);
+            cout << " ";
+
+        }
+    }
+    //COLOR DE LINEAS Y LETRAS
+    rlutil::setColor(rlutil::YELLOW);
+    /// Líneas horizontales
+    for(i=x; i<=x+ancho; i++){
+        rlutil::locate(i, y);
+        cout << UI_HORIZONTAL_LINE;
+        rlutil::locate(i, y+alto);
+        cout << UI_HORIZONTAL_LINE;
+
+    }
+    /// Líneas verticales
+    for(i=y; i<=y+alto; i++){
+        rlutil::locate(x, i);
+        cout << UI_VERTICAL_LINE;
+        rlutil::locate(x+ancho, i);
+        cout << UI_VERTICAL_LINE;
+    }
+    //COLOR DE LETRAS
+    /// Vértices
+    rlutil::locate(x, y);
+    cout << UI_TOP_LEFT;
+    rlutil::locate(x, y+alto);
+    cout << UI_BOTTOM_LEFT;
+    rlutil::locate(x+ancho, y);
+    cout << UI_TOP_RIGHT;
+    rlutil::locate(x+ancho, y+alto);
+    cout << UI_BOTTOM_RIGHT;
+    rlutil::resetColor();
+    rlutil::setBackgroundColor(rlutil::DARKGREY);
+}
+
+
+
+void recuadroalu1(int x, int y, int ancho, int alto){
+
+const char *UI_BOTTOM_RIGHT = "\xD9"; // 217 - ┘
+const char *UI_BOTTOM_LEFT = "\xC0"; // 192 - └
+const char *UI_TOP_LEFT = "\xDA"; // 218 - ┌
+const char *UI_TOP_RIGHT = "\xBF"; // 191 - ┐
+
+const char *UI_HORIZONTAL_LINE = "\xC4"; // 196 - ─
+
+
+const char *UI_VERTICAL_LINE = "\xB3"; // 179 - │
+
+
+
+
+    /// Borramos el espacio del recuadro
+    int i, j;
+    for(i=x; i<=x+ancho; i++){
+        for(j=y; j<=y+alto; j++){
+            rlutil::setBackgroundColor(rlutil::DARKGREY);
+            rlutil::locate(i, j);
+            cout << " ";
+
+        }
+    }
+    rlutil::setColor(rlutil::YELLOW);
+    /// Líneas horizontales
+    for(i=x; i<=x+ancho; i++){
+        rlutil::locate(i, y);
+        cout << UI_HORIZONTAL_LINE;
+        rlutil::locate(i,4);
+        cout << UI_HORIZONTAL_LINE;
+        rlutil::locate(i, y+alto);
+        cout << UI_HORIZONTAL_LINE;
+
+    }
+    /// Líneas verticales
+    for(i=y; i<=y+alto; i++){
+        rlutil::locate(x, i);
+        cout << UI_VERTICAL_LINE;
+        rlutil::locate(x+ancho, i);
+        cout << UI_VERTICAL_LINE;
+    }
+    /// Vértices
+    rlutil::locate(x, y);
+    cout << UI_TOP_LEFT;
+    rlutil::locate(x, y+alto);
+    cout << UI_BOTTOM_LEFT;
+    rlutil::locate(x+ancho, y);
+    cout << UI_TOP_RIGHT;
+    rlutil::locate(x+ancho, y+alto);
+    cout << UI_BOTTOM_RIGHT;
+}
+
+
 
 #endif // ALUMNO_H_INCLUDED

@@ -31,14 +31,14 @@ const char *UI_VERTICAL_LINE = "\xB3"; // 179 - │
     int i, j;
     for(i=x; i<=x+ancho; i++){
         for(j=y; j<=y+alto; j++){
-            rlutil::setBackgroundColor(rlutil::RED);
+            rlutil::setBackgroundColor(rlutil::DARKGREY);
             rlutil::locate(i, j);
             cout << " ";
 
         }
     }
     //COLOR DE LINEAS Y LETRAS
-    rlutil::setColor(rlutil::WHITE);
+    rlutil::setColor(rlutil::YELLOW);
     /// Líneas horizontales
     for(i=x; i<=x+ancho; i++){
         rlutil::locate(i, y);
@@ -65,7 +65,7 @@ const char *UI_VERTICAL_LINE = "\xB3"; // 179 - │
     rlutil::locate(x+ancho, y+alto);
     cout << UI_BOTTOM_RIGHT;
     rlutil::resetColor();
-    rlutil::setBackgroundColor(rlutil::RED);
+    rlutil::setBackgroundColor(rlutil::DARKGREY);
 }
 
 
@@ -89,13 +89,13 @@ const char *UI_VERTICAL_LINE = "\xB3"; // 179 - │
     int i, j;
     for(i=x; i<=x+ancho; i++){
         for(j=y; j<=y+alto; j++){
-            rlutil::setBackgroundColor(rlutil::RED);
+            rlutil::setBackgroundColor(rlutil::DARKGREY);
             rlutil::locate(i, j);
             cout << " ";
 
         }
     }
-    rlutil::setColor(rlutil::BLACK);
+    rlutil::setColor(rlutil::YELLOW);
     /// Líneas horizontales
     for(i=x; i<=x+ancho; i++){
         rlutil::locate(i, y);

@@ -10,7 +10,7 @@ int ExamenNotas(){
     while(true)
     {
         system("cls");
-        cout<< "\t MENU Examen y Notas "<<endl;
+        cout<< "| MENU Examen y Notas | "<<endl;
         cout<< "-------------------------------"<<endl;
         cout<< "1) Cargar nuevo examen"<<endl;
         cout<< "2) Modificar ID Alumno Por Examen"<<endl;
