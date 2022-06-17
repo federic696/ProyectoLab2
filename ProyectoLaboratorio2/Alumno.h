@@ -9,12 +9,13 @@ using namespace std;
 
 class Alumno:public Persona{
 private:
-    //int legajo;
+    int legajo;
     int curso;
 
 public:
     //sets()
-
+    void setLegajo(int Leg){legajo=Leg;}
+    void setCurso(int Cur){curso=Cur;}
     void cargarAlumno();
     void mostrarAlumno();
     bool GrabarEnDiscoAlumno();
@@ -22,26 +23,50 @@ public:
 
     //gets()
 
-
+    int getlegajo(){return legajo;}
+    int getCurso(){return curso;}
 
 };
 
 void Alumno::cargarAlumno()
 {
-    cargarPersona();
+    cout << "Nombre: ";
+    cin >>nombre;
+    cout << "Apellido: ";
+    cin >> apellido;
+    cout << "DNI: ";
+    cin >> DNI;
+    cout << "Email: ";
+    cin >> email;
+    cout << "Fecha de nacimiento: ";
+    fechaN.CargarFecha();
     cout << "Legajo: ";
     cin >> legajo;
     cout << "Curso: ";
     cin >> curso;
+    estado=true;
+    cargarAlumno();
 }
 
 void Alumno::mostrarAlumno()
 {
-    mostrarPersona();
+   cout << "Nombre: ";
+    cout << nombre << endl;
+    cout << "Apellido: ";
+    cout << apellido << endl;
+    cout << "DNI: ";
+    cout << DNI << endl;
+    cout << "Email: ";
+    cout << email << endl;
+    cout << "Fecha de nacimiento: ";
+    fechaN.MostrarFecha();
     cout << "Legajo: ";
     cout << legajo << endl;
     cout << "Curso: ";
     cout << curso << endl;
+     if(estado==true){
+        cout<<"Persona activa"<<endl;
+    }
 }
 bool Alumno::GrabarEnDiscoAlumno()
 {

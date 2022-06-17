@@ -4,11 +4,8 @@
 #include "Fecha.h"
 using namespace std;
 
-void Alumno::cargarAlumno();
-void Alumno::mostrarAlumno();
-bool Alumno::GrabarEnDiscoAlumno();
-bool Alumno::LeerEnDiscoAlumno(int nroRegistro);
-
+void BuscarAlumnoDNI();
+void BuscarAlumnoLegajo();
 int Alumnos()
 {
 
@@ -35,7 +32,6 @@ int Alumnos()
         {
         case 1:
             obj.cargarAlumno();
-            obj.GrabarEnDiscoAlumno();
             break;
         case 2:
             while(obj.LeerEnDiscoAlumno(pos)==1){
@@ -48,6 +44,18 @@ int Alumnos()
             break;
         case 3:
 
+            cout<< "1 Buscar alumno por DNI"<<endl;
+            cout<< "2 Buscar alumno por legajo"<<endl;
+            cout<<"Elija una opcion: ";
+            cin>>Opc;
+                switch(Opc){
+            case 1:
+                BuscarAlumnoDNI();
+                break;
+            case 2:
+                BuscarAlumnoLegajo();
+                break;
+                }
             break;
         case 4:
 
@@ -62,4 +70,35 @@ int Alumnos()
     cout<< endl;
     system("pause");
     return 0;
+}
+
+void BuscarAlumnoLegajo(){
+    Alumno Reg;
+    int Pos=0;
+    int Legajo=0;
+    cout<< "Ingrese legajo del alumno: ";
+    cin>>Legajo;
+    while(Reg.LeerEnDiscoAlumno(Pos++)){
+        if(Reg.getlegajo()==Legajo){
+            Reg.mostrarAlumno();
+        }
+    }
+    system("pause");
+
+}
+
+
+
+void BuscarAlumnoDNI(){
+    Alumno Reg;
+    int Pos=0;
+    int DNI=0;
+    cout<< "Ingrese DNI del alumno: ";
+    cin>> DNI;
+    while(Reg.LeerEnDiscoAlumno(Pos++)==1){
+        if(Reg.getDNI()==DNI){
+            Reg.mostrarAlumno();
+        }
+    }
+    system("pause");
 }

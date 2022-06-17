@@ -44,7 +44,6 @@
 		<Unit filename="Maestro.h" />
 		<Unit filename="Materia.cpp" />
 		<Unit filename="Materia.h" />
-		<Unit filename="Persona.cpp" />
 		<Unit filename="Persona.h" />
 		<Unit filename="funcionesrecuadro.h" />
 		<Unit filename="main.cpp" />
