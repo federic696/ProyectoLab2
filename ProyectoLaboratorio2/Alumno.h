@@ -10,18 +10,21 @@ using namespace std;
 
 class Alumno:public Persona{
 private:
-    //int legajo;
+    int legajo;
     int curso;
 
 public:
     //sets()
-
+    void SetLegajo(int Leg){legajo=Leg;}
+    void SetCurso(int Cur){curso=Cur;}
     void cargarAlumno();
     void mostrarAlumno();
     bool GrabarEnDiscoAlumno();
     bool LeerEnDiscoAlumno(int nroRegistro);
 
     //gets()
+    int GetLegajo(){return legajo;}
+    int GetCurso(){return curso;}
 
 
 
@@ -30,24 +33,47 @@ public:
 void Alumno::cargarAlumno()
 {
 
-    cargarPersona();
+     cout << "Nombre: ";
+    cin >>nombre;
+    cout << "Apellido: ";
+    cin >> apellido;
+    cout << "DNI: ";
+    cin >> DNI;
+    cout << "Email: ";
+    cin >> email;
+    cout << "Fecha de nacimiento: ";
+    fechaN.CargarFecha();
     rlutil::locate(2,13);
     cout << "Legajo: ";
     cin >> legajo;
     rlutil::locate(2,14);
     cout << "Curso: ";
     cin >> curso;
+     estado=true;
+    cargarAlumno();
 }
 
 void Alumno::mostrarAlumno()
 {
-    mostrarPersona();
+    cout << "Nombre: ";
+    cout << nombre << endl;
+    cout << "Apellido: ";
+    cout << apellido << endl;
+    cout << "DNI: ";
+    cout << DNI << endl;
+    cout << "Email: ";
+    cout << email << endl;
+    cout << "Fecha de nacimiento: ";
+    fechaN.MostrarFecha();
     rlutil::locate(2,12);
     cout << "Legajo: ";
     cout << legajo << endl;
     rlutil::locate(2,13);
     cout << "Curso: ";
     cout << curso << endl;
+     if(estado==true){
+        cout<<"Persona activa"<<endl;
+    }
 }
 bool Alumno::GrabarEnDiscoAlumno()
 {
