@@ -14,7 +14,7 @@ protected:
     char email[30];
     Fecha fechaN;
     bool estado;
-    char ID;
+    int ID;
     int legajo;
 public:
     //sets()

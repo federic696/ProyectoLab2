@@ -3,6 +3,84 @@
 #include "Materia.h"
 using namespace std;
 
+
+void Materia::cargarMateria()
+{
+    Materia reg;
+    cout<<"ID:";
+    cin>>reg.IDMateria;
+    cout<<"Nombre Materia:";
+    cin>>reg.nombreMateria;
+    cout<<"ID Maestro:";
+    cin>>reg.IDMaestro;
+    reg.estado=true;
+    reg.GrabarEnDiscoMateria();
+}
+void Materia::mostrarMateria()
+{
+    cout<<"ID Materia: "<<IDMateria<<endl;
+    cout<<"Nombre Materia: "<<nombreMateria<<endl;
+    cout<<"ID Maestro: "<<IDMaestro<<endl;
+    cout<<"Estado: "<<estado<<endl;
+
+}
+
+bool Materia::GrabarEnDiscoMateria()
+{
+    FILE *p;
+    p=fopen ("Materia.dat","ab");
+    if(p==NULL)
+    {
+        return false;
+    }
+    bool escribio=fwrite(this,sizeof(Materia),1,p);
+    fclose(p);
+    return escribio;
+}
+bool Materia::LeerEnDiscoMateria(int nroRegistro)
+{
+    FILE *p = fopen("Materia.dat", "rb");
+    if (p == NULL)
+    {
+        return false;
+    }
+    fseek(p, nroRegistro * sizeof(Materia), SEEK_SET);
+    bool leyo = fread(this, sizeof(Materia), 1, p);
+    fclose(p);
+    return leyo;
+}
+
+void mostrarTodasMaterias(){
+    Materia reg;
+    int pos=0;
+    while(reg.LeerEnDiscoMateria(pos++)==1){
+        reg.mostrarMateria();
+        cout<<endl;
+    }
+        system("pause");
+}
+
+void Materia::materiaXMaestro(){
+    Maestro reg;
+    int pos=0;
+    int pos2=0;
+    while(LeerEnDiscoMateria(pos++)){
+            cout<<"ID Materia: "<<IDMateria<<endl;
+            cout<<"Nombre Materia: "<<nombreMateria<<endl;
+        while(reg.LeerEnDiscoMaestro(pos2++)){
+            if(reg.getID()==IDMaestro){
+                cout<<"ID Maestro: "<<IDMaestro<<endl;
+                cout<<"Nombre: "<<reg.getNombre()<<endl;
+                break;
+            }
+        }
+            cout<< "-------------------------------"<<endl;
+        pos2=0;
+    }
+            system("pause");
+}
+
+
 int Materias()
 {
     Materia reg;
@@ -27,7 +105,7 @@ int Materias()
         switch(Opc)
         {
         case 1:
-
+            reg.materiaXMaestro();
             break;
         case 2:
 
@@ -55,3 +133,4 @@ int Materias()
     system("pause");
     return 0;
 }
+
