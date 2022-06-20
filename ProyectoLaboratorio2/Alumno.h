@@ -125,9 +125,6 @@ bool Alumno::LeerEnDiscoAlumno(int nroRegistro){
 }
 int Alumno::ModificarEnDisco(int Pos){
 
-
-///funciones decoracion
-
     FILE *pAlu;
     int escribio;
     pAlu=fopen("Alumnos.dat","rb+");
@@ -138,6 +135,7 @@ int Alumno::ModificarEnDisco(int Pos){
     escribio=fwrite(this,sizeof(Alumno),1,pAlu);
 	fclose(pAlu);
 	return escribio;
+
 }
 void recuadroalu(int x, int y, int ancho, int alto){
 
@@ -259,8 +257,9 @@ void Alumno::ModificarDatosAlumno(){
     int Leg=0;
     cout<< "Ingrese el legajo del alumno: ";
     cin>>Leg;
-    while(LeerEnDiscoAlumno(Pos++)){
+    while(LeerEnDiscoAlumno(Pos++)==1){
         if(Leg==GetLegajo()){
+            LeerEnDiscoAlumno(Pos);
             cout<< "actualise los nuevos datos del alumno: "<<endl;
             cout<< "Nombre: ";
             cin>>  nombre;
@@ -278,7 +277,7 @@ void Alumno::ModificarDatosAlumno(){
             fechaN.CargarFecha();
             setFecha(fechaN);
             ModificarEnDisco(Pos);
-
+            Leg=0;
         }
     }
 

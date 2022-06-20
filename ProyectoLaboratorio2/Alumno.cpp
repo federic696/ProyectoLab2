@@ -58,11 +58,10 @@ int Alumnos()
 
             break;
         case 19:
-            while(obj.LeerEnDiscoAlumno(pos)==1){
-            recuadroalu1(1,1,60,20);
+
+            system("cls");
             while(obj.LeerEnDiscoAlumno(pos++)==1){
-            recuadroalu1(1,1,60,20);
-            rlutil::locate(2,5);
+
             obj.mostrarAlumno();
             cout<<endl;
             pos++;
@@ -71,7 +70,7 @@ int Alumnos()
             cout<< "| ALUMNOS REGISTRADOS |"<<endl;
             rlutil::locate(10,20);
             system("pause");
-            }
+
             break;
 
 
@@ -96,9 +95,9 @@ int Alumnos()
                 }
 
             break;
-        case 21:
+        case 21:system("cls");
                 obj.ModificarDatosAlumno();
-                system("cls");
+
             break;
         case 22:
             return 0;

@@ -20,8 +20,10 @@ public:
 
 
 };
-void Maestro::cargarMaestro()
-{
+
+///funciones para la clase
+
+void Maestro::cargarMaestro(){
     cout << "Nombre: ";
     cin >>nombre;
     cout << "Apellido: ";
@@ -36,8 +38,7 @@ void Maestro::cargarMaestro()
     GrabarEnDiscoMaestro();
 }
 
-void Maestro::mostrarMaestro()
-{
+void Maestro::mostrarMaestro(){
 
         cout << "Nombre: ";
         cout << nombre << endl;
@@ -56,8 +57,8 @@ void Maestro::mostrarMaestro()
 
 
 }
-bool Maestro::GrabarEnDiscoMaestro()
-{
+
+bool Maestro::GrabarEnDiscoMaestro(){
     FILE *p;
     p=fopen ("Maestro.dat","ab");
     if(p==NULL)
@@ -69,8 +70,7 @@ bool Maestro::GrabarEnDiscoMaestro()
     return escribio;
 }
 
-bool Maestro::LeerEnDiscoMaestro(int nroRegistro)
-{
+bool Maestro::LeerEnDiscoMaestro(int nroRegistro){
     FILE *p = fopen("Maestro.dat", "rb");
     if (p == NULL)
     {
@@ -80,6 +80,54 @@ bool Maestro::LeerEnDiscoMaestro(int nroRegistro)
     bool leyo = fread(this, sizeof(Maestro), 1, p);
     fclose(p);
     return leyo;
+}
+
+
+///funciones goables
+
+
+void BuscarMaestro(){
+    Maestro Reg;
+    int Pos=0;
+    int DNI=0;
+    cout<< "Ingrese el DNI del maestro: ";
+    cin>>DNI;
+    while(Reg.LeerEnDiscoMaestro(Pos++))
+    {
+        if(Reg.getDNI()==DNI)
+        {
+            Reg.mostrarMaestro();
+        }
+    }
+    system("pause");
+}
+
+
+void ModificarMaestro(){
+    char Nombre[30],Apellido[30],Email[30];
+    int Pos=0, dni=0, DNI=0,Dia=0,Mes=0,Anio=0;
+    Maestro Reg;
+    cout<< "ingrese el DNI del maestro: ";
+    cin>> DNI;
+    while(Reg.LeerEnDiscoMaestro(Pos++)){
+        if(Reg.getDNI()==DNI){
+            cout<< "Actualice los datos del maestro: ";
+            cout << "Nombre: ";
+            cin >> Nombre;
+            Reg.setNombre(Nombre);
+            cout << "Apellido: ";
+            cin >> Apellido;
+            cout << "DNI: ";
+            cin >> dni;
+            cout << "Email: ";
+            cin >> Email;
+            cout << "Fecha de nacimiento: ";
+
+
+            }
+    }
+
+
 }
 
 #endif // MAESTRO_H_INCLUDED

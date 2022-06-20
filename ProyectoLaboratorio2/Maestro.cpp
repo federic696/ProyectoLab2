@@ -33,6 +33,7 @@ Maestro mas;
             mas.mostrarMaestro();
             cout<<endl;
             }
+            system("pause");
             break;
         case 3:
             BuscarMaestro();
@@ -55,18 +56,4 @@ Maestro mas;
 
 
 
-void BuscarMaestro(){
-    Maestro Reg;
-    int Pos=0;
-    int DNI=0;
-    cout<< "Ingrese el DNI del maestro: ";
-    cin>>DNI;
-    while(Reg.LeerEnDiscoMaestro(Pos++))
-    {
-        if(Reg.getDNI()==DNI)
-        {
-            Reg.mostrarMaestro();
-        }
-    }
-    system("pause");
-}
+
