@@ -3,7 +3,7 @@
 	<iostream>
 	"funcionesrecuadro.h"
 
-1655590499 source:c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\alumno.cpp
+1655590995 source:c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\alumno.cpp
 	<iostream>
 	<conio.h>
 	"Alumno.h"
@@ -32,7 +32,7 @@
 	<cstdlib>
 	<string.h>
 
-1655482510 source:c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\maestro.cpp
+1655591537 source:c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\maestro.cpp
 	<iostream>
 	<conio.h>
 	"Maestro.h"
@@ -266,7 +266,7 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1655590604 c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\alumno.h
+1655590995 c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\alumno.h
 	<iostream>
 	<iostream>
 	<cstdlib>

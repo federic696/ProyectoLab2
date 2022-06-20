@@ -11,6 +11,7 @@ bool Alumno::GrabarEnDiscoAlumno();
 bool Alumno::LeerEnDiscoAlumno(int nroRegistro);
 void BuscarAlumnoDNI();
 void BuscarAlumnoLegajo();
+
 int Alumnos()
 {
 
@@ -48,7 +49,7 @@ int Alumnos()
             rlutil::locate(20,3);
             cout<< "| CARGAR ALUMNO |"<<endl;
             obj.cargarAlumno();
-            //obj.GrabarEnDiscoAlumno();
+            obj.GrabarEnDiscoAlumno();
             rlutil::locate(14,17);
             cout << "ALUMNO CARGADO CORRECTAMENTE!";
             rlutil::locate(10,20);
@@ -57,12 +58,15 @@ int Alumnos()
 
             break;
         case 19:
-           // system("cls");
+            while(obj.LeerEnDiscoAlumno(pos)==1){
             recuadroalu1(1,1,60,20);
             while(obj.LeerEnDiscoAlumno(pos++)==1){
             recuadroalu1(1,1,60,20);
             rlutil::locate(2,5);
             obj.mostrarAlumno();
+            cout<<endl;
+            pos++;
+            }
             rlutil::locate(20,3);
             cout<< "| ALUMNOS REGISTRADOS |"<<endl;
             rlutil::locate(10,20);

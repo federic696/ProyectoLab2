@@ -50,7 +50,7 @@ void Alumno::cargarAlumno()
     cout << "Curso: ";
     cin >> curso;
      estado=true;
-    cargarAlumno();
+
 }
 
 void Alumno::mostrarAlumno()

@@ -16,7 +16,7 @@ Maestro mas;
         cout<< "2) Mostrar Maestros"<<endl;
         cout<< "3) Buscar por DNI"<<endl;
         cout<< "4) Modificar Maestro por DNI"<<endl;
-        cout<< "5) Darlo de baja o alta por Legajo o DNI"<<endl;
+        cout<< "5) Darlo de baja o alta por DNI"<<endl;
         cout<< "0) Volver a menu"<<endl;
         cout<< "-------------------------------"<<endl;
         cout<< "Opcion: "<<endl;
