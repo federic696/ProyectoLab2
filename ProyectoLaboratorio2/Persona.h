@@ -37,7 +37,9 @@ public:
     void setID(int i){
         ID=i;
     }
-    void setEmail(const char *e);
+    void setEmail(const char *e){
+        strcpy(email,e);
+    }
     void setFecha();
     void setEstado();
     void cargarPersona();

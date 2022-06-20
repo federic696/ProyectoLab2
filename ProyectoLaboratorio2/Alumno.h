@@ -7,6 +7,12 @@ using namespace std;
 #include <string.h>
 #include "Persona.h"
 #include "rlutil.h"
+#include "Grado.h"
+
+///funciones globales
+int BuscarLegajo(int Leg);
+
+
 
 class Alumno:public Persona{
 private:
@@ -21,7 +27,8 @@ public:
     void mostrarAlumno();
     bool GrabarEnDiscoAlumno();
     bool LeerEnDiscoAlumno(int nroRegistro);
-
+    void ModificarDatosAlumno();
+    int ModificarEnDisco(int Pos);
     //gets()
     int GetLegajo(){return legajo;}
     int GetCurso(){return curso;}
@@ -30,31 +37,50 @@ public:
 
 };
 
-void Alumno::cargarAlumno()
-{
+void Alumno::cargarAlumno(){
 
-     cout << "Nombre: ";
+    rlutil::locate(2,8);
+    cout << "Nombre: ";
     cin >>nombre;
+    rlutil::locate(2,9);
     cout << "Apellido: ";
     cin >> apellido;
+    rlutil::locate(2,10);
     cout << "DNI: ";
     cin >> DNI;
+
+    while(DNI<=0){
+        rlutil::locate(2,11);
+        cout<< "Ingrese un DNI correcto: ";
+        cin>>DNI;
+
+    }
+    rlutil::locate(2,12);
     cout << "Email: ";
     cin >> email;
+
     cout << "Fecha de nacimiento: ";
     fechaN.CargarFecha();
     rlutil::locate(2,13);
     cout << "Legajo: ";
     cin >> legajo;
-    rlutil::locate(2,14);
-    cout << "Curso: ";
+    while(BuscarLegajo(legajo)==0){
+        cout<< "Ingrese un legajo no exitente: ";
+        cin>>legajo;
+        rlutil::locate(2,14);
+    }
+    rlutil::locate(2,15);
+    cout << "Grado: ";
     cin >> curso;
      estado=true;
 
 }
 
-void Alumno::mostrarAlumno()
-{
+
+
+///Funciones dentro de disco
+
+void Alumno::mostrarAlumno(){
     cout << "Nombre: ";
     cout << nombre << endl;
     cout << "Apellido: ";
@@ -75,8 +101,7 @@ void Alumno::mostrarAlumno()
         cout<<"Persona activa"<<endl;
     }
 }
-bool Alumno::GrabarEnDiscoAlumno()
-{
+bool Alumno::GrabarEnDiscoAlumno(){
     FILE *p;
     p=fopen ("Alumno.dat","ab");
     if(p==NULL)
@@ -87,8 +112,7 @@ bool Alumno::GrabarEnDiscoAlumno()
     fclose(p);
     return escribio;
 }
-bool Alumno::LeerEnDiscoAlumno(int nroRegistro)
-{
+bool Alumno::LeerEnDiscoAlumno(int nroRegistro){
     FILE *p = fopen("Alumno.dat", "rb");
     if (p == NULL)
     {
@@ -99,7 +123,22 @@ bool Alumno::LeerEnDiscoAlumno(int nroRegistro)
     fclose(p);
     return leyo;
 }
+int Alumno::ModificarEnDisco(int Pos){
 
+
+///funciones decoracion
+
+    FILE *pAlu;
+    int escribio;
+    pAlu=fopen("Alumnos.dat","rb+");
+    if(pAlu==NULL){
+        return -1;
+    }
+    fseek(pAlu, Pos*sizeof(Alumno),0);
+    escribio=fwrite(this,sizeof(Alumno),1,pAlu);
+	fclose(pAlu);
+	return escribio;
+}
 void recuadroalu(int x, int y, int ancho, int alto){
 
 const char *UI_BOTTOM_RIGHT = "\xD9"; // 217 - ┘
@@ -156,9 +195,6 @@ const char *UI_VERTICAL_LINE = "\xB3"; // 179 - │
     rlutil::resetColor();
     rlutil::setBackgroundColor(rlutil::DARKGREY);
 }
-
-
-
 void recuadroalu1(int x, int y, int ancho, int alto){
 
 const char *UI_BOTTOM_RIGHT = "\xD9"; // 217 - ┘
@@ -212,6 +248,85 @@ const char *UI_VERTICAL_LINE = "\xB3"; // 179 - │
     rlutil::locate(x+ancho, y+alto);
     cout << UI_BOTTOM_RIGHT;
 }
+
+
+
+
+
+
+void Alumno::ModificarDatosAlumno(){
+    int Pos=0;
+    int Leg=0;
+    cout<< "Ingrese el legajo del alumno: ";
+    cin>>Leg;
+    while(LeerEnDiscoAlumno(Pos++)){
+        if(Leg==GetLegajo()){
+            cout<< "actualise los nuevos datos del alumno: "<<endl;
+            cout<< "Nombre: ";
+            cin>>  nombre;
+            setNombre(nombre);
+            cout<< "Apellido: ";
+            cin>> apellido;
+            setApellido(apellido);
+            cout<< "DNI: ";
+            cin >> DNI;
+            setDNI(DNI);
+            cout << "Email: ";
+            cin >> email;
+            setEmail(email);
+            cout << "Fecha de nacimiento: ";
+            fechaN.CargarFecha();
+            setFecha(fechaN);
+            ModificarEnDisco(Pos);
+
+        }
+    }
+
+
+}
+
+///funciones globales
+
+int BuscarLegajo(int Leg){
+    Alumno Reg;
+    int Pos=0;
+
+    while(Reg.LeerEnDiscoAlumno(Pos++)){
+        if(Reg.GetLegajo()==Leg){
+            return 0;
+        }
+    }
+    return 1;
+
+}
+void BuscarAlumnoLegajo(){
+    Alumno Reg;
+    int Pos=0;
+    int Legajo=0;
+    cout<< "Ingrese legajo del alumno: ";
+    cin>>Legajo;
+    while(Reg.LeerEnDiscoAlumno(Pos++)){
+        if(Reg.GetLegajo()==Legajo){
+            Reg.mostrarAlumno();
+        }
+    }
+    system("pause");
+
+}
+void BuscarAlumnoDNI(){
+    Alumno Reg;
+    int Pos=0;
+    int DNI=0;
+    cout<< "Ingrese DNI del alumno: ";
+    cin>> DNI;
+    while(Reg.LeerEnDiscoAlumno(Pos++)==1){
+        if(Reg.getDNI()==DNI){
+            Reg.mostrarAlumno();
+        }
+    }
+    system("pause");
+}
+
 
 
 

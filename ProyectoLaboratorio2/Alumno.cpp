@@ -33,7 +33,7 @@ int Alumnos()
         rlutil::locate(11,11);
         cout<< "F3 - Buscar por DNI o Legajo"<<endl;
         rlutil::locate(11,13);
-        cout<< "F4 - Modificar Estudiante Por DNI o Legajo"<<endl;
+        cout<< "F4 - Modificar Estudiante Por Legajo"<<endl;
         rlutil::locate(11,15);
         cout<< "F5 - Darlo de baja o alta por Legajo o DNI"<<endl;
         rlutil::locate(11,17);
@@ -51,7 +51,7 @@ int Alumnos()
             obj.cargarAlumno();
             obj.GrabarEnDiscoAlumno();
             rlutil::locate(14,17);
-            cout << "ALUMNO CARGADO CORRECTAMENTE!";
+            if(obj.GrabarEnDiscoAlumno())cout << "ALUMNO CARGADO CORRECTAMENTE!";
             rlutil::locate(10,20);
             system("pause");
             system("cls");
@@ -97,7 +97,8 @@ int Alumnos()
 
             break;
         case 21:
-
+                obj.ModificarDatosAlumno();
+                system("cls");
             break;
         case 22:
             return 0;
@@ -109,39 +110,6 @@ int Alumnos()
     cout<< endl;
     system("pause");
     return 0;
-}
-
-
-
-void BuscarAlumnoLegajo(){
-    Alumno Reg;
-    int Pos=0;
-    int Legajo=0;
-    cout<< "Ingrese legajo del alumno: ";
-    cin>>Legajo;
-    while(Reg.LeerEnDiscoAlumno(Pos++)){
-        if(Reg.GetLegajo()==Legajo){
-            Reg.mostrarAlumno();
-        }
-    }
-    system("pause");
-
-}
-
-
-
-void BuscarAlumnoDNI(){
-    Alumno Reg;
-    int Pos=0;
-    int DNI=0;
-    cout<< "Ingrese DNI del alumno: ";
-    cin>> DNI;
-    while(Reg.LeerEnDiscoAlumno(Pos++)==1){
-        if(Reg.getDNI()==DNI){
-            Reg.mostrarAlumno();
-        }
-    }
-    system("pause");
 }
 
 

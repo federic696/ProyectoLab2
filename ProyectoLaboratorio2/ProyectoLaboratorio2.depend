@@ -3,7 +3,7 @@
 	<iostream>
 	"funcionesrecuadro.h"
 
-1655590995 source:c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\alumno.cpp
+1655739668 source:c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\alumno.cpp
 	<iostream>
 	<conio.h>
 	"Alumno.h"
@@ -266,15 +266,16 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1655590995 c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\alumno.h
+1655741198 c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\alumno.h
 	<iostream>
 	<iostream>
 	<cstdlib>
 	<string.h>
 	"Persona.h"
 	"rlutil.h"
+	"Grado.h"
 
-1655419975 c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\persona.h
+1655737919 c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\persona.h
 	<iostream>
 	<cstdlib>
 	<string.h>
@@ -432,6 +433,13 @@
 	"Fecha.h"
 
 1655417101 c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\materia.h
+	<iostream>
+	<iostream>
+	<cstdlib>
+	<string.h>
+	"Fecha.h"
+
+1655740846 c:\users\feder\desktop\proyectolab2\proyectolaboratorio2\grado.h
 	<iostream>
 	<iostream>
 	<cstdlib>
