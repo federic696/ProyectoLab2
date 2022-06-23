@@ -5,6 +5,21 @@
 using namespace std;
 #include "rlutil.h"
 
+int Alumno::cantidadAlumnos(){
+    FILE *p = fopen("Alumnos.dat", "rb");
+    if (p == NULL){
+        return 0;
+    }
+    size_t bytes;
+    int cant_reg;
+
+    fseek(p, 0, SEEK_END);
+    bytes = ftell(p);
+    fclose(p);
+    cant_reg = bytes / sizeof(Alumno);
+    return cant_reg;
+}
+
 void Alumno::cargarAlumno(){
 
     rlutil::locate(2,8);

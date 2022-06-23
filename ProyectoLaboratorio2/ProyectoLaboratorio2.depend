@@ -148,14 +148,14 @@
 	<string.h>
 	"Fecha.h"
 
-1655759559 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\alumno.cpp
+1655951581 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\alumno.cpp
 	<iostream>
 	<conio.h>
 	"Alumno.h"
 	"Fecha.h"
 	"rlutil.h"
 
-1655759559 c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\alumno.h
+1655951585 c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\alumno.h
 	<iostream>
 	<iostream>
 	<cstdlib>
@@ -197,7 +197,7 @@
 	<iostream>
 	"funcionesrecuadro.h"
 
-1655760513 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\materia.cpp
+1656023732 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\materia.cpp
 	<iostream>
 	<conio.h>
 	"Materia.h"
@@ -380,13 +380,15 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1655760346 c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\materia.h
+1656023532 c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\materia.h
 	<iostream>
 	<iostream>
 	<cstdlib>
 	<string.h>
 	"Maestro.h"
 	"Fecha.h"
+	"Alumno.h"
+	"ExamenYNotas.h"
 
 1655436434 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\maestro.h
 	<iostream>

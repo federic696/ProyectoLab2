@@ -1,8 +1,67 @@
 #include<iostream>
 #include<conio.h>
 #include "Materia.h"
+
 using namespace std;
 
+
+void Materia::mejorPromedio(){
+    Alumno reg;
+    int cantAlumnos=reg.cantidadAlumnos();
+
+    int IDAlumn[cantAlumnos]={0};
+    int sumaNota[cantAlumnos]={0};
+    int cantNota[cantAlumnos]={0};
+    float promedio[cantAlumnos]={0};
+    ExamenYNotas reg2;
+    int pos=0;
+    int pos2=0;
+
+    while(reg.LeerEnDiscoAlumno(pos++)){
+        for(int i=0;i<cantAlumnos;i++){
+            if(IDAlumn[i]==0){
+                IDAlumn[i]=reg.getID();
+                break;
+            }
+        }
+    }
+    while(reg2.LeerEnDiscoExamenYNotas(pos2++)){
+        for(int i=0;i<cantAlumnos;i++){
+            if(IDAlumn[i]==reg2.getIDAlumno() && reg2.getIDExamen()== getIDMateria()){
+                sumaNota[i]+=reg2.getNota();
+                cantNota[i]++;
+            }
+        }
+    }
+
+    for(int i=0; i<cantAlumnos;i++){
+       promedio[i]=sumaNota[i]/cantNota[i];
+    }
+
+    int mayorAlumno=0;
+    float mayorPromedio=0;
+
+    for(int i=0; i<cantAlumnos;i++){
+       if(promedio[i]>mayorPromedio){
+        mayorPromedio=promedio[i];
+        mayorAlumno=i;
+       }
+    }
+    char nombreAlumno[30];
+    pos=0;
+    while(reg.LeerEnDiscoAlumno(pos++)){
+        if(IDAlumn[mayorAlumno]==reg.getID()){
+                strcpy(nombreAlumno,reg.getNombre());
+            //*nombreAlumno=reg.getNombre();
+            break;
+        }
+    }
+    cout<<"Materia: "<<getNombreMateria()<<endl;
+    cout<<"Mejor Promedio: "<<mayorPromedio<<endl;
+    cout<<"Alumno: "<<nombreAlumno<<endl;
+    cout<< "-------------------------------"<<endl;
+
+}
 
 void Materia::cargarMateria()
 {
@@ -85,6 +144,7 @@ int Materias()
 {
     Materia reg;
     int Opc;
+    int pos=0;
     while(true)
     {
         system("cls");
@@ -108,7 +168,10 @@ int Materias()
             reg.materiaXMaestro();
             break;
         case 2:
-
+            while(reg.LeerEnDiscoMateria(pos++)){
+             reg.mejorPromedio();
+            }
+            system("pause");
             break;
         case 3:
             mostrarTodasMaterias();

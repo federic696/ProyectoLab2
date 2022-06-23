@@ -32,7 +32,7 @@ public:
     //gets()
     int GetLegajo(){return legajo;}
     int GetCurso(){return curso;}
-
+    int cantidadAlumnos();
 
 
 };

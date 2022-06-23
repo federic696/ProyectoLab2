@@ -6,6 +6,8 @@
 #include <string.h>
 #include "Maestro.h"
 #include "Fecha.h"
+#include "Alumno.h"
+#include "ExamenYNotas.h"
 
 using namespace std;
 
@@ -21,9 +23,15 @@ private:
 
 public:
     //sets()
-
+    int getIDMateria(){
+        return IDMateria;
+    }
+    char *getNombreMateria(){
+        return nombreMateria;
+    }
     void cargarMateria();
     void mostrarMateria();
+    void mejorPromedio();
     bool GrabarEnDiscoMateria();
     bool LeerEnDiscoMateria(int nroRegistro);
     void materiaXMaestro();
