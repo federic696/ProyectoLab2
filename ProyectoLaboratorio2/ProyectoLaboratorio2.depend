@@ -469,7 +469,11 @@
 	<string.h>
 	"Fecha.h"
 
+<<<<<<< Updated upstream
 1656047419 source:c:\users\feded\onedrive\documentos\github\proyectolab2\proyectolaboratorio2\alumno.cpp
+=======
+1656107897 source:c:\users\feded\onedrive\documentos\github\proyectolab2\proyectolaboratorio2\alumno.cpp
+>>>>>>> Stashed changes
 	<iostream>
 	<conio.h>
 	"Alumno.h"
@@ -526,7 +530,11 @@
 	<string.h>
 	"Fecha.h"
 
+<<<<<<< Updated upstream
 1656047419 source:c:\users\feded\onedrive\documentos\github\proyectolab2\proyectolaboratorio2\fecha.cpp
+=======
+1656107897 source:c:\users\feded\onedrive\documentos\github\proyectolab2\proyectolaboratorio2\fecha.cpp
+>>>>>>> Stashed changes
 	<iostream>
 	<conio.h>
 	"Fecha.h"
@@ -537,7 +545,11 @@
 	<conio.h>
 	"Grado.h"
 
+<<<<<<< Updated upstream
 1656047419 source:c:\users\feded\onedrive\documentos\github\proyectolab2\proyectolaboratorio2\maestro.cpp
+=======
+1656107897 source:c:\users\feded\onedrive\documentos\github\proyectolab2\proyectolaboratorio2\maestro.cpp
+>>>>>>> Stashed changes
 	<iostream>
 	<conio.h>
 	"Maestro.h"

@@ -182,6 +182,7 @@ int ExamenNotas(){
     int pos=0;
     while(true)
     {
+
         system("cls");
         cout<< "| MENU Examen y Notas | "<<endl;
         cout<< "-------------------------------"<<endl;
