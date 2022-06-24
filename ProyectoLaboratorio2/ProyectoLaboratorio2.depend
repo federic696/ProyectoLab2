@@ -469,7 +469,7 @@
 	<string.h>
 	"Fecha.h"
 
-1656046269 source:c:\users\feded\onedrive\documentos\github\proyectolab2\proyectolaboratorio2\alumno.cpp
+1656047419 source:c:\users\feded\onedrive\documentos\github\proyectolab2\proyectolaboratorio2\alumno.cpp
 	<iostream>
 	<conio.h>
 	"Alumno.h"
@@ -526,7 +526,7 @@
 	<string.h>
 	"Fecha.h"
 
-1656043121 source:c:\users\feded\onedrive\documentos\github\proyectolab2\proyectolaboratorio2\fecha.cpp
+1656047419 source:c:\users\feded\onedrive\documentos\github\proyectolab2\proyectolaboratorio2\fecha.cpp
 	<iostream>
 	<conio.h>
 	"Fecha.h"
@@ -537,11 +537,10 @@
 	<conio.h>
 	"Grado.h"
 
-1656046344 source:c:\users\feded\onedrive\documentos\github\proyectolab2\proyectolaboratorio2\maestro.cpp
+1656047419 source:c:\users\feded\onedrive\documentos\github\proyectolab2\proyectolaboratorio2\maestro.cpp
 	<iostream>
 	<conio.h>
 	"Maestro.h"
-	"rlutil.h"
 
 1655769191 c:\users\feded\onedrive\documentos\github\proyectolab2\proyectolaboratorio2\maestro.h
 	<iostream>

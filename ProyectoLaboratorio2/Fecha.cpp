@@ -11,15 +11,15 @@ void Fecha::MostrarFecha()
 void Fecha::CargarFecha()
 {
     int d;
-    rlutil::locate(2,14);
+    rlutil::locate(4,10);
     cout<<"DIA: ";
     cin>>d;
     setDia(d);
-    rlutil::locate(2,15);
+    rlutil::locate(4,11);
     cout<<"MES: ";
     cin>>d;
     setMes(d);
-    rlutil::locate(2,16);
+    rlutil::locate(4,12);
     cout<<"ANIO: ";
     cin>>d;
     setAnio(d);

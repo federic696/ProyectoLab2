@@ -31,6 +31,7 @@ void Alumno::cargarAlumno(){
     rlutil::locate(2,10);
     cout << "DNI: ";
     cin >> DNI;
+
     while(DNI<=0){
         rlutil::locate(2,11);
         cout<< "Ingrese un DNI correcto: ";
@@ -40,18 +41,18 @@ void Alumno::cargarAlumno(){
     rlutil::locate(2,12);
     cout << "Email: ";
     cin >> email;
-    rlutil::locate(2,13);
+
     cout << "Fecha de nacimiento: ";
     fechaN.CargarFecha();
-    rlutil::locate(2,17);
+    rlutil::locate(2,13);
     cout << "Legajo: ";
     cin >> legajo;
     while(BuscarLegajo(legajo)==0){
-        rlutil::locate(2,18);
         cout<< "Ingrese un legajo no exitente: ";
         cin>>legajo;
+        rlutil::locate(2,14);
     }
-    rlutil::locate(2,19);
+    rlutil::locate(2,15);
     cout << "Grado: ";
     cin >> curso;
      estado=true;
@@ -63,29 +64,23 @@ void Alumno::cargarAlumno(){
 ///Funciones dentro de disco
 
 void Alumno::mostrarAlumno(){
-    rlutil::locate(2,8);
     cout << "Nombre: ";
     cout << nombre << endl;
-    rlutil::locate(2,9);
     cout << "Apellido: ";
     cout << apellido << endl;
-    rlutil::locate(2,10);
     cout << "DNI: ";
     cout << DNI << endl;
-    rlutil::locate(2,11);
     cout << "Email: ";
     cout << email << endl;
-    rlutil::locate(2,12);
     cout << "Fecha de nacimiento: ";
     fechaN.MostrarFecha();
-    rlutil::locate(2,13);
+    rlutil::locate(2,12);
     cout << "Legajo: ";
     cout << legajo << endl;
-    rlutil::locate(2,14);
+    rlutil::locate(2,13);
     cout << "Curso: ";
     cout << curso << endl;
      if(estado==true){
-        rlutil::locate(2,15);
         cout<<"Persona activa"<<endl;
     }
 }
@@ -243,31 +238,24 @@ const char *UI_VERTICAL_LINE = "\xB3"; // 179 - │
 void Alumno::ModificarDatosAlumno(){
     int Pos=0;
     int Leg=0;
-    rlutil::locate(2,6);
     cout<< "Ingrese el legajo del alumno: ";
     cin>>Leg;
     while(LeerEnDiscoAlumno(Pos++)==1){
         if(Leg==GetLegajo()){
             LeerEnDiscoAlumno(Pos);
-            rlutil::locate(10,7);
-            cout<< "Actualice los nuevos datos del alumno"<<endl;
-            rlutil::locate(2,8);
+            cout<< "actualise los nuevos datos del alumno: "<<endl;
             cout<< "Nombre: ";
             cin>>  nombre;
             setNombre(nombre);
-            rlutil::locate(2,9);
             cout<< "Apellido: ";
             cin>> apellido;
             setApellido(apellido);
-            rlutil::locate(2,10);
             cout<< "DNI: ";
             cin >> DNI;
             setDNI(DNI);
-            rlutil::locate(2,11);
             cout << "Email: ";
             cin >> email;
             setEmail(email);
-            rlutil::locate(2,12);
             cout << "Fecha de nacimiento: ";
             fechaN.CargarFecha();
             setFecha(fechaN);
@@ -297,7 +285,6 @@ void BuscarAlumnoLegajo(){
     Alumno Reg;
     int Pos=0;
     int Legajo=0;
-    rlutil::locate(2,6);
     cout<< "Ingrese legajo del alumno: ";
     cin>>Legajo;
     while(Reg.LeerEnDiscoAlumno(Pos++)){
@@ -305,7 +292,6 @@ void BuscarAlumnoLegajo(){
             Reg.mostrarAlumno();
         }
     }
-    rlutil::locate(10,20);
     system("pause");
 
 }
@@ -313,7 +299,6 @@ void BuscarAlumnoDNI(){
     Alumno Reg;
     int Pos=0;
     int DNI=0;
-    rlutil::locate(2,6);
     cout<< "Ingrese DNI del alumno: ";
     cin>> DNI;
     while(Reg.LeerEnDiscoAlumno(Pos++)==1){
@@ -321,7 +306,6 @@ void BuscarAlumnoDNI(){
             Reg.mostrarAlumno();
         }
     }
-    rlutil::locate(10,20);
     system("pause");
 }
 
@@ -365,7 +349,7 @@ int Alumnos()
             cout<< "| CARGAR ALUMNO |"<<endl;
             obj.cargarAlumno();
             obj.GrabarEnDiscoAlumno();
-            rlutil::locate(12,20);
+            rlutil::locate(14,17);
             if(obj.GrabarEnDiscoAlumno())cout << "ALUMNO CARGADO CORRECTAMENTE!";
             rlutil::locate(10,20);
             system("pause");
@@ -376,16 +360,15 @@ int Alumnos()
 
             system("cls");
             while(obj.LeerEnDiscoAlumno(pos++)==1){
-            recuadroalu(1,1,60,20);
-            recuadroalu1(1,1,60,20);
+
             obj.mostrarAlumno();
+            cout<<endl;
+            pos++;
+            }
             rlutil::locate(20,3);
             cout<< "| ALUMNOS REGISTRADOS |"<<endl;
             rlutil::locate(10,20);
             system("pause");
-            system("cls");
-            pos++;
-            }
 
             break;
 
@@ -395,40 +378,23 @@ int Alumnos()
 
 
         case 20:
-            system("cls");
-            recuadroalu(1,1,60,20);
-            recuadroalu1(1,1,60,20);
-            rlutil::locate(20,3);
-            cout<< "| BUSCAR ALUMNO |"<<endl;
-            rlutil::locate(11,8);
-            cout<< "F1 - Buscar alumno por DNI"<<endl;
-            rlutil::locate(11,10);
-            cout<< "F2 - Buscar alumno por legajo"<<endl;
-            Opc=rlutil::getkey();
-            system("cls");
-            switch(Opc){
-            case 18:
-            recuadroalu(1,1,60,20);
-            recuadroalu1(1,1,60,20);
-            rlutil::locate(20,3);
-            cout<< "| BUSCAR POR DNI |"<<endl;
+                system("cls");
+            cout<< "1 Buscar alumno por DNI"<<endl;
+            cout<< "2 Buscar alumno por legajo"<<endl;
+            cout<<"Elija una opcion: ";
+            cin>>Opc;
+                system("cls");
+                switch(Opc){
+            case 1:
                 BuscarAlumnoDNI();
                 break;
-            case 19:
-            recuadroalu(1,1,60,20);
-            recuadroalu1(1,1,60,20);
-            rlutil::locate(20,3);
-            cout<< "| BUSCAR POR LEJAGO |"<<endl;
+            case 2:
                 BuscarAlumnoLegajo();
                 break;
                 }
 
             break;
         case 21:system("cls");
-            recuadroalu(1,1,60,20);
-            recuadroalu1(1,1,60,20);
-            rlutil::locate(20,3);
-            cout<< "| MODIFICAR ALUMNO |"<<endl;
                 obj.ModificarDatosAlumno();
 
             break;
