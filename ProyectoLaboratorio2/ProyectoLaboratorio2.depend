@@ -469,3 +469,111 @@
 	<string.h>
 	"Fecha.h"
 
+1656046269 source:c:\users\feded\onedrive\documentos\github\proyectolab2\proyectolaboratorio2\alumno.cpp
+	<iostream>
+	<conio.h>
+	"Alumno.h"
+	"Fecha.h"
+	"rlutil.h"
+
+1656041926 c:\users\feded\onedrive\documentos\github\proyectolab2\proyectolaboratorio2\alumno.h
+	<iostream>
+	<iostream>
+	<cstdlib>
+	<string.h>
+	"Persona.h"
+	"rlutil.h"
+	"Grado.h"
+
+1655769191 c:\users\feded\onedrive\documentos\github\proyectolab2\proyectolaboratorio2\persona.h
+	<iostream>
+	<cstdlib>
+	<string.h>
+	"Fecha.h"
+
+1655769191 c:\users\feded\onedrive\documentos\github\proyectolab2\proyectolaboratorio2\fecha.h
+
+1655769191 c:\users\feded\onedrive\documentos\github\proyectolab2\proyectolaboratorio2\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1655769191 c:\users\feded\onedrive\documentos\github\proyectolab2\proyectolaboratorio2\grado.h
+	<iostream>
+	<iostream>
+	<cstdlib>
+	<string.h>
+	"Fecha.h"
+
+1655769191 source:c:\users\feded\onedrive\documentos\github\proyectolab2\proyectolaboratorio2\examenynotas.cpp
+	<iostream>
+	<conio.h>
+	"ExamenYNotas.h"
+
+1655769191 c:\users\feded\onedrive\documentos\github\proyectolab2\proyectolaboratorio2\examenynotas.h
+	<iostream>
+	<iostream>
+	<cstdlib>
+	<string.h>
+	"Fecha.h"
+
+1656043121 source:c:\users\feded\onedrive\documentos\github\proyectolab2\proyectolaboratorio2\fecha.cpp
+	<iostream>
+	<conio.h>
+	"Fecha.h"
+	"rlutil.h"
+
+1655769191 source:c:\users\feded\onedrive\documentos\github\proyectolab2\proyectolaboratorio2\grado.cpp
+	<iostream>
+	<conio.h>
+	"Grado.h"
+
+1656046344 source:c:\users\feded\onedrive\documentos\github\proyectolab2\proyectolaboratorio2\maestro.cpp
+	<iostream>
+	<conio.h>
+	"Maestro.h"
+	"rlutil.h"
+
+1655769191 c:\users\feded\onedrive\documentos\github\proyectolab2\proyectolaboratorio2\maestro.h
+	<iostream>
+	<iostream>
+	<cstdlib>
+	<string.h>
+	"Fecha.h"
+	"Persona.h"
+
+1655769191 source:c:\users\feded\onedrive\documentos\github\proyectolab2\proyectolaboratorio2\main.cpp
+	<iostream>
+	"funcionesrecuadro.h"
+
+1655769191 c:\users\feded\onedrive\documentos\github\proyectolab2\proyectolaboratorio2\funcionesrecuadro.h
+	<iostream>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	"rlutil.h"
+
+1656041926 source:c:\users\feded\onedrive\documentos\github\proyectolab2\proyectolaboratorio2\materia.cpp
+	<iostream>
+	<conio.h>
+	"Materia.h"
+
+1656041926 c:\users\feded\onedrive\documentos\github\proyectolab2\proyectolaboratorio2\materia.h
+	<iostream>
+	<iostream>
+	<cstdlib>
+	<string.h>
+	"Maestro.h"
+	"Fecha.h"
+	"Alumno.h"
+	"ExamenYNotas.h"
+

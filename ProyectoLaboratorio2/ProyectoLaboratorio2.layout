@@ -4,47 +4,12 @@
 	<ActiveTarget name="Debug" />
 	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1177" topLine="27" />
+			<Cursor1 position="597" topLine="9" />
 		</Cursor>
 	</File>
-	<File name="rlutil.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="funcionesrecuadro.h" open="1" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="9362" topLine="291" />
-		</Cursor>
-	</File>
-	<File name="Maestro.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="395" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Alumno.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="775" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Fecha.h" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="13" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Grado.cpp" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="57" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Maestro.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1189" topLine="87" />
-		</Cursor>
-	</File>
-	<File name="Materia.cpp" open="1" top="1" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1376" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Materia.h" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="202" topLine="0" />
+			<Cursor1 position="305" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="Persona.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -52,19 +17,39 @@
 			<Cursor1 position="269" topLine="6" />
 		</Cursor>
 	</File>
+	<File name="ExamenYNotas.cpp" open="1" top="1" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2463" topLine="49" />
+		</Cursor>
+		<Folding>
+			<Collapse line="43" />
+			<Collapse line="64" />
+			<Collapse line="80" />
+			<Collapse line="104" />
+			<Collapse line="128" />
+			<Collapse line="141" />
+			<Collapse line="154" />
+			<Collapse line="166" />
+		</Folding>
+	</File>
+	<File name="Alumno.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="775" topLine="12" />
+		</Cursor>
+	</File>
+	<File name="Materia.h" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="202" topLine="0" />
+		</Cursor>
+	</File>
 	<File name="Fecha.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="57" topLine="0" />
+			<Cursor1 position="342" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="Alumno.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+	<File name="Maestro.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="137" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Grado.h" open="1" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="461" topLine="0" />
+			<Cursor1 position="395" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="ExamenYNotas.h" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -72,14 +57,57 @@
 			<Cursor1 position="721" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="ExamenYNotas.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Materia.cpp" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="222" topLine="0" />
+			<Cursor1 position="1376" topLine="147" />
 		</Cursor>
 	</File>
-	<File name="funcionesrecuadro.h" open="1" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Fecha.h" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="305" topLine="0" />
+			<Cursor1 position="13" topLine="0" />
 		</Cursor>
+	</File>
+	<File name="rlutil.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="9362" topLine="291" />
+		</Cursor>
+	</File>
+	<File name="Grado.h" open="1" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="461" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Maestro.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="241" topLine="51" />
+		</Cursor>
+		<Folding>
+			<Collapse line="209" />
+			<Collapse line="262" />
+		</Folding>
+	</File>
+	<File name="Grado.cpp" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="57" topLine="52" />
+		</Cursor>
+	</File>
+	<File name="Alumno.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="7537" topLine="14" />
+		</Cursor>
+		<Folding>
+			<Collapse line="7" />
+			<Collapse line="22" />
+			<Collapse line="64" />
+			<Collapse line="91" />
+			<Collapse line="102" />
+			<Collapse line="113" />
+			<Collapse line="127" />
+			<Collapse line="183" />
+			<Collapse line="242" />
+			<Collapse line="283" />
+			<Collapse line="295" />
+			<Collapse line="330" />
+		</Folding>
 	</File>
 </CodeBlocks_layout_file>
