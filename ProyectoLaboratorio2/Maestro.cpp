@@ -193,10 +193,13 @@ void ModificarMaestro(){
             Reg.setNombre(Nombre);
             cout << "Apellido: ";
             cin >> Apellido;
+            Reg.setApellido(Apellido);
             cout << "DNI: ";
             cin >> dni;
+            Reg.setDNI(dni);
             cout << "Email: ";
             cin >> Email;
+            Reg.setEmail(Email);
             cout << "Fecha de nacimiento: ";
 
 

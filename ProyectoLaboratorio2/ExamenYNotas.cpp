@@ -2,6 +2,7 @@
 #include<conio.h>
 using namespace std;
 #include "ExamenYNotas.h"
+#include "rlutil.h"
 
 int BuscarID(int id){
 ExamenYNotas obj;
@@ -45,17 +46,18 @@ void cambiarIDAlumno(){
 int idEx;
 int pos;
 int idAl;
-do{
-cout << "INGRESE ID DEL EXAMEN A MODIFICAR: ";
-cin >> idEx;
-pos=BuscarID(idEx);
-if (pos==-1){
-    cout<<endl;
-}
-}while(pos==-1);
-
-cout << "INGRESE UN ID NUEVO DE ALUMNO: ";
-cin >> idAl;
+  do{
+    rlutil::locate(2,8);
+    cout << "INGRESE ID DEL EXAMEN A MODIFICAR: ";
+    cin >> idEx;
+    pos=BuscarID(idEx);
+      if (pos==-1){
+        cout<<endl;
+      }
+  }while(pos==-1);
+  rlutil::locate(2,8);
+  cout << "INGRESE UN ID NUEVO DE ALUMNO: ";
+  cin >> idAl;
 
 
 if(ModificarID(pos,idAl)){cout << "SE MODIFICO EL ID DEL ALUMNO"<<endl;}
@@ -74,7 +76,8 @@ while(obj.LeerEnDiscoExamenYNotas(pos)){
         }
     pos++;
 }
-cout << "EL ID NO COINCIDE CON NINGUN EXAMEN DEL ALUMNO";
+ rlutil::locate(2,10);
+  cout << "EL ID NO COINCIDE CON NINGUN EXAMEN DEL ALUMNO";
 return -1;
 }
 
@@ -109,18 +112,20 @@ int Nota;
 int pos;
 int idAl, idEx;
 do{
-cout << "INGRESE ID DEL ALUMNO A MODIFICAR: ";
-cin >> idAl;
-cout << "INGRESE ID DEL EXAMEN A MODIFICAR: ";
-cin >> idEx;
-pos=BuscarIDDoble(idEx, idAl);
-if (pos==-1){
-    cout<<endl;
-}
-}while(pos==-1);
-
-cout << "INGRESE LA NOTA CORRECTA: ";
-cin >> Nota;
+    rlutil::locate(2,8);
+    cout << "INGRESE ID DEL ALUMNO A MODIFICAR: ";
+    cin >> idAl;
+    rlutil::locate(2,9);
+    cout << "INGRESE ID DEL EXAMEN A MODIFICAR: ";
+    cin >> idEx;
+    pos=BuscarIDDoble(idEx, idAl);
+      if (pos==-1){
+          cout<<endl;
+      }
+  }while(pos==-1);
+  rlutil::locate(2,12);
+  cout << "INGRESE LA NOTA CORRECTA: ";
+  cin >> Nota;
 
 
 if(ModificarNotaEnDisco(pos, Nota)){cout << "SE MODIFICO LA NOTA"<<endl;}
@@ -242,14 +247,19 @@ const char *UI_VERTICAL_LINE = "\xB3"; // 179 - │
 
 void ExamenYNotas::cargarExamenYNotas()
 {
+    rlutil::locate(2,8);
     cout << "ID Alumno: ";
     cin >>IDAlumno;
+    rlutil::locate(2,9);
     cout << "ID Maestro: ";
     cin >> IDMaestro;
+    rlutil::locate(2,10);
     cout << "ID Materia: ";
     cin >> IDMateria;
+    rlutil::locate(2,11);
     cout << "ID Examen: ";
     cin >> IDExamen;
+    rlutil::locate(2,12);
     cout << "Nota: ";
     cin >> Nota;
 }
@@ -299,41 +309,66 @@ int ExamenNotas(){
     {
 
         system("cls");
-        cout<< "| MENU Examen y Notas | "<<endl;
-        cout<< "-------------------------------"<<endl;
-        cout<< "1) Cargar nuevo examen"<<endl;
-        cout<< "2) Modificar ID Alumno Por Examen"<<endl;
-        cout<< "3) Modificar Nota Por Examen Del Alumno"<<endl;
-        cout<< "4) Cargar promedio alumno por grado"<<endl;
-        cout<< "5) Ver mejores notas de alumnos"<<endl;
-        cout<< "9) Mostrar Examenes (Provisorio)"<<endl;
-        cout<< "0) Volver a menu"<<endl;
-        cout<< "-------------------------------"<<endl;
-        cout<< "Opcion: "<<endl;
-        cin>>Opc;
-        system("cls");
+        recuadroexa(1,1,60,20);
+        recuadroexa1(1,1,60,20);
+        rlutil::locate(20,3);
+        cout<< "| MENU EXAMEN Y NOTAS | "<<endl;
+        rlutil::locate(11,7);
+        cout<< "F1 - Cargar nuevo examen"<<endl;
+        rlutil::locate(11,9);
+        cout<< "F2 - Modificar ID Alumno Por Examen"<<endl;
+        rlutil::locate(11,11);
+        cout<< "F3 - Modificar Nota Por Examen Del Alumno"<<endl;
+        rlutil::locate(11,13);
+        cout<< "F4 - Cargar promedio alumno por grado"<<endl;
+        rlutil::locate(11,15);
+        cout<< "F5 - Ver mejores notas de alumnos"<<endl;
+        rlutil::locate(11,17);
+        cout<< "F6 - Mostrar Examenes (Provisorio)"<<endl;
+        rlutil::locate(11,19);
+        cout<< "F7 - Volver a menu principal"<<endl;
+        rlutil::locate(0,0);
+        Opc=rlutil::getkey();
         switch(Opc)
         {
-        case 1:
+        case 18: //F1
+            system("cls");
+            recuadroexa(1,1,60,20);
+            recuadroexa1(1,1,60,20);
+            rlutil::locate(20,3);
+            cout<< "| CARGAR EXAMEN |"<<endl;
             obj.cargarExamenYNotas();
             obj.GrabarEnDiscoExamenYNotas();
             break;
-        case 2:
+        case 19: //F2
+            system("cls");
+            recuadroexa(1,1,60,20);
+            recuadroexa1(1,1,60,20);
+            rlutil::locate(20,3);
+            cout<< "| MODIFICAR ID |"<<endl;
             cambiarIDAlumno();
             break;
-        case 3:
+        case 20: //F3
+           system("cls");
+            recuadroexa(1,1,60,20);
+            recuadroexa1(1,1,60,20);
+            rlutil::locate(20,3);
+            cout<< "| MODIFICAR NOTA |"<<endl;
             cambiarNota();
             break;
-        case 4:
+        case 21: //F4
             break;
-        case 9:
+        case 22: //F5
             while(obj.LeerEnDiscoExamenYNotas(pos)){
                 obj.mostrarExamenYNotas();
                 pos++;
             }
             system("pause");
             break;
-        case 0:
+         case 23: //F6
+            break;
+
+        case 24: //F7
             return 0;
             break;
 
