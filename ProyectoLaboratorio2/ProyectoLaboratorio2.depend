@@ -10,7 +10,7 @@
 	"Fecha.h"
 	"rlutil.h"
 
-1656109138 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\alumno.cpp
+1656113528 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\alumno.cpp
 	<iostream>
 	<conio.h>
 	"Alumno.h"
@@ -23,7 +23,7 @@
 	"Maestro.h"
 	"rlutil.h"
 
-1655492106 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\main.cpp
+1656113810 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\main.cpp
 	<iostream>
 	"funcionesrecuadro.h"
 

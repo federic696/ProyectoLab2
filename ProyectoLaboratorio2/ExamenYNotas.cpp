@@ -265,14 +265,19 @@ void ExamenYNotas::cargarExamenYNotas()
 }
 void ExamenYNotas::mostrarExamenYNotas()
 {
+    rlutil::locate(2,8);
     cout << "ID Alumno: ";
     cout << IDAlumno <<endl;
+    rlutil::locate(2,9);
     cout << "ID Maestro: ";
     cout << IDMaestro <<endl;
+    rlutil::locate(2,10);
     cout << "ID Materia: ";
     cout << IDMateria <<endl;
+    rlutil::locate(2,11);
     cout << "ID Examen: ";
     cout << IDExamen <<endl;
+    rlutil::locate(2,12);
     cout << "Nota: ";
     cout << Nota <<endl;
 }
@@ -357,15 +362,26 @@ int ExamenNotas(){
             cambiarNota();
             break;
         case 21: //F4
+
             break;
         case 22: //F5
-            while(obj.LeerEnDiscoExamenYNotas(pos)){
-                obj.mostrarExamenYNotas();
-                pos++;
-            }
-            system("pause");
+
+
             break;
          case 23: //F6
+            system("cls");
+            while(obj.LeerEnDiscoExamenYNotas(pos)){
+            recuadroexa(1,1,60,20);
+            recuadroexa1(1,1,60,20);
+            obj.mostrarExamenYNotas();
+            rlutil::locate(20,3);
+            cout<< "| MODIFICAR ID |";
+            rlutil::locate(10,20);
+            system("pause");
+            system("cls");
+            pos++;
+            }
+            system("pause");
             break;
 
         case 24: //F7

@@ -30,7 +30,7 @@ int main()
         rlutil::locate(11,15);
         cout<< "F5 - INGRESAR MENU MATERIA"<<endl;
         rlutil::locate(11,17);
-        cout<< "F6 - Salir"<<endl;
+        cout<< "F6 - SALIR"<<endl;
         rlutil::locate(0,0);
         Opc=rlutil::getkey();
         switch(Opc)
