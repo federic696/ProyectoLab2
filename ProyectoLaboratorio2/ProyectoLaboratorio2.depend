@@ -10,18 +10,17 @@
 	"Fecha.h"
 	"rlutil.h"
 
-1656108302 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\alumno.cpp
+1656109138 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\alumno.cpp
 	<iostream>
 	<conio.h>
 	"Alumno.h"
 	"Fecha.h"
 	"rlutil.h"
 
-1656108302 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\maestro.cpp
+1656109138 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\maestro.cpp
 	<iostream>
 	<conio.h>
 	"Maestro.h"
-	"rlutil.h"
 
 1655492106 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\main.cpp
 	<iostream>
@@ -226,12 +225,12 @@
 
 1655435748 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\fecha.h
 
-1655489039 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\examenynotas.cpp
+1656109138 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\examenynotas.cpp
 	<iostream>
 	<conio.h>
 	"ExamenYNotas.h"
 
-1656108302 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\fecha.cpp
+1656109138 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\fecha.cpp
 	<iostream>
 	<conio.h>
 	"Fecha.h"
@@ -475,8 +474,8 @@
 	<string.h>
 	"Fecha.h"
 
-<<<<<<< Updated upstream
-=======
+1655762917 ated upstream
+
 1656046269 source:c:\users\feded\onedrive\documentos\github\proyectolab2\proyectolaboratorio2\alumno.cpp
 	<iostream>
 	<conio.h>
@@ -592,4 +591,5 @@
 	<string.h>
 	"Fecha.h"
 
->>>>>>> Stashed changes
+1655763084 shed changes
+
