@@ -226,7 +226,7 @@
 
 1655435748 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\fecha.h
 
-1656113471 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\examenynotas.cpp
+1656176642 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\examenynotas.cpp
 	<iostream>
 	<conio.h>
 	"ExamenYNotas.h"
@@ -243,10 +243,11 @@
 	<conio.h>
 	"Grado.h"
 
-1656081401 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\materia.cpp
+1656177232 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\materia.cpp
 	<iostream>
 	<conio.h>
 	"Materia.h"
+	"rlutil.h"
 
 1655494331 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\persona.cpp
 	<iostream>

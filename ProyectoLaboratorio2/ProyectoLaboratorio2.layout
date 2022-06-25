@@ -2,9 +2,40 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="main.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="main.cpp" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="905" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Materia.cpp" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4890" topLine="20" />
+		</Cursor>
+		<Folding>
+			<Collapse line="7" />
+			<Collapse line="64" />
+			<Collapse line="206" />
+			<Collapse line="218" />
+			<Collapse line="230" />
+		</Folding>
+	</File>
+	<File name="Grado.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="11" />
+			<Collapse line="15" />
+		</Folding>
+	</File>
+	<File name="Maestro.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="393" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Alumno.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="11039" topLine="365" />
 		</Cursor>
 	</File>
 	<File name="rlutil.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -12,24 +43,40 @@
 			<Cursor1 position="9385" topLine="288" />
 		</Cursor>
 	</File>
-	<File name="Materia.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Persona.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="0" topLine="142" />
+			<Cursor1 position="336" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="Maestro.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Maestro.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="393" topLine="0" />
+			<Cursor1 position="1628" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="14" />
+			<Collapse line="89" />
+			<Collapse line="109" />
+			<Collapse line="134" />
+			<Collapse line="146" />
+			<Collapse line="162" />
+			<Collapse line="181" />
+			<Collapse line="212" />
+			<Collapse line="265" />
+		</Folding>
+	</File>
+	<File name="Grado.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="Alumno.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Materia.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="11039" topLine="335" />
+			<Cursor1 position="137" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="ExamenYNotas.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="7862" topLine="70" />
+			<Cursor1 position="8229" topLine="51" />
 		</Cursor>
 		<Folding>
 			<Collapse line="6" />
@@ -45,25 +92,5 @@
 			<Collapse line="284" />
 			<Collapse line="296" />
 		</Folding>
-	</File>
-	<File name="Maestro.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2704" topLine="65" />
-		</Cursor>
-		<Folding>
-			<Collapse line="89" />
-			<Collapse line="109" />
-			<Collapse line="134" />
-			<Collapse line="146" />
-			<Collapse line="162" />
-			<Collapse line="181" />
-			<Collapse line="212" />
-			<Collapse line="265" />
-		</Folding>
-	</File>
-	<File name="Grado.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="36" />
-		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

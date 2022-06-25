@@ -381,7 +381,6 @@ int ExamenNotas(){
             system("cls");
             pos++;
             }
-            system("pause");
             break;
 
         case 24: //F7
