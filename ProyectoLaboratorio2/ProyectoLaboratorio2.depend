@@ -94,46 +94,54 @@
 	<cstdlib>
 	<string.h>
 
-1654064985 source:c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\alumno.cpp
+1656190860 source:c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\alumno.cpp
 	<iostream>
 	<conio.h>
 	"Alumno.h"
 	"Fecha.h"
+	"rlutil.h"
 
-1655433269 c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\alumno.h
+1656190860 c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\alumno.h
 	<iostream>
 	<iostream>
 	<cstdlib>
 	<string.h>
 	"Persona.h"
+	"rlutil.h"
+	"Grado.h"
 
 1655436909 source:c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\examenynotas.cpp
 	<iostream>
 	<conio.h>
 	"ExamenYNotas.h"
 
-1654060142 source:c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\grado.cpp
+1656193224 source:c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\grado.cpp
 	<iostream>
 	<conio.h>
+	"Grado.h"
+	"rlutil.h"
 
-1655433269 source:c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\materia.cpp
+1656190860 source:c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\materia.cpp
 	<iostream>
 	<conio.h>
 	"Materia.h"
+	"rlutil.h"
 
-1654982148 source:c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\maestro.cpp
+1656190860 source:c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\maestro.cpp
 	<iostream>
 	<conio.h>
 	"Maestro.h"
+	"rlutil.h"
 
-1654979458 source:c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\main.cpp
+1656190860 source:c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\main.cpp
 	<iostream>
 	"funcionesrecuadro.h"
 
-1654064413 source:c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\fecha.cpp
+1655763870 source:c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\fecha.cpp
 	<iostream>
 	<conio.h>
 	"Fecha.h"
+	"rlutil.h"
 
 1654064861 c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\fecha.h
 
@@ -143,7 +151,7 @@
 	"Persona.h"
 	"Fecha.h"
 
-1655433269 c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\persona.h
+1655763870 c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\persona.h
 	<iostream>
 	<cstdlib>
 	<string.h>
@@ -327,7 +335,7 @@
 	"Persona.h"
 	"Fecha.h"
 
-1654979458 c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\funcionesrecuadro.h
+1655763870 c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\funcionesrecuadro.h
 	<iostream>
 	<cstdio>
 	<cstdlib>
@@ -413,7 +421,7 @@
 	"Alumno.h"
 	"ExamenYNotas.h"
 
-1655433269 c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\maestro.h
+1656190860 c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\maestro.h
 	<iostream>
 	<iostream>
 	<cstdlib>
@@ -421,14 +429,17 @@
 	"Fecha.h"
 	"Persona.h"
 
-1655433269 c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\materia.h
+1656190860 c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\materia.h
 	<iostream>
 	<iostream>
 	<cstdlib>
 	<string.h>
+	"Maestro.h"
 	"Fecha.h"
+	"Alumno.h"
+	"ExamenYNotas.h"
 
-1655436630 c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\examenynotas.h
+1656195476 c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\examenynotas.h
 	<iostream>
 	<iostream>
 	<cstdlib>
@@ -595,4 +606,11 @@
 	"Fecha.h"
 
 1655763084 shed changes
+
+1656193222 c:\users\peterzz\documents\github\proyectolab2\proyectolaboratorio2\grado.h
+	<iostream>
+	<iostream>
+	<cstdlib>
+	<string.h>
+	"Fecha.h"
 

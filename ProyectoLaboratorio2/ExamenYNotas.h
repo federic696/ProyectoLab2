@@ -10,10 +10,10 @@ class ExamenYNotas{
 private:
     int IDAlumno;
     int IDMaestro;
-    int IDMateria;
+    int Grado;
     int IDExamen;
     int Nota;
-    bool estado;
+    bool estado=true;
 
 public:
     //sets()
@@ -28,10 +28,15 @@ public:
         Nota=i;
     }
 
+    void setGrado(int i){
+        Grado=i;
+    }
+
     void cargarExamenYNotas();
     void mostrarExamenYNotas();
     bool GrabarEnDiscoExamenYNotas();
     bool LeerEnDiscoExamenYNotas(int nroRegistro);
+    bool GrabarEnDiscoExamenYNotas(int nroRegistro);
 
     //gets()
     int getIDExamen(){
@@ -45,6 +50,20 @@ public:
         return Nota;
     }
 
+    int getGrado(){
+        return Grado;
+    }
+
+
+bool getEstado() const
+{
+    return estado;
+}
+
+void setEstado(bool _estado)
+{
+    estado = _estado;
+}
 
 };
 

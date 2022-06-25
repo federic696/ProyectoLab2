@@ -148,7 +148,21 @@ bool Grado::LeerEnDiscoGrado(int nroRegistro)
     fclose(p);
     return leyo;
 }
+int Grado::cantidadGrado()
+{
+    FILE *p = fopen("Grado.dat", "rb");
+    if (p == NULL){
+        return 0;
+    }
+    size_t bytes;
+    int cant_reg;
 
+    fseek(p, 0, SEEK_END);
+    bytes = ftell(p);
+    fclose(p);
+    cant_reg = bytes / sizeof(Grado);
+    return cant_reg;
+}
 int Grados(){
 
 int Opc;

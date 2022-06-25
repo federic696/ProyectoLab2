@@ -3,8 +3,10 @@
 using namespace std;
 #include "ExamenYNotas.h"
 #include "rlutil.h"
+#include "Alumno.h"
 
-int BuscarID(int id){
+int BuscarID(int id)
+{
 ExamenYNotas obj;
 int pos=0;
 while(obj.LeerEnDiscoExamenYNotas(pos)){
@@ -18,7 +20,8 @@ cout << "EL ID NO COINCIDE CON NINGUN EXAMEN";
 return -1;
 }
 
-bool ModificarID(int pos2, int ID){
+bool ModificarID(int pos2, int ID)
+{
 if(pos2>=0){
         ExamenYNotas obj;
 
@@ -42,7 +45,8 @@ if(pos2>=0){
 return false;
 }
 
-void cambiarIDAlumno(){
+void cambiarIDAlumno()
+{
 int idEx;
 int pos;
 int idAl;
@@ -64,7 +68,8 @@ if(ModificarID(pos,idAl)){cout << "SE MODIFICO EL ID DEL ALUMNO"<<endl;}
 
 }
 
-int BuscarIDDoble(int idEx, int idAl){
+int BuscarIDDoble(int idEx, int idAl)
+{
 ExamenYNotas obj;
 int pos=0;
 while(obj.LeerEnDiscoExamenYNotas(pos)){
@@ -81,7 +86,8 @@ while(obj.LeerEnDiscoExamenYNotas(pos)){
 return -1;
 }
 
-bool ModificarNotaEnDisco(int pos2, int Nota){
+bool ModificarNotaEnDisco(int pos2, int Nota)
+{
 if(pos2>=0){
         ExamenYNotas obj;
 
@@ -104,10 +110,8 @@ if(pos2>=0){
 }
 return false;
 }
-
-
-
-void cambiarNota(){
+void cambiarNota()
+{
 int Nota;
 int pos;
 int idAl, idEx;
@@ -132,7 +136,8 @@ if(ModificarNotaEnDisco(pos, Nota)){cout << "SE MODIFICO LA NOTA"<<endl;}
 
 }
 
-void recuadroexa1(int x, int y, int ancho, int alto){
+void recuadroexa1(int x, int y, int ancho, int alto)
+{
 
 const char *UI_BOTTOM_RIGHT = "\xD9"; // 217 - ┘
 const char *UI_BOTTOM_LEFT = "\xC0"; // 192 - └
@@ -185,8 +190,8 @@ const char *UI_VERTICAL_LINE = "\xB3"; // 179 - │
     rlutil::locate(x+ancho, y+alto);
     cout << UI_BOTTOM_RIGHT;
 }
-
-void recuadroexa(int x, int y, int ancho, int alto){
+void recuadroexa(int x, int y, int ancho, int alto)
+{
 
 const char *UI_BOTTOM_RIGHT = "\xD9"; // 217 - ┘
 const char *UI_BOTTOM_LEFT = "\xC0"; // 192 - └
@@ -242,9 +247,6 @@ const char *UI_VERTICAL_LINE = "\xB3"; // 179 - │
     rlutil::resetColor();
     rlutil::setBackgroundColor(rlutil::DARKGREY);
 }
-
-
-
 void ExamenYNotas::cargarExamenYNotas()
 {
     rlutil::locate(2,8);
@@ -254,8 +256,8 @@ void ExamenYNotas::cargarExamenYNotas()
     cout << "ID Maestro: ";
     cin >> IDMaestro;
     rlutil::locate(2,10);
-    cout << "ID Materia: ";
-    cin >> IDMateria;
+    cout << "Grado: ";
+    cin >> Grado;
     rlutil::locate(2,11);
     cout << "ID Examen: ";
     cin >> IDExamen;
@@ -272,8 +274,8 @@ void ExamenYNotas::mostrarExamenYNotas()
     cout << "ID Maestro: ";
     cout << IDMaestro <<endl;
     rlutil::locate(2,10);
-    cout << "ID Materia: ";
-    cout << IDMateria <<endl;
+    cout << "Grado: ";
+    cout << Grado <<endl;
     rlutil::locate(2,11);
     cout << "ID Examen: ";
     cout << IDExamen <<endl;
@@ -305,6 +307,52 @@ bool ExamenYNotas::LeerEnDiscoExamenYNotas(int nroRegistro)
     fclose(p);
     return leyo;
 }
+bool ExamenYNotas::GrabarEnDiscoExamenYNotas(int nroRegistro){
+    FILE *p = fopen("ExamenYNotas.dat", "rb+");
+    if (p == NULL){
+        return false;
+    }
+    fseek(p, nroRegistro * sizeof(ExamenYNotas), SEEK_SET);
+    bool guardo = fwrite(this, sizeof(ExamenYNotas), 1, p);
+    fclose(p);
+    return guardo;
+}
+
+bool eliminarExamen()
+{
+  int idExamen, idAlumno;
+  bool ok = false;
+  char confirmacion;
+  int pos=0;
+
+  cout << "ID Alumno: ";
+  cin >> idAlumno;
+  cout << "ID Examen: ";
+  cin >> idExamen;
+
+    pos=BuscarIDDoble(idExamen, idAlumno);
+    ExamenYNotas reg;
+    reg.LeerEnDiscoExamenYNotas(pos);
+    if (reg.getEstado()) {
+      cout << "Esta seguro de que lo quiere eliminarlo? S/N" << endl;
+    }
+    else {
+      cout << "El Examen esta eliminado, desea restaurarlo ? S/N" << endl;
+    }
+
+
+    cin >> confirmacion;
+
+    if (confirmacion == 'S' || confirmacion == 's') {
+      reg.setEstado(!reg.getEstado());
+      ok = reg.GrabarEnDiscoExamenYNotas(pos);
+    }
+    else {
+      ok = true;
+    }
+
+  return ok;
+}
 
 int ExamenNotas(){
     int Opc;
@@ -325,11 +373,11 @@ int ExamenNotas(){
         rlutil::locate(11,11);
         cout<< "F3 - Modificar Nota Por Examen Del Alumno"<<endl;
         rlutil::locate(11,13);
-        cout<< "F4 - Cargar promedio alumno por grado"<<endl;
+        cout<< "F4 - Mostrar Mejores Notas de Alumnos"<<endl;
         rlutil::locate(11,15);
-        cout<< "F5 - Ver mejores notas de alumnos"<<endl;
+        cout<< "F5 - Eliminar Un Examen"<<endl;
         rlutil::locate(11,17);
-        cout<< "F6 - Mostrar Examenes (Provisorio)"<<endl;
+        cout<< "F6 - Mostrar Examenes"<<endl;
         rlutil::locate(11,19);
         cout<< "F7 - Volver a menu principal"<<endl;
         rlutil::locate(0,0);
@@ -363,9 +411,10 @@ int ExamenNotas(){
             break;
         case 21: //F4
 
+
             break;
         case 22: //F5
-
+            eliminarExamen();
 
             break;
          case 23: //F6

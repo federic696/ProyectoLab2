@@ -20,6 +20,7 @@ public:
     void mostrarGrado();
     bool GrabarEnDiscoGrado();
     bool LeerEnDiscoGrado(int nroRegistro);
+    int cantidadGrado();
 
     //gets()
 
