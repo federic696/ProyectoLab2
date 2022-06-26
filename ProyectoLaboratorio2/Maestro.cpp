@@ -72,7 +72,7 @@ Maestro mas;
         case 21:
 
             break;
-        case 22:
+        case 23:
             return 0;
             break;
 

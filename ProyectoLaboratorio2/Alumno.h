@@ -16,7 +16,7 @@ int BuscarLegajo(int Leg);
 
 class Alumno:public Persona{
 private:
-    int legajo;
+    //int legajo;
     int curso;
 
 public:
@@ -30,7 +30,7 @@ public:
     void ModificarDatosAlumno();
     int ModificarEnDisco(int Pos);
     //gets()
-    int GetLegajo(){return legajo;}
+    //int GetLegajo(){return legajo;}
     int GetCurso(){return curso;}
     int cantidadAlumnos();
 

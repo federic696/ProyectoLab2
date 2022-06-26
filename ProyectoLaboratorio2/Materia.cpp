@@ -131,7 +131,7 @@ void Materia::mejorPromedio(){
     while(reg.LeerEnDiscoAlumno(pos++)){
         for(int i=0;i<cantAlumnos;i++){
             if(IDAlumn[i]==0){
-                IDAlumn[i]=reg.getID();
+                IDAlumn[i]=reg.GetLegajo();
                 break;
             }
         }
@@ -161,7 +161,7 @@ void Materia::mejorPromedio(){
     char nombreAlumno[30];
     pos=0;
     while(reg.LeerEnDiscoAlumno(pos++)){
-        if(IDAlumn[mayorAlumno]==reg.getID()){
+        if(IDAlumn[mayorAlumno]==reg.GetLegajo()){
                 strcpy(nombreAlumno,reg.getNombre());
             //*nombreAlumno=reg.getNombre();
             break;
@@ -250,7 +250,7 @@ void Materia::materiaXMaestro(){
             rlutil::locate(2,9);
             cout<<"Nombre Materia: "<<nombreMateria<<endl;
         while(reg.LeerEnDiscoMaestro(pos2++)){
-            if(reg.getID()==IDMaestro){
+            if(reg.GetLegajo()==IDMaestro){
                 rlutil::locate(2,10);
                 cout<<"ID Maestro: "<<IDMaestro<<endl;
                 rlutil::locate(2,11);

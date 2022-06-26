@@ -14,9 +14,10 @@ protected:
     char email[30];
     Fecha fechaN;
     bool estado;
-    int ID;
+   // int ID;
     int legajo;
 public:
+    int GetLegajo(){return legajo;}
     //sets()
     void setFecha(Fecha fn)
     {
@@ -34,9 +35,9 @@ public:
     {
         DNI=d;
     }
-    void setID(int i){
+   /* void setID(int i){
         ID=i;
-    }
+    }*/
     void setEmail(const char *e){
         strcpy(email,e);
     }
@@ -44,6 +45,7 @@ public:
     void setEstado();
     void cargarPersona();
     void mostrarPersona();
+    void SetLegajo(int Leg){legajo=Leg;}
 
 
     //gets()
@@ -67,9 +69,9 @@ public:
     {
         return fechaN;
     }
-    int getID(){
+   /* int getID(){
         return ID;
-    }
+    }*/
 
 };
 #endif // PERSONA_H_INCLUDED
