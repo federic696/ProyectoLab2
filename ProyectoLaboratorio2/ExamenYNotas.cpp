@@ -325,22 +325,27 @@ bool eliminarExamen()
   char confirmacion;
   int pos=0;
 
+  rlutil::locate(2,8);
   cout << "ID Alumno: ";
   cin >> idAlumno;
+  rlutil::locate(2,9);
   cout << "ID Examen: ";
   cin >> idExamen;
 
     pos=BuscarIDDoble(idExamen, idAlumno);
     ExamenYNotas reg;
     reg.LeerEnDiscoExamenYNotas(pos);
-    if (reg.getEstado()) {
+    if (reg.getEstado())
+      {
+      rlutil::locate(2,10);
       cout << "Esta seguro de que lo quiere eliminarlo? S/N" << endl;
     }
     else {
+      rlutil::locate(2,11);
       cout << "El Examen esta eliminado, desea restaurarlo ? S/N" << endl;
     }
 
-
+    rlutil::locate(2,12);
     cin >> confirmacion;
 
     if (confirmacion == 'S' || confirmacion == 's') {
@@ -414,6 +419,11 @@ int ExamenNotas(){
 
             break;
         case 22: //F5
+            system("cls");
+            recuadroexa(1,1,60,20);
+            recuadroexa1(1,1,60,20);
+            rlutil::locate(20,3);
+            cout<< "| ELIMINAR EXAMEN |"<<endl;
             eliminarExamen();
 
             break;

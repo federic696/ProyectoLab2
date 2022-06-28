@@ -10,14 +10,14 @@
 	"Fecha.h"
 	"rlutil.h"
 
-1656113528 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\alumno.cpp
+1656222131 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\alumno.cpp
 	<iostream>
 	<conio.h>
 	"Alumno.h"
 	"Fecha.h"
 	"rlutil.h"
 
-1656113471 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\maestro.cpp
+1656222131 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\maestro.cpp
 	<iostream>
 	<conio.h>
 	"Maestro.h"
@@ -222,7 +222,7 @@
 	"Persona.h"
 	"Fecha.h"
 
-1656081401 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\alumno.h
+1656222131 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\alumno.h
 	<iostream>
 	<iostream>
 	<cstdlib>
@@ -231,7 +231,7 @@
 	"rlutil.h"
 	"Grado.h"
 
-1655763084 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\persona.h
+1656222131 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\persona.h
 	<iostream>
 	<cstdlib>
 	<string.h>
@@ -251,12 +251,13 @@
 	"Fecha.h"
 	"rlutil.h"
 
-1655763084 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\grado.cpp
+1656222131 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\grado.cpp
 	<iostream>
 	<conio.h>
 	"Grado.h"
+	"rlutil.h"
 
-1656178490 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\materia.cpp
+1656222131 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\materia.cpp
 	<iostream>
 	<conio.h>
 	"Materia.h"
@@ -451,7 +452,7 @@
 	<string.h>
 	"Fecha.h"
 
-1655763084 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\examenynotas.h
+1656222131 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\examenynotas.h
 	<iostream>
 	<iostream>
 	<cstdlib>
@@ -603,7 +604,7 @@
 	"Alumno.h"
 	"ExamenYNotas.h"
 
-1655763084 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\grado.h
+1656222131 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\grado.h
 	<iostream>
 	<iostream>
 	<cstdlib>
