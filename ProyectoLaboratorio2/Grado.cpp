@@ -221,17 +221,22 @@ int Opc;
         cout<< "F1 - Mostrar maestros y materias por grado"<<endl;
         rlutil::locate(11,9);
         cout<< "F2 - Mostrar  estudiante por grado"<<endl;
-        rlutil::locate(11,10);
+        rlutil::locate(11,11);
         cout<< "F3 - Mostrar mejores promedios por grado"<<endl;
-        rlutil::locate(11,12);
-        cout<< "F4 - Mostrar mejores promedio materia por grado"<<endl;
         rlutil::locate(11,13);
+        cout<< "F4 - Mostrar mejores promedio materia por grado"<<endl;
+        rlutil::locate(11,15);
         cout<< "F5 - Volver a menu"<<endl;
         rlutil::locate(0,0);
         Opc=rlutil::getkey();
         switch(Opc)
         {
         case 18:
+            system("cls");
+            recuadrogra(1,1,60,20);
+            recuadrogra1(1,1,60,20);
+             rlutil::locate(20,3);
+            cout<< "| MOSTRAR GRADOS |"<<endl;
             mostrarGrado();
             break;
         case 19:
