@@ -55,6 +55,7 @@ void Alumno::cargarAlumno(){
     cout << "Grado: ";
     cin >> curso;
      estado=true;
+     GrabarEnDiscoAlumno();
 
 }
 
