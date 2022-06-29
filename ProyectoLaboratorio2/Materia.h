@@ -8,6 +8,7 @@
 #include "Fecha.h"
 #include "Alumno.h"
 #include "ExamenYNotas.h"
+#include "Grado.h"
 
 using namespace std;
 
@@ -18,6 +19,7 @@ class Materia{
 private:
     int IDMateria;
     char nombreMateria[30];
+    int grado;
     int IDMaestro;
     bool estado;
 

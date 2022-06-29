@@ -116,14 +116,58 @@ const char *UI_VERTICAL_LINE = "\xB3"; // 179 - │
 }
 
 
-void Grado::cargarGrado()
+void cargarGrado()
 {
+    Grado aux;
+    int pos=1;
+    while(pos<=12){
+        aux.setNumGrado(pos);
+        aux.clearMaterias();
+        aux.GrabarEnDiscoGrado();
+        pos++;
+    }
 
 }
-void Grado::mostrarGrado()
+void mostrarGrado()
 {
+    Materia aux2;
+    Grado aux;
+    int pos=0;
+    int pos1=0;
+    while(aux.LeerEnDiscoGrado(pos++)){
+       cout<<"Grado "<<aux.getNumGrado()<<endl;
+       cout<<"Materias: "<<endl;
+       for(int i=0;i<15;i++){
+        //cout<<aux.getIDMateria(i)<<endl;
+        if(aux.getIDMateria(i)!=0){
+            while(aux2.LeerEnDiscoMateria(pos1++)){
+                if(aux.getIDMateria(i)==aux2.getIDMateria()){
+                    cout<<aux2.getNombreMateria()<<endl;
+                }
+            }
+            pos1=0;
+        }
+       }
+        cout<<"---------------------------"<<endl;
+    }
+        system("pause");
+}
+
+int Grado::ModificarEnDisco(int Pos){
+
+    FILE *pAlu;
+    int escribio;
+    pAlu=fopen("Grado.dat","rb+");
+    if(pAlu==NULL){
+        return -1;
+    }
+    fseek(pAlu, Pos*sizeof(Grado),0);
+    escribio=fwrite(this,sizeof(Grado),1,pAlu);
+	fclose(pAlu);
+	return escribio;
 
 }
+
 bool Grado::GrabarEnDiscoGrado()
 {
     FILE *p;
@@ -174,7 +218,7 @@ int Opc;
         rlutil::locate(23,3);
         cout<< "| MENU GRADOS |"<<endl;
         rlutil::locate(11,7);
-        cout<< "F1 - Mostrar  maestros por grado y materia"<<endl;
+        cout<< "F1 - Mostrar maestros y materias por grado"<<endl;
         rlutil::locate(11,9);
         cout<< "F2 - Mostrar  estudiante por grado"<<endl;
         rlutil::locate(11,10);
@@ -188,7 +232,7 @@ int Opc;
         switch(Opc)
         {
         case 18:
-
+            mostrarGrado();
             break;
         case 19:
 
@@ -201,6 +245,9 @@ int Opc;
             break;
         case 22:
             return 0;
+            break;
+        case 23:
+            cargarGrado();
             break;
 
 

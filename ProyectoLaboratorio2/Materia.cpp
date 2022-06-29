@@ -177,18 +177,24 @@ void Materia::mejorPromedio(){
 
 void Materia::cargarMateria()
 {
+    Grado reg2;
     Materia reg;
-    rlutil::locate(2,8);
+    //rlutil::locate(2,8);
+    cout<<"Grado: ";
+    cin>>reg.grado;
     cout<<"ID:";
     cin>>reg.IDMateria;
-    rlutil::locate(2,9);
+    //rlutil::locate(2,9);
     cout<<"Nombre Materia:";
     cin>>reg.nombreMateria;
-    rlutil::locate(2,10);
+    //rlutil::locate(2,10);
     cout<<"ID Maestro:";
     cin>>reg.IDMaestro;
     reg.estado=true;
     reg.GrabarEnDiscoMateria();
+    reg2.LeerEnDiscoGrado(reg.grado-1);
+    reg2.setIDMateria(reg.IDMateria);
+    reg2.ModificarEnDisco(reg.grado-1);
 }
 void Materia::mostrarMateria()
 {
