@@ -46,7 +46,7 @@ public:
     void cargarPersona();
     void mostrarPersona();
     void SetLegajo(int Leg){legajo=Leg;}
-
+    void setEstado(bool e){estado=e;}
 
     //gets()
     char *getNombre()

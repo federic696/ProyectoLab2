@@ -55,7 +55,9 @@ void Alumno::cargarAlumno(){
     cout << "Grado: ";
     cin >> curso;
      estado=true;
-    // GrabarEnDiscoAlumno();
+    GrabarEnDiscoAlumno();
+    rlutil::locate(12,20);
+    if(GrabarEnDiscoAlumno())cout << "ALUMNO CARGADO CORRECTAMENTE!";
 
 }
 
@@ -64,6 +66,7 @@ void Alumno::cargarAlumno(){
 ///Funciones dentro de disco
 
 void Alumno::mostrarAlumno(){
+    if(estado==true){
     rlutil::locate(2,8);
     cout << "Nombre: ";
     cout << nombre << endl;
@@ -85,10 +88,15 @@ void Alumno::mostrarAlumno(){
     rlutil::locate(2,14);
     cout << "Curso: ";
     cout << curso << endl;
-     if(estado==true){
+    /* if(estado==true){
         rlutil::locate(2,15);
         cout<<"Persona activa"<<endl;
     }
+    else{
+      rlutil::locate(2,15);
+      cout<<"Persona inactiva"<<endl;
+    }*/
+  }
 }
 bool Alumno::GrabarEnDiscoAlumno(){
     FILE *p;
@@ -282,6 +290,27 @@ void Alumno::ModificarDatosAlumno(){
 
 ///funciones globales
 
+
+void borrarRegistro(){
+    Alumno alu;
+    int pos=0;
+    int legajo;
+    rlutil::locate(2,6);
+    cout<<"Ingrese el legajo del alumno a borrar: ";
+    cin>>legajo;
+    while(alu.LeerEnDiscoAlumno(pos)){
+    if(alu.GetLegajo()==legajo){
+        alu.setEstado(false);
+        alu.ModificarEnDisco(pos-1);
+    }
+    else{
+        cout<<"NO EXISTE EL LEGAJO"<<endl;
+      }
+    pos++;
+  }
+}
+
+
 int BuscarLegajo(int Leg){
     Alumno Reg;
     int Pos=0;
@@ -299,7 +328,7 @@ void BuscarAlumnoLegajo(){
     int Pos=0;
     int Legajo=0;
     rlutil::locate(2,6);
-    cout<< "Ingrese legajo del alumno: ";
+    cout<< "Ingrese el legajo del alumno: ";
     cin>>Legajo;
     while(Reg.LeerEnDiscoAlumno(Pos++)){
         if(Reg.GetLegajo()==Legajo){
@@ -351,29 +380,26 @@ int Alumnos()
         rlutil::locate(11,13);
         cout<< "F4 - Modificar Estudiante Por Legajo"<<endl;
         rlutil::locate(11,15);
-        cout<< "F5 - Darlo de baja o alta por Legajo o DNI"<<endl;
+        cout<< "F5 - Darlo de baja o alta por Legajo"<<endl;
         rlutil::locate(11,17);
         cout<< "F6 - Volver a menu"<<endl;
         rlutil::locate(0,0);
         Opc=rlutil::getkey();
         switch(Opc)
         {
-        case 18:
+        case 18: //F1
             system("cls");
             recuadroalu(1,1,60,20);
             recuadroalu1(1,1,60,20);
             rlutil::locate(20,3);
             cout<< "| CARGAR ALUMNO |"<<endl;
             obj.cargarAlumno();
-            //obj.GrabarEnDiscoAlumno();
-            rlutil::locate(12,20);
-            if(obj.GrabarEnDiscoAlumno())cout << "ALUMNO CARGADO CORRECTAMENTE!";
             rlutil::locate(10,20);
             system("pause");
             system("cls");
 
             break;
-        case 19:
+        case 19: //F2
 
             system("cls");
             while(obj.LeerEnDiscoAlumno(pos++)==1){
@@ -395,7 +421,7 @@ int Alumnos()
 
 
 
-        case 20:
+        case 20: //F3
             system("cls");
             recuadroalu(1,1,60,20);
             recuadroalu1(1,1,60,20);
@@ -425,7 +451,8 @@ int Alumnos()
                 }
 
             break;
-        case 21:system("cls");
+        case 21: //F4
+            system("cls");
             recuadroalu(1,1,60,20);
             recuadroalu1(1,1,60,20);
             rlutil::locate(20,3);
@@ -433,7 +460,16 @@ int Alumnos()
                 obj.ModificarDatosAlumno();
 
             break;
-        case 23:
+        case 22: //F5
+            system("cls");
+            recuadroalu(1,1,60,20);
+            recuadroalu1(1,1,60,20);
+            rlutil::locate(20,3);
+            cout<< "| DAR DE BAJA ALUMNO |"<<endl;
+            borrarRegistro();
+
+            break;
+        case 23: //F6
             return 0;
             break;
 

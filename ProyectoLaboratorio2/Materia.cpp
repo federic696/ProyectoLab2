@@ -179,15 +179,15 @@ void Materia::cargarMateria()
 {
     Grado reg2;
     Materia reg;
-    //rlutil::locate(2,8);
+    rlutil::locate(2,8);
     cout<<"Grado: ";
     cin>>reg.grado;
     cout<<"ID:";
     cin>>reg.IDMateria;
-    //rlutil::locate(2,9);
+    rlutil::locate(2,9);
     cout<<"Nombre Materia:";
     cin>>reg.nombreMateria;
-    //rlutil::locate(2,10);
+    rlutil::locate(2,10);
     cout<<"ID Maestro:";
     cin>>reg.IDMaestro;
     reg.estado=true;
@@ -265,6 +265,7 @@ void Materia::darDeBaja(){
     int IDreg;
     int pos=0;
     bool baja=false;
+    rlutil::locate(2,8);
     cout<<"Ingrese ID de Materia: ";
     cin>>IDreg;
     while(reg.LeerEnDiscoMateria(pos++)){
@@ -277,13 +278,16 @@ void Materia::darDeBaja(){
                 }
             }
             reg2.ModificarEnDisco(reg.grado-1);
-            cout<<"Materia dada de baja con exito"<<endl;
+            rlutil::locate(10,18);
+            cout<<"Materia dada de baja con exito!"<<endl;
             baja=true;
+            rlutil::locate(10,20);
             system("pause");
             break;
         }
     }
     if(baja==false){
+    rlutil::locate(2,8);
     cout<<"No se encontro la materia"<<endl;
     system("pause");
     }

@@ -59,12 +59,16 @@ int idAl;
         cout<<endl;
       }
   }while(pos==-1);
-  rlutil::locate(2,8);
+  rlutil::locate(2,9);
   cout << "INGRESE UN ID NUEVO DE ALUMNO: ";
   cin >> idAl;
 
 
-if(ModificarID(pos,idAl)){cout << "SE MODIFICO EL ID DEL ALUMNO"<<endl;}
+if(ModificarID(pos,idAl)){
+  rlutil::locate(2,10);
+  cout << "SE MODIFICO EL ID DEL ALUMNO"<<endl;
+}
+
 
 }
 
@@ -353,7 +357,7 @@ bool eliminarExamen()
       ok = reg.GrabarEnDiscoExamenYNotas(pos);
     }
     else {
-      ok = true;
+      return 0;
     }
 
   return ok;
@@ -434,7 +438,7 @@ int ExamenNotas(){
             recuadroexa1(1,1,60,20);
             obj.mostrarExamenYNotas();
             rlutil::locate(20,3);
-            cout<< "| MODIFICAR ID |";
+            cout<< "| EXAMENES |";
             rlutil::locate(10,20);
             system("pause");
             system("cls");

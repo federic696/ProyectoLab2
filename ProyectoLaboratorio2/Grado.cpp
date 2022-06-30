@@ -211,6 +211,7 @@ int Grado::cantidadGrado()
 void Grado::mostrarAlumnos(){
     Alumno reg;
     int pos=0;
+    rlutil::locate(2,8);
     cout<<"Grado "<<numGrado<<":"<<endl;
     while(reg.LeerEnDiscoAlumno(pos++)){
         if(reg.GetCurso()==numGrado){
@@ -235,9 +236,7 @@ int Opc;
         cout<< "F2 - Mostrar  estudiantes por grado"<<endl;
         rlutil::locate(11,11);
         cout<< "F3 - Mostrar mejores promedios por grado"<<endl;
-        /*rlutil::locate(11,13);
-        cout<< "F4 - Mostrar mejores promedio materia por grado"<<endl;*/
-        rlutil::locate(11,15);
+        rlutil::locate(11,13);
         cout<< "F4 - Volver a menu"<<endl;
         rlutil::locate(0,0);
         Opc=rlutil::getkey();
@@ -247,16 +246,26 @@ int Opc;
             system("cls");
             recuadrogra(1,1,60,20);
             recuadrogra1(1,1,60,20);
-             rlutil::locate(20,3);
+            rlutil::locate(20,3);
             cout<< "| MOSTRAR GRADOS |"<<endl;
             mostrarGrado();
             break;
         case 19:
-            for(int i=1;i<=12;i++){
-                reg.LeerEnDiscoGrado(i);
-                reg.mostrarAlumnos();
+            system("cls");
+            for(int i=0;i<12;i++){
+              recuadrogra(1,1,60,20);
+              recuadrogra1(1,1,60,20);
+              rlutil::locate(20,3);
+              cout<< "| MOSTRAR ESTUDIANTES |"<<endl;
+              reg.LeerEnDiscoGrado(i);
+              reg.mostrarAlumnos();
+              rlutil::locate(10,20);
+              system("pause");
+
+
+
+
             }
-            system("pause");
             break;
         case 20:
 

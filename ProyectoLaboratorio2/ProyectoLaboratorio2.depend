@@ -10,7 +10,7 @@
 	"Fecha.h"
 	"rlutil.h"
 
-1656510131 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\alumno.cpp
+1656617453 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\alumno.cpp
 	<iostream>
 	<conio.h>
 	"Alumno.h"
@@ -222,7 +222,7 @@
 	"Persona.h"
 	"Fecha.h"
 
-1656222131 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\alumno.h
+1656614016 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\alumno.h
 	<iostream>
 	<iostream>
 	<cstdlib>
@@ -231,7 +231,7 @@
 	"rlutil.h"
 	"Grado.h"
 
-1656222131 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\persona.h
+1656613043 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\persona.h
 	<iostream>
 	<cstdlib>
 	<string.h>
@@ -239,7 +239,7 @@
 
 1655435748 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\fecha.h
 
-1656438997 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\examenynotas.cpp
+1656617247 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\examenynotas.cpp
 	<iostream>
 	<conio.h>
 	"ExamenYNotas.h"
@@ -252,13 +252,13 @@
 	"Fecha.h"
 	"rlutil.h"
 
-1656510756 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\grado.cpp
+1656610352 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\grado.cpp
 	<iostream>
 	<conio.h>
 	"Grado.h"
 	"rlutil.h"
 
-1656508806 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\materia.cpp
+1656616668 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\materia.cpp
 	<iostream>
 	<conio.h>
 	"Materia.h"
@@ -419,7 +419,7 @@
 	"Fecha.h"
 	"Persona.h"
 
-1656508806 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\materia.h
+1656608960 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\materia.h
 	<iostream>
 	<iostream>
 	<cstdlib>
@@ -455,7 +455,7 @@
 	<string.h>
 	"Fecha.h"
 
-1656222131 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\examenynotas.h
+1656608960 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\examenynotas.h
 	<iostream>
 	<iostream>
 	<cstdlib>
@@ -608,7 +608,7 @@
 	"Alumno.h"
 	"ExamenYNotas.h"
 
-1656508806 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\grado.h
+1656608960 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\grado.h
 	<iostream>
 	<iostream>
 	<cstdlib>
