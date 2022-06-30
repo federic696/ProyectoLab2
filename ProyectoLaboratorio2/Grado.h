@@ -30,6 +30,7 @@ public:
     }
     int getNumGrado(){return numGrado;}
     int getIDMateria(int loc){ return IDMaterias[loc];}
+    void resetIDMateria(int loc){ IDMaterias[loc]=0;}
     void setIDMateria(int id){
         for(int i=0;i<15;i++){
             if(IDMaterias[i]==0){
@@ -38,6 +39,7 @@ public:
             }
         }
     }
+    void mostrarAlumnos();
     //gets()
 
 

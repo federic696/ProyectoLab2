@@ -37,6 +37,9 @@ public:
     bool GrabarEnDiscoMateria();
     bool LeerEnDiscoMateria(int nroRegistro);
     void materiaXMaestro();
+    void setEstado(bool e){estado=e;}
+    void darDeBaja();
+    int ModificarEnDisco(int Pos);
     //gets()
 
 

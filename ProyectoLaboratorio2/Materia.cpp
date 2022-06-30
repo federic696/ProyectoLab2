@@ -208,7 +208,20 @@ void Materia::mostrarMateria()
     cout<<"Estado: "<<estado<<endl;
 
 }
+int Materia::ModificarEnDisco(int Pos){
 
+    FILE *pAlu;
+    int escribio;
+    pAlu=fopen("Materia.dat","rb+");
+    if(pAlu==NULL){
+        return -1;
+    }
+    fseek(pAlu, Pos*sizeof(Materia),0);
+    escribio=fwrite(this,sizeof(Materia),1,pAlu);
+	fclose(pAlu);
+	return escribio;
+
+}
 bool Materia::GrabarEnDiscoMateria()
 {
     FILE *p;
@@ -243,6 +256,36 @@ void mostrarTodasMaterias(){
         system("pause");
         pos++;
 
+    }
+}
+
+void Materia::darDeBaja(){
+    Materia reg;
+    Grado reg2;
+    int IDreg;
+    int pos=0;
+    bool baja=false;
+    cout<<"Ingrese ID de Materia: ";
+    cin>>IDreg;
+    while(reg.LeerEnDiscoMateria(pos++)){
+        if(IDreg==reg.getIDMateria()){
+            reg.setEstado(false);
+            reg2.LeerEnDiscoGrado(reg.grado-1);
+            for(int i=0;i<15;i++){
+                if(reg.getIDMateria()==reg2.getIDMateria(i)){
+                    reg2.resetIDMateria(i);
+                }
+            }
+            reg2.ModificarEnDisco(reg.grado-1);
+            cout<<"Materia dada de baja con exito"<<endl;
+            baja=true;
+            system("pause");
+            break;
+        }
+    }
+    if(baja==false){
+    cout<<"No se encontro la materia"<<endl;
+    system("pause");
     }
 }
 
@@ -294,9 +337,9 @@ int Materias()
         rlutil::locate(11,15);
         cout<< "F5 - Dar de alta una materia"<<endl;
         rlutil::locate(11,17);
-        cout<< "F6 - Subir materia  por grado"<<endl;
-        rlutil::locate(11,19);
-        cout<< "F7 - Volver a menu"<<endl;
+       // cout<< "F6 - Subir materia  por grado"<<endl;
+        //rlutil::locate(11,19);
+        cout<< "F6 - Volver a menu"<<endl;
         rlutil::locate(0,0);
         Opc=rlutil::getkey();
         switch(Opc)
@@ -330,7 +373,12 @@ int Materias()
             mostrarTodasMaterias();
             break;
         case 21:
-
+            system("cls");
+            recuadromate(1,1,60,20);
+            recuadromate1(1,1,60,20);
+            rlutil::locate(20,3);
+            cout<< "| MATERIAS |"<<endl;
+            reg.darDeBaja();
             break;
         case 22:
             system("cls");
@@ -341,10 +389,10 @@ int Materias()
 
             reg.cargarMateria();
             break;
-        case 23:
+        /*case 23:
 
-            break;
-        case 24:
+            break;*/
+        case 23:
             return 0;
             break;
 

@@ -157,7 +157,7 @@
 	<string.h>
 	"Fecha.h"
 
-1656213194 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\alumno.cpp
+1656572309 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\alumno.cpp
 	<iostream>
 	<conio.h>
 	"Alumno.h"
@@ -181,20 +181,20 @@
 
 1654557666 c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\fecha.h
 
-1656469842 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\examenynotas.cpp
+1656555955 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\examenynotas.cpp
 	<iostream>
 	<conio.h>
 	"ExamenYNotas.h"
 	"rlutil.h"
 	"Alumno.h"
 
-1655578650 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\fecha.cpp
+1656510739 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\fecha.cpp
 	<iostream>
 	<conio.h>
 	"Fecha.h"
 	"rlutil.h"
 
-1656391513 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\grado.cpp
+1656572104 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\grado.cpp
 	<iostream>
 	<conio.h>
 	"Grado.h"
@@ -210,7 +210,7 @@
 	<iostream>
 	"funcionesrecuadro.h"
 
-1656478647 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\materia.cpp
+1656571822 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\materia.cpp
 	<iostream>
 	<conio.h>
 	"Materia.h"
@@ -400,7 +400,7 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1656477671 c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\materia.h
+1656567246 c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\materia.h
 	<iostream>
 	<iostream>
 	<cstdlib>
@@ -483,7 +483,7 @@
 	<string.h>
 	"Fecha.h"
 
-1656478780 c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\grado.h
+1656571415 c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\grado.h
 	<iostream>
 	<iostream>
 	<cstdlib>
@@ -491,7 +491,7 @@
 	"Fecha.h"
 	"Materia.h"
 
-1656201393 c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\examenynotas.h
+1656555858 c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\examenynotas.h
 	<iostream>
 	<iostream>
 	<cstdlib>

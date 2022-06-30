@@ -55,7 +55,7 @@ void Alumno::cargarAlumno(){
     cout << "Grado: ";
     cin >> curso;
      estado=true;
-     GrabarEnDiscoAlumno();
+    // GrabarEnDiscoAlumno();
 
 }
 
@@ -365,7 +365,7 @@ int Alumnos()
             rlutil::locate(20,3);
             cout<< "| CARGAR ALUMNO |"<<endl;
             obj.cargarAlumno();
-            obj.GrabarEnDiscoAlumno();
+            //obj.GrabarEnDiscoAlumno();
             rlutil::locate(12,20);
             if(obj.GrabarEnDiscoAlumno())cout << "ALUMNO CARGADO CORRECTAMENTE!";
             rlutil::locate(10,20);
@@ -387,7 +387,7 @@ int Alumnos()
             system("cls");
             pos++;
             }
-
+            pos=0;
             break;
 
 
