@@ -42,7 +42,6 @@ public:
         strcpy(email,e);
     }
     void setFecha();
-    void setEstado();
     void cargarPersona();
     void mostrarPersona();
     void SetLegajo(int Leg){legajo=Leg;}

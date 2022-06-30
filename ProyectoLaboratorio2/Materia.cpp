@@ -182,12 +182,13 @@ void Materia::cargarMateria()
     rlutil::locate(2,8);
     cout<<"Grado: ";
     cin>>reg.grado;
+    rlutil::locate(2,9);
     cout<<"ID:";
     cin>>reg.IDMateria;
-    rlutil::locate(2,9);
+    rlutil::locate(2,10);
     cout<<"Nombre Materia:";
     cin>>reg.nombreMateria;
-    rlutil::locate(2,10);
+    rlutil::locate(2,11);
     cout<<"ID Maestro:";
     cin>>reg.IDMaestro;
     reg.estado=true;
@@ -271,6 +272,7 @@ void Materia::darDeBaja(){
     while(reg.LeerEnDiscoMateria(pos++)){
         if(IDreg==reg.getIDMateria()){
             reg.setEstado(false);
+            reg.ModificarEnDisco(pos-1);
             reg2.LeerEnDiscoGrado(reg.grado-1);
             for(int i=0;i<15;i++){
                 if(reg.getIDMateria()==reg2.getIDMateria(i)){
@@ -341,8 +343,6 @@ int Materias()
         rlutil::locate(11,15);
         cout<< "F5 - Dar de alta una materia"<<endl;
         rlutil::locate(11,17);
-       // cout<< "F6 - Subir materia  por grado"<<endl;
-        //rlutil::locate(11,19);
         cout<< "F6 - Volver a menu"<<endl;
         rlutil::locate(0,0);
         Opc=rlutil::getkey();

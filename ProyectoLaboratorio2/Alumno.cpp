@@ -66,7 +66,6 @@ void Alumno::cargarAlumno(){
 ///Funciones dentro de disco
 
 void Alumno::mostrarAlumno(){
-    if(estado==true){
     rlutil::locate(2,8);
     cout << "Nombre: ";
     cout << nombre << endl;
@@ -88,15 +87,15 @@ void Alumno::mostrarAlumno(){
     rlutil::locate(2,14);
     cout << "Curso: ";
     cout << curso << endl;
-    /* if(estado==true){
+     if(estado==true){
         rlutil::locate(2,15);
         cout<<"Persona activa"<<endl;
     }
     else{
       rlutil::locate(2,15);
       cout<<"Persona inactiva"<<endl;
-    }*/
-  }
+    }
+
 }
 bool Alumno::GrabarEnDiscoAlumno(){
     FILE *p;
@@ -124,7 +123,7 @@ int Alumno::ModificarEnDisco(int Pos){
 
     FILE *pAlu;
     int escribio;
-    pAlu=fopen("Alumnos.dat","rb+");
+    pAlu=fopen("Alumno.dat","rb+");
     if(pAlu==NULL){
         return -1;
     }
@@ -250,38 +249,39 @@ const char *UI_VERTICAL_LINE = "\xB3"; // 179 - │
 
 
 void Alumno::ModificarDatosAlumno(){
+    Alumno reg;
     int Pos=0;
     int Leg=0;
+    char n[30],mail[30];
+    int dn;
     rlutil::locate(2,6);
     cout<< "Ingrese el legajo del alumno: ";
     cin>>Leg;
-    while(LeerEnDiscoAlumno(Pos++)==1){
-        if(Leg==GetLegajo()){
-            LeerEnDiscoAlumno(Pos);
+    while(reg.LeerEnDiscoAlumno(Pos++)==1){
+        if(Leg==reg.GetLegajo()){
             rlutil::locate(10,7);
             cout<< "Actualice los nuevos datos del alumno"<<endl;
             rlutil::locate(2,8);
             cout<< "Nombre: ";
-            cin>>  nombre;
-            setNombre(nombre);
+            cin>>  n;
+            reg.setNombre(n);
             rlutil::locate(2,9);
             cout<< "Apellido: ";
-            cin>> apellido;
-            setApellido(apellido);
+            cin>> n;
+            reg.setApellido(n);
             rlutil::locate(2,10);
             cout<< "DNI: ";
-            cin >> DNI;
-            setDNI(DNI);
+            cin >> dn;
+            reg.setDNI(dn);
             rlutil::locate(2,11);
             cout << "Email: ";
-            cin >> email;
-            setEmail(email);
+            cin >> mail;
+            reg.setEmail(mail);
             rlutil::locate(2,12);
             cout << "Fecha de nacimiento: ";
-            fechaN.CargarFecha();
-            setFecha(fechaN);
-            ModificarEnDisco(Pos);
-            Leg=0;
+            reg.getfecha().CargarFecha();
+            reg.ModificarEnDisco(Pos-1);
+            break;
         }
     }
 
@@ -294,20 +294,21 @@ void Alumno::ModificarDatosAlumno(){
 void borrarRegistro(){
     Alumno alu;
     int pos=0;
-    int legajo;
+    int leg;
     rlutil::locate(2,6);
     cout<<"Ingrese el legajo del alumno a borrar: ";
-    cin>>legajo;
+    cin>>leg;
     while(alu.LeerEnDiscoAlumno(pos)){
-    if(alu.GetLegajo()==legajo){
+    if(alu.GetLegajo()==leg){
         alu.setEstado(false);
-        alu.ModificarEnDisco(pos-1);
+        alu.ModificarEnDisco(pos);
+        cout << "Se realizo la baja" << endl;
+        system("pause");
+        break;
     }
-    else{
-        cout<<"NO EXISTE EL LEGAJO"<<endl;
-      }
     pos++;
   }
+    cout << "No se encontro el id" << endl;
 }
 
 
