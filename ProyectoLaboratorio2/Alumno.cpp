@@ -356,7 +356,25 @@ void BuscarAlumnoDNI(){
     system("pause");
 }
 
+int Alumno::sacarPromedio(int leg){
+    //Alumno reg;
 
+    int pos=0;
+    ExamenYNotas reg2;
+    int examenes[reg2.cantidadExamenesXAlumno(leg)];
+    int i=0;
+    while(reg2.LeerEnDiscoExamenYNotas(pos++)){
+        if(reg2.getIDAlumno()==leg){
+            examenes[i]=reg2.getNota();
+            i++;
+        }
+    }
+    int total=0;
+    for(int f=0;f<reg2.cantidadExamenesXAlumno(leg);f++){
+        total+=examenes[f];
+    }
+    return total/reg2.cantidadExamenesXAlumno(leg);
+}
 
 int Alumnos()
 {
@@ -383,7 +401,7 @@ int Alumnos()
         rlutil::locate(11,15);
         cout<< "F5 - Darlo de baja o alta por Legajo"<<endl;
         rlutil::locate(11,17);
-        cout<< "F6 - Volver a menu"<<endl;
+        cout<< "F7 - Volver a menu"<<endl;
         rlutil::locate(0,0);
         Opc=rlutil::getkey();
         switch(Opc)
@@ -470,7 +488,14 @@ int Alumnos()
             borrarRegistro();
 
             break;
-        case 23: //F6
+        case 23:
+            int i;
+            cout<<"Ingrese legajo alumno: ";
+            cin>>i;
+            cout<<"Promedio: "<<obj.sacarPromedio(i)<<endl;
+            system("pause");
+            break;
+        case 24: //F6
             return 0;
             break;
 

@@ -32,7 +32,7 @@ public:
     //gets()
     int GetCurso(){return curso;}
     int cantidadAlumnos();
-
+    int sacarPromedio(int leg);
 
 };
 

@@ -9,7 +9,6 @@ using namespace std;
 class ExamenYNotas{
 private:
     int IDAlumno;
-    int IDMaestro;
     int IDMateria;
     int IDExamen;
     int Nota;
@@ -53,7 +52,7 @@ public:
     int getIDMateria(){
         return IDMateria;
     }
-
+    int cantidadExamenesXAlumno(int id);
 
 bool getEstado() const
 {

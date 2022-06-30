@@ -90,6 +90,18 @@ while(obj.LeerEnDiscoExamenYNotas(pos)){
 return -1;
 }
 
+int ExamenYNotas::cantidadExamenesXAlumno(int id){
+    ExamenYNotas reg;
+    int pos=0;
+    int total=0;
+    while(reg.LeerEnDiscoExamenYNotas(pos++)){
+        if(id==reg.getIDAlumno()){
+            total++;
+        }
+    }
+    return total;
+}
+
 bool ModificarNotaEnDisco(int pos2, int Nota)
 {
 if(pos2>=0){
@@ -257,15 +269,12 @@ void ExamenYNotas::cargarExamenYNotas()
     cout << "ID Alumno: ";
     cin >>IDAlumno;
     rlutil::locate(2,9);
-    cout << "ID Maestro: ";
-    cin >> IDMaestro;
-    rlutil::locate(2,10);
     cout << "ID Materia: ";
     cin >> IDMateria;
-    rlutil::locate(2,11);
+    rlutil::locate(2,10);
     cout << "ID Examen: ";
     cin >> IDExamen;
-    rlutil::locate(2,12);
+    rlutil::locate(2,11);
     cout << "Nota: ";
     cin >> Nota;
 }
@@ -275,15 +284,12 @@ void ExamenYNotas::mostrarExamenYNotas()
     cout << "ID Alumno: ";
     cout << IDAlumno <<endl;
     rlutil::locate(2,9);
-    cout << "ID Maestro: ";
-    cout << IDMaestro <<endl;
-    rlutil::locate(2,10);
     cout << "ID Materia: ";
     cout << IDMateria <<endl;
-    rlutil::locate(2,11);
+    rlutil::locate(2,10);
     cout << "ID Examen: ";
     cout << IDExamen <<endl;
-    rlutil::locate(2,12);
+    rlutil::locate(2,11);
     cout << "Nota: ";
     cout << Nota <<endl;
 }
