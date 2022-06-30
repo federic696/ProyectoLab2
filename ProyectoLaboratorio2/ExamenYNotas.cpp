@@ -256,8 +256,8 @@ void ExamenYNotas::cargarExamenYNotas()
     cout << "ID Maestro: ";
     cin >> IDMaestro;
     rlutil::locate(2,10);
-    cout << "Grado: ";
-    cin >> Grado;
+    cout << "ID Materia: ";
+    cin >> IDMateria;
     rlutil::locate(2,11);
     cout << "ID Examen: ";
     cin >> IDExamen;
@@ -274,8 +274,8 @@ void ExamenYNotas::mostrarExamenYNotas()
     cout << "ID Maestro: ";
     cout << IDMaestro <<endl;
     rlutil::locate(2,10);
-    cout << "Grado: ";
-    cout << Grado <<endl;
+    cout << "ID Materia: ";
+    cout << IDMateria <<endl;
     rlutil::locate(2,11);
     cout << "ID Examen: ";
     cout << IDExamen <<endl;

@@ -10,7 +10,7 @@ class ExamenYNotas{
 private:
     int IDAlumno;
     int IDMaestro;
-    int Grado;
+    int IDMateria;
     int IDExamen;
     int Nota;
     bool estado=true;
@@ -28,8 +28,8 @@ public:
         Nota=i;
     }
 
-    void setGrado(int i){
-        Grado=i;
+    void setIDMateria(int i){
+        IDMateria=i;
     }
 
     void cargarExamenYNotas();
@@ -50,8 +50,8 @@ public:
         return Nota;
     }
 
-    int getGrado(){
-        return Grado;
+    int getIDMateria(){
+        return IDMateria;
     }
 
 
