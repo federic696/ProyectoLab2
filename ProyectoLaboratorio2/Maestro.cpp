@@ -100,10 +100,13 @@ void Maestro::cargarMaestro(){
     rlutil::locate(2,11);
     cout << "Email: ";
     cin >> email;
+    cout<<"Legajo: ";
+    cin>>legajo;
     rlutil::locate(2,12);
     cout << "Fecha de nacimiento: ";
     fechaN.CargarFecha();
     estado=true;
+
     GrabarEnDiscoMaestro();
 }
 
