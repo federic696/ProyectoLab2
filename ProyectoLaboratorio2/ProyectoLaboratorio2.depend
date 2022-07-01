@@ -10,14 +10,14 @@
 	"Fecha.h"
 	"rlutil.h"
 
-1656627820 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\alumno.cpp
+1656637718 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\alumno.cpp
 	<iostream>
 	<conio.h>
 	"Alumno.h"
 	"Fecha.h"
 	"rlutil.h"
 
-1656222131 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\maestro.cpp
+1656635930 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\maestro.cpp
 	<iostream>
 	<conio.h>
 	"Maestro.h"
@@ -222,7 +222,7 @@
 	"Persona.h"
 	"Fecha.h"
 
-1656627073 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\alumno.h
+1656633733 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\alumno.h
 	<iostream>
 	<iostream>
 	<cstdlib>
@@ -239,7 +239,7 @@
 
 1655435748 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\fecha.h
 
-1656617732 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\examenynotas.cpp
+1656633733 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\examenynotas.cpp
 	<iostream>
 	<conio.h>
 	"ExamenYNotas.h"
@@ -252,7 +252,7 @@
 	"Fecha.h"
 	"rlutil.h"
 
-1656610352 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\grado.cpp
+1656634442 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\grado.cpp
 	<iostream>
 	<conio.h>
 	"Grado.h"
@@ -455,7 +455,7 @@
 	<string.h>
 	"Fecha.h"
 
-1656608960 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\examenynotas.h
+1656633733 c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\examenynotas.h
 	<iostream>
 	<iostream>
 	<cstdlib>

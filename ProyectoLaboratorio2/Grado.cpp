@@ -273,10 +273,10 @@ int Opc;
         case 21:
             return 0;
             break;
+
         case 23:
             cargarGrado();
             break;
-
 
         }
     }

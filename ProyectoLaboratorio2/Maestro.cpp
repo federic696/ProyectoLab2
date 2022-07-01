@@ -10,7 +10,9 @@ using namespace std;
 void recuadroma1(int x, int y, int ancho, int alto);
 void recuadroma(int x, int y, int ancho, int alto);
 void BuscarMaestro();
-
+void ModificarMaestro();
+void borrarRegistroMaestro();
+void recuperarRegistrosMaestro();
 
 int Maestros(){
 int Opc;
@@ -32,9 +34,11 @@ Maestro mas;
         rlutil::locate(11,13);
         cout<< "F4 - Modificar Maestro por DNI"<<endl;
         rlutil::locate(11,15);
-        cout<< "F5 - Darlo de baja o alta por DNI"<<endl;
+        cout<< "F5 - Dar de baja por DNI"<<endl;
         rlutil::locate(11,17);
-        cout<< "F6 - Volver a menu"<<endl;
+        cout<< "F6 - Dar de alta por DNI"<<endl;
+        rlutil::locate(11,19);
+        cout<< "F7 - Volver a menu"<<endl;
         rlutil::locate(0,0);
         Opc=rlutil::getkey();
         switch(Opc)
@@ -70,9 +74,37 @@ Maestro mas;
             BuscarMaestro();
             break;
         case 21:
+            system("cls");
+            recuadroma(1,1,60,20);
+            recuadroma1(1,1,60,20);
+            rlutil::locate(20,3);
+            cout<< "| MODIFICAR MAESTRO |"<<endl;
+            ModificarMaestro();
+
+        case 22:
+            system("cls");
+            recuadroma(1,1,60,20);
+            recuadroma1(1,1,60,20);
+            rlutil::locate(20,3);
+            cout<< "| DAR DE BAJA |"<<endl;
+            borrarRegistroMaestro();
+
 
             break;
         case 23:
+            system("cls");
+            recuadroma(1,1,60,20);
+            recuadroma1(1,1,60,20);
+            rlutil::locate(20,3);
+            cout<< "| DAR DE ALTA |"<<endl;
+            recuperarRegistrosMaestro();
+
+
+
+
+          break;
+
+        case 24:
             return 0;
             break;
 
@@ -130,6 +162,10 @@ void Maestro::mostrarMaestro(){
             rlutil::locate(2,13);
             cout<<"Persona activa"<<endl;
         }
+        else{
+          rlutil::locate(2,13);
+          cout<<"Persona inactiva"<<endl;
+        }
 
 
 
@@ -159,6 +195,20 @@ bool Maestro::LeerEnDiscoMaestro(int nroRegistro){
     return leyo;
 }
 
+int Maestro::ModificarEnDisco(int Pos){
+
+    FILE *pAlu;
+    int escribio;
+    pAlu=fopen("Maestro.dat","rb+");
+    if(pAlu==NULL){
+        return -1;
+    }
+    fseek(pAlu, Pos*sizeof(Maestro),0);
+    escribio=fwrite(this,sizeof(Maestro),1,pAlu);
+	fclose(pAlu);
+	return escribio;
+
+}
 
 ///funciones goables
 
@@ -175,6 +225,11 @@ void BuscarMaestro(){
         if(Reg.getDNI()==DNI)
         {
             Reg.mostrarMaestro();
+            break;
+        }
+        else{
+        rlutil::locate(2,10);
+        cout << "No se encontro un maestro con el DNI ingresado"<<endl;
         }
     }
     rlutil::locate(10,20);
@@ -186,31 +241,91 @@ void ModificarMaestro(){
     char Nombre[30],Apellido[30],Email[30];
     int Pos=0, dni=0, DNI=0,Dia=0,Mes=0,Anio=0;
     Maestro Reg;
+    rlutil::locate(2,6);
     cout<< "ingrese el DNI del maestro: ";
     cin>> DNI;
     while(Reg.LeerEnDiscoMaestro(Pos++)){
         if(Reg.getDNI()==DNI){
+            rlutil::locate(10,7);
             cout<< "Actualice los datos del maestro: ";
+            rlutil::locate(2,8);
             cout << "Nombre: ";
             cin >> Nombre;
             Reg.setNombre(Nombre);
+            rlutil::locate(2,9);
             cout << "Apellido: ";
             cin >> Apellido;
             Reg.setApellido(Apellido);
+            rlutil::locate(2,10);
             cout << "DNI: ";
             cin >> dni;
             Reg.setDNI(dni);
+            rlutil::locate(2,11);
             cout << "Email: ";
             cin >> Email;
             Reg.setEmail(Email);
+            rlutil::locate(2,12);
             cout << "Fecha de nacimiento: ";
-
-
+            Reg.getfecha().CargarFecha();
+            Reg.ModificarEnDisco(Pos-1);
+            rlutil::locate(10,20);
+            system("pause");
+            break;
             }
     }
+        if(Reg.getDNI()!=DNI){
+          rlutil::locate(2,8);
+          cout << "No se encontro un maestro con el DNI ingresado" << endl;
+        }
 }
 
+void borrarRegistroMaestro(){
+    Maestro alu;
+    int pos=0;
+    int dni;
+    rlutil::locate(2,6);
+    cout<<"Ingrese el dni del profesor a borrar: ";
+    cin>>dni;
+    while(alu.LeerEnDiscoMaestro(pos)){
+    if(alu.getDNI()==dni){
+        alu.setEstado(false);
+        alu.ModificarEnDisco(pos);
+        rlutil::locate(2,8);
+        cout << "Se realizo la baja" << endl;
+        rlutil::locate(10,20);
+        system("pause");
+        break;
+    }
+    pos++;
+  }
+    cout << "No se encontro el id" << endl;
+}
 
+void recuperarRegistrosMaestro(){
+    Maestro alu;
+    int pos=0;
+    int dni;
+    rlutil::locate(2,6);
+    cout<<"Ingrese el dni del maestro a dar de alta: ";
+    cin>>dni;
+    while(alu.LeerEnDiscoMaestro(pos)==1){
+        if(alu.getEstado()==false && alu.getDNI()==dni){
+            alu.setEstado(true);
+            alu.ModificarEnDisco(pos);
+            rlutil::locate(2,10);
+            cout << "Se realizo el alta" << endl;
+            rlutil::locate(10,20);
+            system("pause");
+            break;
+
+        }
+        pos++;
+    }
+      if(alu.getDNI()!=dni){
+        rlutil::locate(2,8);
+        cout << "No se encontro alumno con el legajo ingresado" << endl;
+      }
+}
 
 
 void recuadroma1(int x, int y, int ancho, int alto){

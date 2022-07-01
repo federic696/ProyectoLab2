@@ -308,7 +308,10 @@ void borrarRegistro(){
     }
     pos++;
   }
-    cout << "No se encontro el id" << endl;
+          if(alu.GetLegajo()!=leg){
+          rlutil::locate(2,8);
+          cout << "No se encontro un maestro con el DNI ingresado" << endl;
+        }
 }
 
 
@@ -356,6 +359,32 @@ void BuscarAlumnoDNI(){
     system("pause");
 }
 
+void recuperarRegistros(){
+    Alumno alu;
+    int pos=0;
+    int leg;
+    rlutil::locate(2,6);
+    cout<<"Ingrese el legajo del alumno a dar de alta: ";
+    cin>>leg;
+    while(alu.LeerEnDiscoAlumno(pos)==1){
+        if(alu.getEstado()==false && alu.GetLegajo()==leg){
+            alu.setEstado(true);
+            alu.ModificarEnDisco(pos);
+            rlutil::locate(2,10);
+            cout << "Se realizo el alta" << endl;
+            rlutil::locate(10,20);
+            system("pause");
+            break;
+
+        }
+        pos++;
+    }
+          if(alu.GetLegajo()!=leg){
+          rlutil::locate(2,8);
+          cout << "No se encontro alumno con el legajo ingresado" << endl;
+        }
+}
+
 int Alumno::sacarPromedio(int leg){
     //Alumno reg;
 
@@ -390,18 +419,22 @@ int Alumnos()
       recuadroalu1(1,1,60,20);
         rlutil::locate(23,3);
         cout<< "| MENU ALUMNOS |"<<endl;
-        rlutil::locate(11,7);
+        rlutil::locate(11,6);
         cout<< "F1 - Cargar Estudiante"<<endl;
-        rlutil::locate(11,9);
+        rlutil::locate(11,8);
         cout<< "F2 - Mostrar Estudiantes"<<endl;
-        rlutil::locate(11,11);
+        rlutil::locate(11,10);
         cout<< "F3 - Buscar por DNI o Legajo"<<endl;
-        rlutil::locate(11,13);
+        rlutil::locate(11,12);
         cout<< "F4 - Modificar Estudiante Por Legajo"<<endl;
-        rlutil::locate(11,15);
-        cout<< "F5 - Darlo de baja o alta por Legajo"<<endl;
-        rlutil::locate(11,17);
-        cout<< "F7 - Volver a menu"<<endl;
+        rlutil::locate(11,14);
+        cout<< "F5 - Dar de baja por Legajo"<<endl;
+        rlutil::locate(11,16);
+        cout<< "F6 - Dar de alta por Legajo"<<endl;
+        rlutil::locate(11,18);
+        cout <<"F7 - Promedios por alumno" << endl;
+        rlutil::locate(11,20);
+        cout<< "F8 - Volver a menu"<<endl;
         rlutil::locate(0,0);
         Opc=rlutil::getkey();
         switch(Opc)
@@ -489,13 +522,30 @@ int Alumnos()
 
             break;
         case 23:
+            system("cls");
+            recuadroalu(1,1,60,20);
+            recuadroalu1(1,1,60,20);
+            rlutil::locate(20,3);
+            cout<< "| DAR DE ALTA ALUMNO |"<<endl;
+            recuperarRegistros();
+
+            break;
+        case 24:
+            system("cls");
+            recuadroalu(1,1,60,20);
+            recuadroalu1(1,1,60,20);
+            rlutil::locate(20,3);
+            cout<< "| PROMEDIO DE ALUMNO |"<<endl;
             int i;
+            rlutil::locate(2,8);
             cout<<"Ingrese legajo alumno: ";
             cin>>i;
+            rlutil::locate(20,10);
             cout<<"Promedio: "<<obj.sacarPromedio(i)<<endl;
             system("pause");
+
             break;
-        case 24: //F6
+        case 25: //F6
             return 0;
             break;
 
