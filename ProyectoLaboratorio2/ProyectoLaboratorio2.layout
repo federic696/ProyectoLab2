@@ -2,124 +2,36 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="Maestro.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="ExamenYNotas.cpp" open="1" top="1" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="4999" topLine="53" />
-		</Cursor>
-		<Folding>
-			<Collapse line="89" />
-			<Collapse line="109" />
-			<Collapse line="134" />
-			<Collapse line="146" />
-			<Collapse line="162" />
-			<Collapse line="181" />
-			<Collapse line="212" />
-			<Collapse line="265" />
-		</Folding>
-	</File>
-	<File name="Maestro.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="393" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Materia.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="9059" topLine="45" />
-		</Cursor>
-		<Folding>
-			<Collapse line="7" />
-			<Collapse line="64" />
-			<Collapse line="118" />
-			<Collapse line="178" />
-			<Collapse line="211" />
-			<Collapse line="226" />
-			<Collapse line="238" />
-			<Collapse line="250" />
-			<Collapse line="262" />
-			<Collapse line="297" />
-		</Folding>
-	</File>
-	<File name="Materia.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="137" topLine="13" />
-		</Cursor>
-	</File>
-	<File name="ExamenYNotas.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="8343" topLine="24" />
+			<Cursor1 position="873" topLine="3" />
 		</Cursor>
 		<Folding>
 			<Collapse line="8" />
 			<Collapse line="23" />
-			<Collapse line="48" />
 			<Collapse line="75" />
-			<Collapse line="93" />
-			<Collapse line="117" />
-			<Collapse line="143" />
-			<Collapse line="197" />
-			<Collapse line="254" />
-			<Collapse line="272" />
-			<Collapse line="290" />
-			<Collapse line="302" />
-			<Collapse line="313" />
+			<Collapse line="92" />
+			<Collapse line="105" />
+			<Collapse line="114" />
+			<Collapse line="129" />
+			<Collapse line="141" />
+			<Collapse line="155" />
+			<Collapse line="192" />
+			<Collapse line="209" />
+			<Collapse line="266" />
+			<Collapse line="281" />
+			<Collapse line="296" />
+			<Collapse line="300" />
+			<Collapse line="308" />
+			<Collapse line="311" />
+			<Collapse line="319" />
+			<Collapse line="321" />
+			<Collapse line="331" />
 		</Folding>
-	</File>
-	<File name="Grado.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="459" topLine="12" />
-		</Cursor>
 	</File>
 	<File name="Alumno.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="682" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Grado.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="5237" topLine="0" />
-		</Cursor>
-		<Folding>
-			<Collapse line="7" />
-			<Collapse line="60" />
-			<Collapse line="119" />
-			<Collapse line="131" />
-			<Collapse line="155" />
-			<Collapse line="171" />
-			<Collapse line="183" />
-			<Collapse line="195" />
-			<Collapse line="210" />
-		</Folding>
-	</File>
-	<File name="Persona.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1231" topLine="31" />
-		</Cursor>
-	</File>
-	<File name="Alumno.cpp" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2503" topLine="29" />
-		</Cursor>
-		<Folding>
-			<Collapse line="7" />
-			<Collapse line="22" />
-			<Collapse line="67" />
-			<Collapse line="99" />
-			<Collapse line="110" />
-			<Collapse line="121" />
-			<Collapse line="135" />
-			<Collapse line="191" />
-			<Collapse line="326" />
-			<Collapse line="342" />
-		</Folding>
-	</File>
-	<File name="main.cpp" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="905" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="rlutil.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="9385" topLine="288" />
 		</Cursor>
 	</File>
 	<File name="Fecha.cpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -127,9 +39,99 @@
 			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
+	<File name="Materia.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="137" topLine="3" />
+		</Cursor>
+	</File>
+	<File name="rlutil.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="9385" topLine="288" />
+		</Cursor>
+	</File>
 	<File name="ExamenYNotas.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="914" topLine="26" />
+			<Cursor1 position="914" topLine="25" />
+		</Cursor>
+	</File>
+	<File name="Maestro.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="393" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Maestro.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4893" topLine="136" />
+		</Cursor>
+		<Folding>
+			<Collapse line="244" />
+			<Collapse line="268" />
+			<Collapse line="276" />
+			<Collapse line="310" />
+			<Collapse line="332" />
+			<Collapse line="359" />
+			<Collapse line="412" />
+		</Folding>
+	</File>
+	<File name="Grado.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3500" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="7" />
+			<Collapse line="60" />
+			<Collapse line="119" />
+			<Collapse line="154" />
+			<Collapse line="170" />
+			<Collapse line="182" />
+			<Collapse line="194" />
+			<Collapse line="209" />
+		</Folding>
+	</File>
+	<File name="Persona.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1231" topLine="31" />
+		</Cursor>
+	</File>
+	<File name="main.cpp" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="905" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Materia.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="7540" topLine="121" />
+		</Cursor>
+		<Folding>
+			<Collapse line="8" />
+			<Collapse line="65" />
+			<Collapse line="119" />
+			<Collapse line="179" />
+			<Collapse line="242" />
+			<Collapse line="257" />
+			<Collapse line="269" />
+		</Folding>
+	</File>
+	<File name="Alumno.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1494" topLine="1" />
+		</Cursor>
+		<Folding>
+			<Collapse line="9" />
+			<Collapse line="24" />
+			<Collapse line="110" />
+			<Collapse line="250" />
+			<Collapse line="293" />
+			<Collapse line="319" />
+			<Collapse line="331" />
+			<Collapse line="347" />
+			<Collapse line="363" />
+			<Collapse line="389" />
+		</Folding>
+	</File>
+	<File name="Grado.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="459" topLine="12" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

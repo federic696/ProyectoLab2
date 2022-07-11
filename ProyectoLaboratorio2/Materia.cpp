@@ -2,7 +2,8 @@
 #include<conio.h>
 #include "Materia.h"
 #include "rlutil.h"
-
+#include <cstdio>
+#include <iomanip>
 using namespace std;
 
 void recuadromate(int x, int y, int ancho, int alto){
@@ -197,6 +198,33 @@ void Materia::cargarMateria()
     reg2.setIDMateria(reg.IDMateria);
     reg2.ModificarEnDisco(reg.grado-1);
 }
+void Materia::mostrarMateria(){
+    system("cls");
+    int pos=0;
+
+    cout << left;
+    cout << "------------------------------------------------------------------------------------------------------" << endl;
+    cout << "\t                            | MATERIAS REGISTRADAS |"<< endl;
+    cout << "------------------------------------------------------------------------------------------------------" << endl;
+    cout << setw(15) << "ID MATERIA";
+    cout << setw(30) << "NOMBRE MATERIA";
+    cout << setw(30) << "ID MAESTRO";
+    cout << setw(15) << "ESTADO" << endl;
+
+    cout << "------------------------------------------------------------------------------------------------------" << endl;
+      while(LeerEnDiscoMateria(pos++)==1){
+            cout << left;
+            cout << setw(15) << IDMateria;
+            cout << setw(30) << nombreMateria;
+            cout << setw(30) << IDMaestro;
+            cout << setw(30) << estado<< endl;
+            pos++;
+      }
+    system("pause");
+}
+
+//Me baso en el antiguo prototipo para el nuevo mostrar
+/*
 void Materia::mostrarMateria()
 {
     rlutil::locate(2,8);
@@ -209,6 +237,9 @@ void Materia::mostrarMateria()
     cout<<"Estado: "<<estado<<endl;
 
 }
+*/
+
+
 int Materia::ModificarEnDisco(int Pos){
 
     FILE *pAlu;
@@ -248,17 +279,20 @@ bool Materia::LeerEnDiscoMateria(int nroRegistro)
     return leyo;
 }
 
-void mostrarTodasMaterias(){
+// Simplifico la funcion en 1
+
+/*void mostrarTodasMaterias(){
     Materia reg;
     int pos=0;
     while(reg.LeerEnDiscoMateria(pos)==1){
         reg.mostrarMateria();
-        rlutil::locate(10,20);
-        system("pause");
+       // rlutil::locate(10,20);
+      //  system("pause");
         pos++;
 
     }
 }
+*/
 
 void Materia::darDeBaja(){
     Materia reg;
@@ -370,11 +404,8 @@ int Materias()
             break;
         case 20:
             system("cls");
-            recuadromate(1,1,60,20);
-            recuadromate1(1,1,60,20);
-            rlutil::locate(20,3);
             cout<< "| MATERIAS |"<<endl;
-            mostrarTodasMaterias();
+            reg.mostrarMateria();
             break;
         case 21:
             system("cls");
@@ -404,7 +435,7 @@ int Materias()
         }
     }
     cout<< endl;
-    system("pause");
+    //system("pause");
     return 0;
 }
 

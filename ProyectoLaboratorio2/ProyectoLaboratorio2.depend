@@ -10,18 +10,22 @@
 	"Fecha.h"
 	"rlutil.h"
 
-1656637718 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\alumno.cpp
+1657567358 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\alumno.cpp
 	<iostream>
 	<conio.h>
 	"Alumno.h"
 	"Fecha.h"
 	"rlutil.h"
+	<cstdio>
+	<iomanip>
 
-1656635930 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\maestro.cpp
+1657568107 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\maestro.cpp
 	<iostream>
 	<conio.h>
 	"Maestro.h"
 	"rlutil.h"
+	<cstdio>
+	<iomanip>
 
 1656113810 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\main.cpp
 	<iostream>
@@ -252,17 +256,19 @@
 	"Fecha.h"
 	"rlutil.h"
 
-1656634442 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\grado.cpp
+1657566896 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\grado.cpp
 	<iostream>
 	<conio.h>
 	"Grado.h"
 	"rlutil.h"
 
-1656628050 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\materia.cpp
+1657569096 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\materia.cpp
 	<iostream>
 	<conio.h>
 	"Materia.h"
 	"rlutil.h"
+	<cstdio>
+	<iomanip>
 
 1655494331 source:c:\users\hacke\documents\github\proyectolab2\proyectolaboratorio2\persona.cpp
 	<iostream>

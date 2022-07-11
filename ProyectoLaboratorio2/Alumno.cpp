@@ -4,6 +4,8 @@
 #include "Fecha.h"
 using namespace std;
 #include "rlutil.h"
+#include <cstdio>
+#include <iomanip>
 
 int Alumno::cantidadAlumnos(){
     FILE *p = fopen("Alumnos.dat", "rb");
@@ -66,37 +68,35 @@ void Alumno::cargarAlumno(){
 ///Funciones dentro de disco
 
 void Alumno::mostrarAlumno(){
-    rlutil::locate(2,8);
-    cout << "Nombre: ";
-    cout << nombre << endl;
-    rlutil::locate(2,9);
-    cout << "Apellido: ";
-    cout << apellido << endl;
-    rlutil::locate(2,10);
-    cout << "DNI: ";
-    cout << DNI << endl;
-    rlutil::locate(2,11);
-    cout << "Email: ";
-    cout << email << endl;
-    rlutil::locate(2,12);
-    cout << "Fecha de nacimiento: ";
-    fechaN.MostrarFecha();
-    rlutil::locate(2,13);
-    cout << "Legajo: ";
-    cout << legajo << endl;
-    rlutil::locate(2,14);
-    cout << "Curso: ";
-    cout << curso << endl;
-     if(estado==true){
-        rlutil::locate(2,15);
-        cout<<"Persona activa"<<endl;
-    }
-    else{
-      rlutil::locate(2,15);
-      cout<<"Persona inactiva"<<endl;
-    }
+    system("cls");
+    int pos=0;
 
+    cout << left;
+    cout << "------------------------------------------------------------------------------------------------------" << endl;
+    cout << "\t                            | ESTUDIANTES REGISTRADOS |"<< endl;
+    cout << "------------------------------------------------------------------------------------------------------" << endl;
+    cout << setw(15) << "LEGAJO";
+    cout << setw(30) << "APELLIDOS";
+    cout << setw(30) << "NOMBRES";
+    cout << setw(15) << "DNI";
+    cout << setw(15) << "ESTADO" << endl;
+
+    cout << "------------------------------------------------------------------------------------------------------" << endl;
+      while(LeerEnDiscoAlumno(pos++)==1){
+            cout << left;
+            cout << setw(15) << legajo;
+            cout << setw(30) << apellido;
+            cout << setw(30) << nombre;
+            cout << setw(15) << DNI;
+            cout << setw(15) << estado<< endl;
+            pos++;
+      }
+
+            system("pause");
 }
+
+
+
 bool Alumno::GrabarEnDiscoAlumno(){
     FILE *p;
     p=fopen ("Alumno.dat","ab");
@@ -302,7 +302,9 @@ void borrarRegistro(){
     if(alu.GetLegajo()==leg){
         alu.setEstado(false);
         alu.ModificarEnDisco(pos);
+        rlutil::locate(2,8);
         cout << "Se realizo la baja" << endl;
+        rlutil::locate(10,20);
         system("pause");
         break;
     }
@@ -451,26 +453,15 @@ int Alumnos()
             system("cls");
 
             break;
+
+
         case 19: //F2
-
-            system("cls");
-            while(obj.LeerEnDiscoAlumno(pos++)==1){
-            recuadroalu(1,1,60,20);
-            recuadroalu1(1,1,60,20);
-            obj.mostrarAlumno();
-            rlutil::locate(20,3);
-            cout<< "| ALUMNOS REGISTRADOS |"<<endl;
-            rlutil::locate(10,20);
-            system("pause");
-            system("cls");
-            pos++;
-            }
-            pos=0;
-            break;
+        system("cls");
+        obj.mostrarAlumno();
 
 
 
-
+        break;
 
 
         case 20: //F3

@@ -138,7 +138,6 @@ void mostrarGrado()
        cout<<"Grado "<<aux.getNumGrado()<<endl;
        cout<<"Materias: "<<endl;
        for(int i=0;i<15;i++){
-        //cout<<aux.getIDMateria(i)<<endl;
         if(aux.getIDMateria(i)!=0){
             while(aux2.LeerEnDiscoMateria(pos1++)){
                 if(aux.getIDMateria(i)==aux2.getIDMateria()){

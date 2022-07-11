@@ -3,6 +3,8 @@
 #include "Maestro.h"
 using namespace std;
 #include "rlutil.h"
+#include <cstdio>
+#include <iomanip>
 
 
 
@@ -53,17 +55,8 @@ Maestro mas;
             break;
         case 19:
             system("cls");
-            while(mas.LeerEnDiscoMaestro(Pos)==1){
-            recuadroma(1,1,60,20);
-            recuadroma1(1,1,60,20);
             mas.mostrarMaestro();
-            rlutil::locate(20,3);
-            cout<< "| MAESTROS REGISTRADOS |"<<endl;
-            rlutil::locate(10,20);
-            system("pause");
-            system("cls");
-            Pos++;
-            }
+
             break;
         case 20:
             system("cls");
@@ -132,6 +125,7 @@ void Maestro::cargarMaestro(){
     rlutil::locate(2,11);
     cout << "Email: ";
     cin >> email;
+    rlutil::locate(2,10);
     cout<<"Legajo: ";
     cin>>legajo;
     rlutil::locate(2,12);
@@ -143,6 +137,41 @@ void Maestro::cargarMaestro(){
 }
 
 void Maestro::mostrarMaestro(){
+    system("cls");
+    int pos=0;
+
+    cout << left;
+    cout << "------------------------------------------------------------------------------------------------------" << endl;
+    cout << "                            | MAESTROS REGISTRADOS |"<< endl;
+    cout << "------------------------------------------------------------------------------------------------------" << endl;
+    cout << setw(30) << "APELLIDOS";
+    cout << setw(30) << "NOMBRES";
+    cout << setw(15) << "DNI";
+    cout << setw(15) << "EMAIL";
+    cout << setw(15) << "ESTADO";
+    cout << setw(15) << "FECHA NAC" << endl;
+
+    cout << "------------------------------------------------------------------------------------------------------" << endl;
+      while(LeerEnDiscoMaestro(pos++)==1){
+            cout << left;
+            cout << setw(30) << apellido;
+            cout << setw(30) << nombre;
+            cout << setw(15) << DNI;
+            cout << setw(15) << email;
+            cout << setw(15) << estado;
+            fechaN.MostrarFecha();
+
+            pos++;
+      }
+
+
+            system("pause");
+}
+
+
+//La nueva funcion de mostrar se basa en esta.
+
+/*void Maestro::mostrarMaestro(){
         rlutil::locate(2,8);
         cout << "Nombre: ";
         cout << nombre << endl;
@@ -169,7 +198,7 @@ void Maestro::mostrarMaestro(){
 
 
 
-}
+}*/
 
 bool Maestro::GrabarEnDiscoMaestro(){
     FILE *p;
