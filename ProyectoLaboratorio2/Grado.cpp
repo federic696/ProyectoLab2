@@ -214,8 +214,10 @@ void Grado::mostrarAlumnos(){
     cout<<"Grado "<<numGrado<<":"<<endl;
     while(reg.LeerEnDiscoAlumno(pos++)){
         if(reg.GetCurso()==numGrado){
+            rlutil::locate(2,9);
             cout<<reg.getNombre()<<" "<<reg.getApellido()<<endl;
         }
+        pos++;
     }
 }
 
