@@ -1,6 +1,7 @@
 #include<iostream>
 #include<conio.h>
 #include "Alumno.h"
+#include "Maestro.h"
 #include "Fecha.h"
 using namespace std;
 #include "rlutil.h"
@@ -23,7 +24,7 @@ int Alumno::cantidadAlumnos(){
 }
 
 void Alumno::cargarAlumno(){
-
+    int leg=100000+ (rand() % 999999);
     rlutil::locate(2,8);
     cout << "Nombre: ";
     cin >>nombre;
@@ -46,20 +47,22 @@ void Alumno::cargarAlumno(){
     cout << "Fecha de nacimiento: ";
     fechaN.CargarFecha();
     rlutil::locate(2,17);
-    cout << "Legajo: ";
-    cin >> legajo;
-    while(BuscarLegajo(legajo)==0){
-        rlutil::locate(2,18);
+    //cout << "Legajo: ";
+    //cin >> legajo;
+    while(BuscarLegajo(leg)==0){
+        /*rlutil::locate(2,18);
         cout<< "Ingrese un legajo no exitente: ";
-        cin>>legajo;
+        cin>>legajo;*/
+        leg=100000+ (rand() % 999999);
     }
+    legajo=leg;
     rlutil::locate(2,19);
     cout << "Grado: ";
     cin >> curso;
      estado=true;
     GrabarEnDiscoAlumno();
     rlutil::locate(12,20);
-    if(GrabarEnDiscoAlumno())cout << "ALUMNO CARGADO CORRECTAMENTE!";
+    if(GrabarEnDiscoAlumno())cout << "ALUMNO CARGADO CORRECTAMENTE! LEGAJO: "<<legajo<<endl;
 
 }
 
@@ -319,10 +322,17 @@ void borrarRegistro(){
 
 int BuscarLegajo(int Leg){
     Alumno Reg;
+    Maestro Reg2;
     int Pos=0;
 
     while(Reg.LeerEnDiscoAlumno(Pos++)){
         if(Reg.GetLegajo()==Leg){
+            return 0;
+        }
+    }
+    Pos=0;
+    while(Reg2.LeerEnDiscoMaestro(Pos++)){
+        if(Reg2.GetLegajo()==Leg){
             return 0;
         }
     }

@@ -52,6 +52,7 @@ Maestro mas;
             rlutil::locate(20,3);
             cout<< "| CARGAR MAESTRO |"<<endl;
             mas.cargarMaestro();
+            system("pause");
             break;
         case 19:
             system("cls");
@@ -113,6 +114,7 @@ Maestro mas;
 
 
 void Maestro::cargarMaestro(){
+    int leg=100000+ (rand() % 999999);
     rlutil::locate(2,8);
     cout << "Nombre: ";
     cin >>nombre;
@@ -126,14 +128,19 @@ void Maestro::cargarMaestro(){
     cout << "Email: ";
     cin >> email;
     rlutil::locate(2,10);
-    cout<<"Legajo: ";
-    cin>>legajo;
+     while(BuscarLegajo(leg)==0){
+        /*rlutil::locate(2,18);
+        cout<< "Ingrese un legajo no exitente: ";
+        cin>>legajo;*/
+        leg=100000+ (rand() % 999999);
+    }
+    legajo=leg;
     rlutil::locate(2,12);
     cout << "Fecha de nacimiento: ";
     fechaN.CargarFecha();
     estado=true;
 
-    GrabarEnDiscoMaestro();
+    if(GrabarEnDiscoMaestro()) cout << "MAESTRO CARGADO CORRECTAMENTE! LEGAJO: "<<legajo<<endl;
 }
 
 void Maestro::mostrarMaestro(){
@@ -149,6 +156,7 @@ void Maestro::mostrarMaestro(){
     cout << setw(15) << "DNI";
     cout << setw(15) << "EMAIL";
     cout << setw(15) << "ESTADO";
+    cout << setw(15) << "LEGAJO";
     cout << setw(15) << "FECHA NAC" << endl;
 
     cout << "------------------------------------------------------------------------------------------------------" << endl;
@@ -159,6 +167,7 @@ void Maestro::mostrarMaestro(){
             cout << setw(15) << DNI;
             cout << setw(15) << email;
             cout << setw(15) << estado;
+            cout << setw(15) << legajo;
             fechaN.MostrarFecha();
 
             pos++;

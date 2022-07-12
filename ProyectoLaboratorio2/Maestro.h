@@ -7,6 +7,7 @@ using namespace std;
 #include <string.h>
 #include "Fecha.h"
 #include "Persona.h"
+#include "Alumno.h"
 
 class Maestro:public Persona{
 
