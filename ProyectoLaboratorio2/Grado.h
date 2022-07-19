@@ -39,6 +39,7 @@ public:
             }
         }
     }
+    void mostrarMejoresPromedios();
     void mostrarAlumnos();
     //gets()
 

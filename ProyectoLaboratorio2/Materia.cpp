@@ -117,6 +117,20 @@ const char *UI_VERTICAL_LINE = "\xB3"; // 179 - │
     cout << UI_BOTTOM_RIGHT;
 }
 
+int BuscarIdMateria(int ID){
+    Materia Reg;
+    int Pos=0;
+
+    while(Reg.LeerEnDiscoMateria(Pos++)){
+        if(Reg.getIDMateria()==ID){
+            return 0;
+        }
+    }
+
+    return 1;
+
+}
+
 void Materia::mejorPromedio(){
     Alumno reg;
     int cantAlumnos=reg.cantidadAlumnos();
@@ -178,15 +192,20 @@ void Materia::mejorPromedio(){
 
 void Materia::cargarMateria()
 {
+        int ID=10000+ (rand() % 99999);
     Grado reg2;
     Materia reg;
     rlutil::locate(2,8);
     cout<<"Grado: ";
     cin>>reg.grado;
     rlutil::locate(2,9);
-    cout<<"ID:";
+   /* cout<<"ID:";
     cin>>reg.IDMateria;
-    rlutil::locate(2,10);
+    rlutil::locate(2,10);*/
+     while(BuscarIdMateria(ID)==0){
+        ID=10000+ (rand() % 99999);
+    }
+    reg.IDMateria=ID;
     cout<<"Nombre Materia:";
     cin>>reg.nombreMateria;
     rlutil::locate(2,11);
@@ -197,6 +216,8 @@ void Materia::cargarMateria()
     reg2.LeerEnDiscoGrado(reg.grado-1);
     reg2.setIDMateria(reg.IDMateria);
     reg2.ModificarEnDisco(reg.grado-1);
+     cout<<"MATERIA CARGADA CON EXITO, ID= "<<reg.getIDMateria()<<endl;
+    system("pause");
 }
 void Materia::mostrarMateria(){
     system("cls");

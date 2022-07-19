@@ -161,12 +161,15 @@
 	<string.h>
 	"Fecha.h"
 
-1656630317 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\alumno.cpp
+1657777363 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\alumno.cpp
 	<iostream>
 	<conio.h>
 	"Alumno.h"
+	"Maestro.h"
 	"Fecha.h"
 	"rlutil.h"
+	<cstdio>
+	<iomanip>
 
 1656630120 c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\alumno.h
 	<iostream>
@@ -177,7 +180,7 @@
 	"rlutil.h"
 	"Grado.h"
 
-1656628873 c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\persona.h
+1657604800 c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\persona.h
 	<iostream>
 	<cstdlib>
 	<string.h>
@@ -185,40 +188,44 @@
 
 1654557666 c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\fecha.h
 
-1656630521 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\examenynotas.cpp
+1658217643 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\examenynotas.cpp
 	<iostream>
 	<conio.h>
 	"ExamenYNotas.h"
 	"rlutil.h"
 	"Alumno.h"
 
-1656510739 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\fecha.cpp
+1657775560 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\fecha.cpp
 	<iostream>
 	<conio.h>
 	"Fecha.h"
 	"rlutil.h"
 
-1656617963 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\grado.cpp
+1657863863 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\grado.cpp
 	<iostream>
 	<conio.h>
 	"Grado.h"
 	"rlutil.h"
 
-1656210410 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\maestro.cpp
+1657607896 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\maestro.cpp
 	<iostream>
 	<conio.h>
 	"Maestro.h"
 	"rlutil.h"
+	<cstdio>
+	<iomanip>
 
 1656188530 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\main.cpp
 	<iostream>
 	"funcionesrecuadro.h"
 
-1656628873 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\materia.cpp
+1658218066 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\materia.cpp
 	<iostream>
 	<conio.h>
 	"Materia.h"
 	"rlutil.h"
+	<cstdio>
+	<iomanip>
 
 1655261866 source:c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\persona.cpp
 	<iostream>
@@ -377,13 +384,14 @@
 	"Fecha.h"
 	"Persona.h"
 
-1656188530 c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\maestro.h
+1657607513 c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\maestro.h
 	<iostream>
 	<iostream>
 	<cstdlib>
 	<string.h>
 	"Fecha.h"
 	"Persona.h"
+	"Alumno.h"
 
 1655578650 c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\funcionesrecuadro.h
 	<iostream>
@@ -489,7 +497,7 @@
 	<string.h>
 	"Fecha.h"
 
-1656571415 c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\grado.h
+1657859904 c:\users\maxil\documents\github\proyectolab2\proyectolaboratorio2\grado.h
 	<iostream>
 	<iostream>
 	<cstdlib>

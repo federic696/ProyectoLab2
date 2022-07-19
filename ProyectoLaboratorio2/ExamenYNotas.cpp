@@ -5,6 +5,20 @@ using namespace std;
 #include "rlutil.h"
 #include "Alumno.h"
 
+int BuscarIdExamen(int ID){
+    ExamenYNotas Reg;
+    int Pos=0;
+
+    while(Reg.LeerEnDiscoExamenYNotas(Pos++)){
+        if(Reg.getIDExamen()==ID){
+            return 0;
+        }
+    }
+
+    return 1;
+
+}
+
 int BuscarID(int id)
 {
 ExamenYNotas obj;
@@ -265,6 +279,7 @@ const char *UI_VERTICAL_LINE = "\xB3"; // 179 - │
 }
 void ExamenYNotas::cargarExamenYNotas()
 {
+    int ID=10000+ (rand() % 99999);
     rlutil::locate(2,8);
     cout << "ID Alumno: ";
     cin >>IDAlumno;
@@ -272,11 +287,17 @@ void ExamenYNotas::cargarExamenYNotas()
     cout << "ID Materia: ";
     cin >> IDMateria;
     rlutil::locate(2,10);
-    cout << "ID Examen: ";
+    while(BuscarIdExamen(ID)==0){
+        ID=10000+ (rand() % 99999);
+    }
+    IDExamen=ID;
+    /*cout << "ID Examen: ";
     cin >> IDExamen;
-    rlutil::locate(2,11);
+    rlutil::locate(2,11);*/
     cout << "Nota: ";
     cin >> Nota;
+    cout<<"EXAMEN CARGADO CON EXITO, ID= "<<IDExamen<<endl;
+    system("pause");
 }
 void ExamenYNotas::mostrarExamenYNotas()
 {

@@ -207,6 +207,26 @@ int Grado::cantidadGrado()
     return cant_reg;
 }
 
+void Grado::mostrarMejoresPromedios(){
+    Alumno reg;
+    int pos=0;
+    int mejorPromedio=0;
+    char mejorAlumnoNombre[30];
+    char mejorAlumnoApellido[30];
+    int leg;
+    while(reg.LeerEnDiscoAlumno(pos++)){
+        if(reg.sacarPromedio(reg.GetLegajo())>mejorPromedio && reg.GetCurso()==numGrado){
+                        cout<<"Hola";
+
+            mejorPromedio=reg.sacarPromedio(reg.GetLegajo());
+            *mejorAlumnoNombre=*reg.getNombre();
+            *mejorAlumnoApellido=*reg.getApellido();
+        }
+    }
+    cout<<"Mejor Alumno: "<<mejorAlumnoNombre<<" "<<mejorAlumnoApellido<<endl;
+    cout<<"Promedio: "<<mejorPromedio<<endl;
+}
+
 void Grado::mostrarAlumnos(){
     Alumno reg;
     int pos=0;
@@ -224,6 +244,7 @@ void Grado::mostrarAlumnos(){
 int Grados(){
 Grado reg;
 int Opc;
+int pos=0;
     while(true)
     {
         system("cls");
@@ -269,7 +290,15 @@ int Opc;
             }
             break;
         case 20:
-
+            system("cls");
+            while(reg.LeerEnDiscoGrado(pos++)){
+                cout<<"---------------------------------"<<endl;
+                cout<<"Grado "<<reg.getNumGrado()<<endl;
+                reg.mostrarMejoresPromedios();
+                cout<<"---------------------------------"<<endl;
+            }
+            pos=0;
+            system("pause");
             break;
         case 21:
             return 0;
