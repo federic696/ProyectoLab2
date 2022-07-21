@@ -259,7 +259,6 @@ void Materia::mostrarMateria(){
             cout << setw(30) << nombreMateria;
             cout << setw(30) << IDMaestro;
             cout << setw(30) << estado<< endl;
-            pos++;
       }
     system("pause");
 }
@@ -440,13 +439,14 @@ int Materias()
             while(reg.LeerEnDiscoMateria(pos++)){
              reg.mejorPromedio();
             }
-            rlutil::locate(10,20);
+            //rlutil::locate(10,20);
             system("pause");
             break;
         case 20:
             system("cls");
             cout<< "| MATERIAS |"<<endl;
             reg.mostrarMateria();
+            system("pause");
             break;
         case 21:
             system("cls");

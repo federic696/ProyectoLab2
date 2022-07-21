@@ -56,12 +56,12 @@ void Alumno::cargarAlumno(){
         leg=100000+ (rand() % 999999);
     }
     legajo=leg;
-    rlutil::locate(2,19);
+    rlutil::locate(2,18);
     cout << "Grado: ";
     cin >> curso;
      estado=true;
-    GrabarEnDiscoAlumno();
-    rlutil::locate(12,20);
+    //GrabarEnDiscoAlumno();
+    rlutil::locate(12,19);
     if(GrabarEnDiscoAlumno())cout << "ALUMNO CARGADO CORRECTAMENTE! LEGAJO: "<<legajo<<endl;
 
 }
@@ -83,16 +83,17 @@ void Alumno::mostrarAlumno(){
     cout << setw(30) << "NOMBRES";
     cout << setw(15) << "DNI";
     cout << setw(15) << "ESTADO" << endl;
+    cout << setw(15) << "GRADO" << endl;
 
     cout << "------------------------------------------------------------------------------------------------------" << endl;
-      while(LeerEnDiscoAlumno(pos++)==1){
+      while(LeerEnDiscoAlumno(pos++)){
             cout << left;
             cout << setw(15) << legajo;
             cout << setw(30) << apellido;
             cout << setw(30) << nombre;
             cout << setw(15) << DNI;
             cout << setw(15) << estado<< endl;
-            pos++;
+            cout << setw(15) << curso<< endl;
       }
 
             system("pause");
@@ -474,8 +475,6 @@ int Alumnos()
         case 19: //F2
         system("cls");
         obj.mostrarAlumno();
-
-
 
         break;
 

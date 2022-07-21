@@ -15,6 +15,7 @@ public:
 
     void cargarMaestro();
     void mostrarMaestro();
+    void mostrarMaestro2();
     bool GrabarEnDiscoMaestro();
     bool LeerEnDiscoMaestro(int nroRegistro);
     int ModificarEnDisco(int Pos);

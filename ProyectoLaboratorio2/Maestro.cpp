@@ -160,7 +160,7 @@ void Maestro::mostrarMaestro(){
     cout << setw(15) << "FECHA NAC" << endl;
 
     cout << "------------------------------------------------------------------------------------------------------" << endl;
-      while(LeerEnDiscoMaestro(pos++)==1){
+      while(LeerEnDiscoMaestro(pos++)){
             cout << left;
             cout << setw(30) << apellido;
             cout << setw(30) << nombre;
@@ -170,7 +170,7 @@ void Maestro::mostrarMaestro(){
             cout << setw(15) << legajo;
             fechaN.MostrarFecha();
 
-            pos++;
+            //pos++;
       }
 
 
@@ -180,7 +180,7 @@ void Maestro::mostrarMaestro(){
 
 //La nueva funcion de mostrar se basa en esta.
 
-/*void Maestro::mostrarMaestro(){
+void Maestro::mostrarMaestro2(){
         rlutil::locate(2,8);
         cout << "Nombre: ";
         cout << nombre << endl;
@@ -207,7 +207,7 @@ void Maestro::mostrarMaestro(){
 
 
 
-}*/
+}
 
 bool Maestro::GrabarEnDiscoMaestro(){
     FILE *p;
@@ -262,7 +262,7 @@ void BuscarMaestro(){
     {
         if(Reg.getDNI()==DNI)
         {
-            Reg.mostrarMaestro();
+            Reg.mostrarMaestro2();
             break;
         }
         else{

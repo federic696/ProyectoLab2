@@ -234,10 +234,10 @@ void Grado::mostrarAlumnos(){
     cout<<"Grado "<<numGrado<<":"<<endl;
     while(reg.LeerEnDiscoAlumno(pos++)){
         if(reg.GetCurso()==numGrado){
-            rlutil::locate(2,9);
+            //rlutil::locate(2,9);
+            //cout<<"test"<<endl;
             cout<<reg.getNombre()<<" "<<reg.getApellido()<<endl;
         }
-        pos++;
     }
 }
 
@@ -279,7 +279,7 @@ int pos=0;
               recuadrogra1(1,1,60,20);
               rlutil::locate(20,3);
               cout<< "| MOSTRAR ESTUDIANTES |"<<endl;
-              reg.LeerEnDiscoGrado(i);
+              reg.LeerEnDiscoGrado(pos++);
               reg.mostrarAlumnos();
               rlutil::locate(10,20);
               system("pause");
@@ -288,6 +288,7 @@ int pos=0;
 
 
             }
+            pos=0;
             break;
         case 20:
             system("cls");
