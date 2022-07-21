@@ -397,20 +397,26 @@ void recuperarRegistros(){
         }
 }
 
-int Alumno::sacarPromedio(int leg){
+float Alumno::sacarPromedio(int leg){
     //Alumno reg;
 
     int pos=0;
     ExamenYNotas reg2;
     int examenes[reg2.cantidadExamenesXAlumno(leg)];
+    bool encontrado=false;
     int i=0;
     while(reg2.LeerEnDiscoExamenYNotas(pos++)){
         if(reg2.getIDAlumno()==leg){
+                encontrado=true;
             examenes[i]=reg2.getNota();
             i++;
         }
     }
+    if(encontrado==false){
+        return -1;
+    }
     int total=0;
+
     for(int f=0;f<reg2.cantidadExamenesXAlumno(leg);f++){
         total+=examenes[f];
     }
@@ -542,9 +548,13 @@ int Alumnos()
             cout<<"Ingrese legajo alumno: ";
             cin>>i;
             rlutil::locate(20,10);
+            if(obj.sacarPromedio(i)==-1){
+                cout<<"No se encontro el alumno o no tiene notas"<<endl;
+                system("pause");
+            }else{
             cout<<"Promedio: "<<obj.sacarPromedio(i)<<endl;
             system("pause");
-
+            }
             break;
         case 25: //F6
             return 0;

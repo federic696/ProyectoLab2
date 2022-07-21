@@ -4,6 +4,7 @@ using namespace std;
 #include "ExamenYNotas.h"
 #include "rlutil.h"
 #include "Alumno.h"
+#include "Materia.h"
 
 int BuscarIdExamen(int ID){
     ExamenYNotas Reg;
@@ -277,15 +278,49 @@ const char *UI_VERTICAL_LINE = "\xB3"; // 179 - │
     rlutil::resetColor();
     rlutil::setBackgroundColor(rlutil::DARKGREY);
 }
+
+bool checkIdMateria(int id){
+    Materia reg;
+    int pos=0;
+    while(reg.LeerEnDiscoMateria(pos++)){
+        if(reg.getIDMateria()==id){
+            return true;
+        }
+    }
+
+    return false;
+}
+
+bool checkIdAlumno(int id){
+    Alumno reg;
+    int pos=0;
+    while(reg.LeerEnDiscoAlumno(pos++)){
+        if(reg.GetLegajo()==id){
+            return true;
+        }
+    }
+
+    return false;
+}
 void ExamenYNotas::cargarExamenYNotas()
 {
     int ID=10000+ (rand() % 99999);
     rlutil::locate(2,8);
     cout << "ID Alumno: ";
     cin >>IDAlumno;
+    while(checkIdAlumno(IDAlumno)==false){
+        rlutil::locate(2,8);
+        cout << "Ingrese un ID Alumno valido: ";
+        cin >>IDAlumno;
+    }
     rlutil::locate(2,9);
     cout << "ID Materia: ";
     cin >> IDMateria;
+    while(checkIdMateria(IDMateria)==false){
+    rlutil::locate(2,9);
+    cout << "Ingrese un ID Materia valido: ";
+    cin >> IDMateria;
+    }
     rlutil::locate(2,10);
     while(BuscarIdExamen(ID)==0){
         ID=10000+ (rand() % 99999);
@@ -294,8 +329,14 @@ void ExamenYNotas::cargarExamenYNotas()
     /*cout << "ID Examen: ";
     cin >> IDExamen;
     rlutil::locate(2,11);*/
+        rlutil::locate(2,11);
     cout << "Nota: ";
     cin >> Nota;
+    while(Nota<0 || Nota>10){
+        rlutil::locate(2,11);
+    cout << "Ingrese una nota valida: ";
+    cin >> Nota;
+    }
     cout<<"EXAMEN CARGADO CON EXITO, ID= "<<IDExamen<<endl;
     system("pause");
 }

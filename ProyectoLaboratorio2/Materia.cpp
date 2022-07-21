@@ -189,7 +189,17 @@ void Materia::mejorPromedio(){
     rlutil::locate(2,10);
     cout<<"Alumno: "<<nombreAlumno<<endl;
 }
+bool checkIdMaestro(int id){
+    Maestro reg;
+    int pos=0;
+    while(reg.LeerEnDiscoMaestro(pos++)){
+        if(reg.GetLegajo()==id){
+            return true;
+        }
+    }
 
+    return false;
+}
 void Materia::cargarMateria()
 {
         int ID=10000+ (rand() % 99999);
@@ -198,7 +208,11 @@ void Materia::cargarMateria()
     rlutil::locate(2,8);
     cout<<"Grado: ";
     cin>>reg.grado;
-    rlutil::locate(2,9);
+    while(reg.grado<1 || reg.grado>12){
+       rlutil::locate(2,8);
+    cout<<"Ingrese un Grado valido: ";
+    cin>>reg.grado;
+    }
    /* cout<<"ID:";
     cin>>reg.IDMateria;
     rlutil::locate(2,10);*/
@@ -206,11 +220,17 @@ void Materia::cargarMateria()
         ID=10000+ (rand() % 99999);
     }
     reg.IDMateria=ID;
+    rlutil::locate(2,9);
     cout<<"Nombre Materia:";
     cin>>reg.nombreMateria;
     rlutil::locate(2,11);
     cout<<"ID Maestro:";
     cin>>reg.IDMaestro;
+    while(checkIdMaestro(reg.IDMaestro)==false){
+       rlutil::locate(2,11);
+    cout<<"Ingrese un ID de Maestro valido:";
+    cin>>reg.IDMaestro;
+    }
     reg.estado=true;
     reg.GrabarEnDiscoMateria();
     reg2.LeerEnDiscoGrado(reg.grado-1);
